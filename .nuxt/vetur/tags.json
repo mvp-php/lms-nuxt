@@ -1,0 +1,38 @@
+{
+  "Login": {
+    "description": "Auto imported from components/Login.vue"
+  },
+  "NuxtLogo": {
+    "description": "Auto imported from components/NuxtLogo.vue"
+  },
+  "ElementDropzone": {
+    "description": "Auto imported from components/element/Dropzone.vue"
+  },
+  "ElementFormButton": {
+    "description": "Auto imported from components/element/formButton.vue"
+  },
+  "ElementFormDropdown": {
+    "description": "Auto imported from components/element/formDropdown.vue"
+  },
+  "ElementFormLabel": {
+    "description": "Auto imported from components/element/formLabel.vue"
+  },
+  "ElementFormTextBoxField": {
+    "description": "Auto imported from components/element/formTextBoxField.vue"
+  },
+  "ElementImage": {
+    "description": "Auto imported from components/element/image.vue"
+  },
+  "ElementNuxtLink": {
+    "description": "Auto imported from components/element/NuxtLink.vue"
+  },
+  "ConfigDataService": {
+    "description": "Auto imported from components/config/DataService.js"
+  },
+  "Header": {
+    "description": "Auto imported from components/Header/header.vue"
+  },
+  "ServiceAuthService": {
+    "description": "Auto imported from components/Service/AuthService.js"
+  }
+}

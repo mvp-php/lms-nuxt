@@ -18,8 +18,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    
-    
+
+
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -40,7 +40,13 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  env:{
-    baseUrl:process.env.API_BASE_URL+'/'+process.env.API_VERSION,
-  }
+  env: {
+    baseUrl: process.env.API_BASE_URL + '/' + process.env.API_VERSION,
+  },
+  vue: {
+    config: {
+      productionTip: false,
+      devtools: true
+    }
+  },
 }

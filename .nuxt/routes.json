@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Login-login",
+    "path": "/Login/login",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\Login\\\\login.vue",
+    "chunkName": "pages/Login/login",
+    "_name": "_1474e754"
+  },
+  {
+    "name": "assets-js-jquery-3.6.0.slim.min",
+    "path": "/assets/js/jquery-3.6.0.slim.min",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\assets\\\\js\\\\jquery-3.6.0.slim.min.js",
+    "chunkName": "pages/assets/js/jquery-3.6.0.slim.min",
+    "_name": "_c4f2efc4"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_fa2c8ca4"
+  }
+]
