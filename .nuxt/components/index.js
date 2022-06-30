@@ -1,5 +1,6 @@
 export { default as Login } from '../..\\components\\Login.vue'
 export { default as NuxtLogo } from '../..\\components\\NuxtLogo.vue'
+export { default as ConfigDataService } from '../..\\components\\config\\DataService.js'
 export { default as ElementDropzone } from '../..\\components\\element\\Dropzone.vue'
 export { default as ElementFormButton } from '../..\\components\\element\\formButton.vue'
 export { default as ElementFormDropdown } from '../..\\components\\element\\formDropdown.vue'
@@ -7,9 +8,9 @@ export { default as ElementFormLabel } from '../..\\components\\element\\formLab
 export { default as ElementFormTextBoxField } from '../..\\components\\element\\formTextBoxField.vue'
 export { default as ElementImage } from '../..\\components\\element\\image.vue'
 export { default as ElementNuxtLink } from '../..\\components\\element\\NuxtLink.vue'
-export { default as ConfigDataService } from '../..\\components\\config\\DataService.js'
 export { default as Header } from '../..\\components\\Header\\header.vue'
 export { default as ServiceAuthService } from '../..\\components\\Service\\AuthService.js'
+export { default as ServiceDropZoneService } from '../..\\components\\Service\\DropZoneService.js'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

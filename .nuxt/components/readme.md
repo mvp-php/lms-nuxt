@@ -8,6 +8,7 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Login>` | `<login>` (components/Login.vue)
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
+- `<ConfigDataService>` | `<config-data-service>` (components/config/DataService.js)
 - `<ElementDropzone>` | `<element-dropzone>` (components/element/Dropzone.vue)
 - `<ElementFormButton>` | `<element-form-button>` (components/element/formButton.vue)
 - `<ElementFormDropdown>` | `<element-form-dropdown>` (components/element/formDropdown.vue)
@@ -15,6 +16,6 @@ You can directly use them in pages and other components without the need to impo
 - `<ElementFormTextBoxField>` | `<element-form-text-box-field>` (components/element/formTextBoxField.vue)
 - `<ElementImage>` | `<element-image>` (components/element/image.vue)
 - `<ElementNuxtLink>` | `<element-nuxt-link>` (components/element/NuxtLink.vue)
-- `<ConfigDataService>` | `<config-data-service>` (components/config/DataService.js)
 - `<Header>` | `<header>` (components/Header/header.vue)
 - `<ServiceAuthService>` | `<service-auth-service>` (components/Service/AuthService.js)
+- `<ServiceDropZoneService>` | `<service-drop-zone-service>` (components/Service/DropZoneService.js)

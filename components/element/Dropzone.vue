@@ -7,10 +7,9 @@
     </dropzone>
 </template>
 <script>
-
 import Dropzone from 'nuxt-dropzone'
 import 'nuxt-dropzone/dropzone.css'
-import axios from 'axios';
+import DropZoneService from '../Service/DropZoneService';
 export default {
     components: {
         Dropzone
@@ -18,11 +17,17 @@ export default {
     data() {
         return {
             options: {
-                url: "http://127.0.0.1:8000/api/v1/test-dropzone",
+                url: process.env.baseUrl + "test-dropzone",
                 thumbnailWidth: 200,
+                paramName: "image",
+                acceptedFiles: ".png, .jpeg, .jpg, .gif",
                 maxFilesize: 0.5,
                 addRemoveLinks: true,
-                headers: { "My-Awesome-Header": "header value" }
+                uploadMultiple: false,
+                clickable: true,
+                maxFiles: 5,
+                parallelUploads: 5,
+                headers: { "My-Awesome-Header": "header value" },
             },
             loading: true,
             loading: {
@@ -35,26 +40,26 @@ export default {
             },
             methods: {
                 sendingEvent(file, xhr, formData) {
-                    console.log(file);
                     formData.append('paramName', 'some value or other');
                 },
                 async submit() {
-                    let rsp = await this.$axios.$post('http://127.0.0.1:8000/api/v1/test-dropzone', this.form, {
-                        'content-type': 'multipart/form-data'
+                    DropZoneService.testDropzone(this.form).then((result) => {
+                    }).catch(error => {
                     })
-                    console.log(rsp.response)
                 },
                 start() {
                     this.loading = true
                 },
                 finish() {
                     this.loading = false
-                }
+                },
+                onError(e) {
+                    console.log(e, "kjuuhhhh");
+                },
             }
         }
     },
     mounted() {
-        // Everything is mounted and you can access the dropzone instance
         const instance = this.$refs.el.dropzone
     }
 }

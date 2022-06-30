@@ -5,6 +5,5 @@ class AuthService {
         return http.post(`/call-login/`,data);
     }
     
-    
   }
   export default new AuthService();

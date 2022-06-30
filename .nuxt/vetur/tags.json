@@ -5,6 +5,9 @@
   "NuxtLogo": {
     "description": "Auto imported from components/NuxtLogo.vue"
   },
+  "ConfigDataService": {
+    "description": "Auto imported from components/config/DataService.js"
+  },
   "ElementDropzone": {
     "description": "Auto imported from components/element/Dropzone.vue"
   },
@@ -26,13 +29,13 @@
   "ElementNuxtLink": {
     "description": "Auto imported from components/element/NuxtLink.vue"
   },
-  "ConfigDataService": {
-    "description": "Auto imported from components/config/DataService.js"
-  },
   "Header": {
     "description": "Auto imported from components/Header/header.vue"
   },
   "ServiceAuthService": {
     "description": "Auto imported from components/Service/AuthService.js"
+  },
+  "ServiceDropZoneService": {
+    "description": "Auto imported from components/Service/DropZoneService.js"
   }
 }
