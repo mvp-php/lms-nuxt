@@ -1,5 +1,6 @@
 <template>
-<img v-bind:src="src" v-bind:class="className"/>
+
+<img v-bind:src='log' v-bind:class="className"/>
   
 </template>
 
@@ -7,7 +8,14 @@
 
   export default {
      name: 'image-component',
-    props:['src','className']
-    
+    props:['log','className'],
+    mounted(){
+      console.log(this.log);
+    },
+    log: {
+      type: String,
+      require:true
+      
+    }
   }
 </script>

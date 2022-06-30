@@ -11,6 +11,9 @@
   "ElementDropzone": {
     "description": "Auto imported from components/element/Dropzone.vue"
   },
+  "ElementErrorToastr": {
+    "description": "Auto imported from components/element/errorToastr.vue"
+  },
   "ElementFormButton": {
     "description": "Auto imported from components/element/formButton.vue"
   },
@@ -26,11 +29,23 @@
   "ElementImage": {
     "description": "Auto imported from components/element/image.vue"
   },
+  "ElementLoadingBar": {
+    "description": "Auto imported from components/element/LoadingBar.vue"
+  },
   "ElementNuxtLink": {
     "description": "Auto imported from components/element/NuxtLink.vue"
   },
+  "ElementSuccessToastr": {
+    "description": "Auto imported from components/element/successToastr.vue"
+  },
+  "ForgotPassword": {
+    "description": "Auto imported from components/ForgotPassword/forgotPassword.vue"
+  },
   "Header": {
     "description": "Auto imported from components/Header/header.vue"
+  },
+  "ResetPassword": {
+    "description": "Auto imported from components/ResetPassword/resetPassword.vue"
   },
   "ServiceAuthService": {
     "description": "Auto imported from components/Service/AuthService.js"

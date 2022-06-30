@@ -4,8 +4,12 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _c93fadfe = () => interopDefault(import('..\\pages\\forgot-password\\index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
+const _4acd443d = () => interopDefault(import('..\\pages\\Login\\index.vue' /* webpackChunkName: "pages/Login/index" */))
+const _71ee6996 = () => interopDefault(import('..\\pages\\reset-password\\index.vue' /* webpackChunkName: "pages/reset-password/index" */))
+const _11dfe649 = () => interopDefault(import('..\\pages\\forgot-password\\link-successfully.vue' /* webpackChunkName: "pages/forgot-password/link-successfully" */))
 const _1474e754 = () => interopDefault(import('..\\pages\\Login\\login.vue' /* webpackChunkName: "pages/Login/login" */))
-const _c4f2efc4 = () => interopDefault(import('..\\pages\\assets\\js\\jquery-3.6.0.slim.min.js' /* webpackChunkName: "pages/assets/js/jquery-3.6.0.slim.min" */))
+const _e4ecd130 = () => interopDefault(import('..\\pages\\reset-password\\reset-success.vue' /* webpackChunkName: "pages/reset-password/reset-success" */))
 const _fa2c8ca4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -20,13 +24,29 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/forgot-password",
+    component: _c93fadfe,
+    name: "forgot-password"
+  }, {
+    path: "/Login",
+    component: _4acd443d,
+    name: "Login"
+  }, {
+    path: "/reset-password",
+    component: _71ee6996,
+    name: "reset-password"
+  }, {
+    path: "/forgot-password/link-successfully",
+    component: _11dfe649,
+    name: "forgot-password-link-successfully"
+  }, {
     path: "/Login/login",
     component: _1474e754,
     name: "Login-login"
   }, {
-    path: "/assets/js/jquery-3.6.0.slim.min",
-    component: _c4f2efc4,
-    name: "assets-js-jquery-3.6.0.slim.min"
+    path: "/reset-password/reset-success",
+    component: _e4ecd130,
+    name: "reset-password-reset-success"
   }, {
     path: "/",
     component: _fa2c8ca4,
