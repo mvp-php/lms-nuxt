@@ -15,6 +15,7 @@ export { default as ForgotPassword } from '../..\\components\\ForgotPassword\\fo
 export { default as Header } from '../..\\components\\Header\\header.vue'
 export { default as ResetPassword } from '../..\\components\\ResetPassword\\resetPassword.vue'
 export { default as ServiceAuthService } from '../..\\components\\Service\\AuthService.js'
+export { default as ServiceDropZoneService } from '../..\\components\\Service\\DropZoneService.js'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

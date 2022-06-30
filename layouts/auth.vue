@@ -17,9 +17,11 @@
 </style>
 <script>
  import imageComponent from '../components/element/image.vue';
+
 export default {
   components:{
     imageComponent
+
   },
   methods:{
     onsubmit(){

@@ -49,5 +49,8 @@
   },
   "ServiceAuthService": {
     "description": "Auto imported from components/Service/AuthService.js"
+  },
+  "ServiceDropZoneService": {
+    "description": "Auto imported from components/Service/DropZoneService.js"
   }
 }

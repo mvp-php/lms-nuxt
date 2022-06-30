@@ -23,3 +23,4 @@ You can directly use them in pages and other components without the need to impo
 - `<Header>` | `<header>` (components/Header/header.vue)
 - `<ResetPassword>` | `<reset-password>` (components/ResetPassword/resetPassword.vue)
 - `<ServiceAuthService>` | `<service-auth-service>` (components/Service/AuthService.js)
+- `<ServiceDropZoneService>` | `<service-drop-zone-service>` (components/Service/DropZoneService.js)

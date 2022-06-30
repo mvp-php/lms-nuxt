@@ -17,8 +17,7 @@
   </div>
 </template>
 <style>
-@import '@/pages/assets/styles/salesforce-lightning-design-system.min.css';
-@import '@/pages/assets/styles/style.css';
+
 </style>
 <script>
 import imageComponent from '../../components/element/image.vue';
