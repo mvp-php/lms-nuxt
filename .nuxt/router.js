@@ -4,12 +4,13 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _3c0b0110 = () => interopDefault(import('../pages/forgot-password/index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
-const _778ae5bc = () => interopDefault(import('../pages/Login/index.vue' /* webpackChunkName: "pages/Login/index" */))
-const _5dc3f08b = () => interopDefault(import('../pages/oldindex.vue' /* webpackChunkName: "pages/oldindex" */))
-const _4920999c = () => interopDefault(import('../pages/reset-password/index.vue' /* webpackChunkName: "pages/reset-password/index" */))
-const _24914240 = () => interopDefault(import('../pages/forgot-password/link-successfully.vue' /* webpackChunkName: "pages/forgot-password/link-successfully" */))
-const _7d07e262 = () => interopDefault(import('../pages/reset-password/reset-success.vue' /* webpackChunkName: "pages/reset-password/reset-success" */))
+const _2ab6c504 = () => interopDefault(import('../pages/forgot-password/index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
+const _2c6b2b70 = () => interopDefault(import('../pages/Login/index.vue' /* webpackChunkName: "pages/Login/index" */))
+const _643f7290 = () => interopDefault(import('../pages/reset-password/index.vue' /* webpackChunkName: "pages/reset-password/index" */))
+const _1894d468 = () => interopDefault(import('../pages/forgot-password/link-successfully.vue' /* webpackChunkName: "pages/forgot-password/link-successfully" */))
+const _991be542 = () => interopDefault(import('../pages/Login/login.vue' /* webpackChunkName: "pages/Login/login" */))
+const _2506987a = () => interopDefault(import('../pages/reset-password/reset-success.vue' /* webpackChunkName: "pages/reset-password/reset-success" */))
+const _52f7988e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -24,32 +25,32 @@ export const routerOptions = {
 
   routes: [{
     path: "/forgot-password",
-    component: _3c0b0110,
+    component: _2ab6c504,
     name: "forgot-password"
   }, {
     path: "/Login",
-    component: _778ae5bc,
+    component: _2c6b2b70,
     name: "Login"
   }, {
-    path: "/oldindex",
-    component: _5dc3f08b,
-    name: "oldindex"
-  }, {
     path: "/reset-password",
-    component: _4920999c,
+    component: _643f7290,
     name: "reset-password"
   }, {
     path: "/forgot-password/link-successfully",
-    component: _24914240,
+    component: _1894d468,
     name: "forgot-password-link-successfully"
   }, {
+    path: "/Login/login",
+    component: _991be542,
+    name: "Login-login"
+  }, {
     path: "/reset-password/reset-success",
-    component: _7d07e262,
+    component: _2506987a,
     name: "reset-password-reset-success"
-  },{
-    path: "/assets/js/jquery-3.6.0.slim.min",
-    component: _c4f2efc4,
-    name: "assets-js-jquery-3.6.0.slim.min"
+  }, {
+    path: "/",
+    component: _52f7988e,
+    name: "index"
   }],
 
   fallback: false

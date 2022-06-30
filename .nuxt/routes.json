@@ -1,23 +1,51 @@
 [
   {
-    "name": "Login-login",
-    "path": "/Login/login",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\Login\\\\login.vue",
-    "chunkName": "pages/Login/login",
-    "_name": "_1474e754"
+    "name": "forgot-password",
+    "path": "/forgot-password",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/forgot-password/index.vue",
+    "chunkName": "pages/forgot-password/index",
+    "_name": "_2ab6c504"
   },
   {
-    "name": "assets-js-jquery-3.6.0.slim.min",
-    "path": "/assets/js/jquery-3.6.0.slim.min",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\assets\\\\js\\\\jquery-3.6.0.slim.min.js",
-    "chunkName": "pages/assets/js/jquery-3.6.0.slim.min",
-    "_name": "_c4f2efc4"
+    "name": "Login",
+    "path": "/Login",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/Login/index.vue",
+    "chunkName": "pages/Login/index",
+    "_name": "_2c6b2b70"
+  },
+  {
+    "name": "reset-password",
+    "path": "/reset-password",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/reset-password/index.vue",
+    "chunkName": "pages/reset-password/index",
+    "_name": "_643f7290"
+  },
+  {
+    "name": "forgot-password-link-successfully",
+    "path": "/forgot-password/link-successfully",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/forgot-password/link-successfully.vue",
+    "chunkName": "pages/forgot-password/link-successfully",
+    "_name": "_1894d468"
+  },
+  {
+    "name": "Login-login",
+    "path": "/Login/login",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/Login/login.vue",
+    "chunkName": "pages/Login/login",
+    "_name": "_991be542"
+  },
+  {
+    "name": "reset-password-reset-success",
+    "path": "/reset-password/reset-success",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/reset-password/reset-success.vue",
+    "chunkName": "pages/reset-password/reset-success",
+    "_name": "_2506987a"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\index.vue",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_fa2c8ca4"
+    "_name": "_52f7988e"
   }
 ]
