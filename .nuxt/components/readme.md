@@ -8,7 +8,6 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Login>` | `<login>` (components/Login.vue)
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
-- `<ConfigDataService>` | `<config-data-service>` (components/config/DataService.js)
 - `<ElementDropzone>` | `<element-dropzone>` (components/element/Dropzone.vue)
 - `<ElementErrorToastr>` | `<element-error-toastr>` (components/element/errorToastr.vue)
 - `<ElementFormButton>` | `<element-form-button>` (components/element/formButton.vue)
@@ -19,6 +18,7 @@ You can directly use them in pages and other components without the need to impo
 - `<ElementLoadingBar>` | `<element-loading-bar>` (components/element/LoadingBar.vue)
 - `<ElementNuxtLink>` | `<element-nuxt-link>` (components/element/NuxtLink.vue)
 - `<ElementSuccessToastr>` | `<element-success-toastr>` (components/element/successToastr.vue)
+- `<ConfigDataService>` | `<config-data-service>` (components/config/DataService.js)
 - `<ForgotPassword>` | `<forgot-password>` (components/ForgotPassword/forgotPassword.vue)
 - `<Header>` | `<header>` (components/Header/header.vue)
 - `<ResetPassword>` | `<reset-password>` (components/ResetPassword/resetPassword.vue)
