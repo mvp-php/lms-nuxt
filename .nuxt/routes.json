@@ -1,5 +1,12 @@
 [
   {
+    "name": "categorys",
+    "path": "/categorys",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\categorys\\\\index.vue",
+    "chunkName": "pages/categorys/index",
+    "_name": "_571776d1"
+  },
+  {
     "name": "forgot-password",
     "path": "/forgot-password",
     "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\forgot-password\\\\index.vue",
