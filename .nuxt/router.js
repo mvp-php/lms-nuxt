@@ -8,7 +8,6 @@ const _2ab6c504 = () => interopDefault(import('../pages/forgot-password/index.vu
 const _2c6b2b70 = () => interopDefault(import('../pages/Login/index.vue' /* webpackChunkName: "pages/Login/index" */))
 const _643f7290 = () => interopDefault(import('../pages/reset-password/index.vue' /* webpackChunkName: "pages/reset-password/index" */))
 const _1894d468 = () => interopDefault(import('../pages/forgot-password/link-successfully.vue' /* webpackChunkName: "pages/forgot-password/link-successfully" */))
-const _991be542 = () => interopDefault(import('../pages/Login/login.vue' /* webpackChunkName: "pages/Login/login" */))
 const _2506987a = () => interopDefault(import('../pages/reset-password/reset-success.vue' /* webpackChunkName: "pages/reset-password/reset-success" */))
 const _52f7988e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -39,10 +38,6 @@ export const routerOptions = {
     path: "/forgot-password/link-successfully",
     component: _1894d468,
     name: "forgot-password-link-successfully"
-  }, {
-    path: "/Login/login",
-    component: _991be542,
-    name: "Login-login"
   }, {
     path: "/reset-password/reset-success",
     component: _2506987a,

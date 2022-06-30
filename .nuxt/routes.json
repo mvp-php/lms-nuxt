@@ -28,13 +28,6 @@
     "_name": "_1894d468"
   },
   {
-    "name": "Login-login",
-    "path": "/Login/login",
-    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/Login/login.vue",
-    "chunkName": "pages/Login/login",
-    "_name": "_991be542"
-  },
-  {
     "name": "reset-password-reset-success",
     "path": "/reset-password/reset-success",
     "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/reset-password/reset-success.vue",
