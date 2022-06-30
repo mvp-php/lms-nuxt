@@ -5,6 +5,9 @@
   "NuxtLogo": {
     "description": "Auto imported from components/NuxtLogo.vue"
   },
+  "ConfigDataService": {
+    "description": "Auto imported from components/config/DataService.js"
+  },
   "ElementDropzone": {
     "description": "Auto imported from components/element/Dropzone.vue"
   },
@@ -34,9 +37,6 @@
   },
   "ElementSuccessToastr": {
     "description": "Auto imported from components/element/successToastr.vue"
-  },
-  "ConfigDataService": {
-    "description": "Auto imported from components/config/DataService.js"
   },
   "ForgotPassword": {
     "description": "Auto imported from components/ForgotPassword/forgotPassword.vue"
