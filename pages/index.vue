@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <h1>Dropzone</h1>
-    <Dropzone />
+    <!-- <Dropzone /> -->
   </div>
 
 
@@ -12,6 +11,7 @@ import Dropzone from '../components/element/Dropzone.vue';
 import axios from 'axios';
 
 export default {
+  layout: "auth",
   name: "IndexPage",
   data() {
     return {
@@ -20,10 +20,10 @@ export default {
   },
   methods: {
     getAllCatData() {
-    //   axios.get('http://127.0.0.1:8000/api/v1/get-all-images', this.form, {
-    //     'content-type': 'multipart/form-data'
-    //   })
-    //   // console.log(rsp.response)
+      //   axios.get('http://127.0.0.1:8000/api/v1/get-all-images', this.form, {
+      //     'content-type': 'multipart/form-data'
+      //   })
+      //   // console.log(rsp.response)
     },
 
   },

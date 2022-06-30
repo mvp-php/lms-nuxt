@@ -17,7 +17,7 @@ export default {
     data() {
         return {
             options: {
-                url: process.env.baseUrl + "test-dropzone",
+                url: process.env.baseUrl + "/test-dropzone",
                 thumbnailWidth: 200,
                 paramName: "image",
                 acceptedFiles: ".png, .jpeg, .jpg, .gif",
