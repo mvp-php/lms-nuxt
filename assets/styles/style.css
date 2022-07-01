@@ -1282,9 +1282,8 @@ margin:0 15px;
 }
 .alert-main {
     position: fixed;
-    bottom: 30px;
-    right: 50px;
-    margin-top:30px;
+    top: 15px;
+    right: 10px;
 }
 
 .warning-alert {

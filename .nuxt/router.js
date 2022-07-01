@@ -7,8 +7,8 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _2ab6c504 = () => interopDefault(import('../pages/forgot-password/index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
 const _2c6b2b70 = () => interopDefault(import('../pages/Login/index.vue' /* webpackChunkName: "pages/Login/index" */))
 const _643f7290 = () => interopDefault(import('../pages/reset-password/index.vue' /* webpackChunkName: "pages/reset-password/index" */))
+const _344624f8 = () => interopDefault(import('../pages/reset-success/index.vue' /* webpackChunkName: "pages/reset-success/index" */))
 const _1894d468 = () => interopDefault(import('../pages/forgot-password/link-successfully.vue' /* webpackChunkName: "pages/forgot-password/link-successfully" */))
-const _2506987a = () => interopDefault(import('../pages/reset-password/reset-success.vue' /* webpackChunkName: "pages/reset-password/reset-success" */))
 const _52f7988e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -31,17 +31,17 @@ export const routerOptions = {
     component: _2c6b2b70,
     name: "Login"
   }, {
-    path: "/reset-password",
+    path: "/reset-password/:id",
     component: _643f7290,
     name: "reset-password"
+  }, {
+    path: "/reset-success",
+    component: _344624f8,
+    name: "reset-success"
   }, {
     path: "/forgot-password/link-successfully",
     component: _1894d468,
     name: "forgot-password-link-successfully"
-  }, {
-    path: "/reset-password/reset-success",
-    component: _2506987a,
-    name: "reset-password-reset-success"
   }, {
     path: "/",
     component: _52f7988e,
