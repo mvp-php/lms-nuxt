@@ -9,7 +9,7 @@
             </div>
         </div>
 
-        <ButtonComponent type="submit" buttonName="GET RESET LINK" className="slds-button login-btn" />
+        <ButtonComponent type="submit" buttonName="GET RESET LINK" className="slds-button login-btn mb-40" />
 
     </span>
 

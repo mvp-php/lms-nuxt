@@ -1,7 +1,5 @@
 <template>
-
   <span>
-
     <div class="slds-form-element custom-form-element mb-30">
       <Labels labelName="EMAIL ID" className="slds-form-element__label text-white" />
       <div class="slds-form-element__control">
@@ -9,7 +7,7 @@
         <span class="text-danger" id="email_error" ref="caterror" />
       </div>
     </div>
-    <div class="slds-form-element custom-form-element mb-30">
+    <div class="slds-form-element custom-form-element mb-10">
       <Labels labelName="PASSWORD" className="slds-form-element__label text-white" />
       <div class="slds-form-element__control">
 
@@ -56,16 +54,10 @@ export default {
     }
   },
   props: ['theUser'],
-  mounted() {
-
-
-  },
   methods: {
     toggleShow() {
       this.showPassword = !this.showPassword;
     }
-
-
   }
 }
 </script>

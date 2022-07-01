@@ -79,7 +79,7 @@ export default {
         AuthService.callResetPassword(params,this.$route.params.id).then((result) => {
           console.log(result);
           // localStorage.setItem("userData", JSON.stringify(result.data.data))
-          this.$router.push({ path: 'reset-password/reset-success' });
+          this.$router.push({ path: '/reset-success' });
           this.successMessage = result.data.error_msg;
 
           this.successToastrShow();
@@ -95,15 +95,6 @@ export default {
 
     },
 
-    onReset(event) {
-      event.preventDefault();
-      // Reset our form values
-      this.form.email = "";
-      this.form.name = "";
-      this.form.address = "";
-      this.form.contact = "";
-      // Trick to reset/clear native browser form validation state
-    },
     errorToastrShow() {
       this.hides = false;
       setTimeout(() => this.hides = true, 5000);
