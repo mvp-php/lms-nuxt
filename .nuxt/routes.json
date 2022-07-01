@@ -2,23 +2,23 @@
   {
     "name": "forgot-password",
     "path": "/forgot-password",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\forgot-password\\\\index.vue",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/forgot-password/index.vue",
     "chunkName": "pages/forgot-password/index",
-    "_name": "_c93fadfe"
+    "_name": "_2ab6c504"
   },
   {
     "name": "Login",
     "path": "/Login",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\Login\\\\index.vue",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/Login/index.vue",
     "chunkName": "pages/Login/index",
-    "_name": "_4acd443d"
+    "_name": "_2c6b2b70"
   },
   {
     "name": "reset-password",
     "path": "/reset-password",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\reset-password\\\\index.vue",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/reset-password/index.vue",
     "chunkName": "pages/reset-password/index",
-    "_name": "_71ee6996"
+    "_name": "_643f7290"
   },
   {
     "name": "reset-success",
@@ -30,22 +30,15 @@
   {
     "name": "forgot-password-link-successfully",
     "path": "/forgot-password/link-successfully",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\forgot-password\\\\link-successfully.vue",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/forgot-password/link-successfully.vue",
     "chunkName": "pages/forgot-password/link-successfully",
-    "_name": "_11dfe649"
-  },
-  {
-    "name": "Login-login",
-    "path": "/Login/login",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\Login\\\\login.vue",
-    "chunkName": "pages/Login/login",
-    "_name": "_1474e754"
+    "_name": "_1894d468"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\index.vue",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_fa2c8ca4"
+    "_name": "_52f7988e"
   }
 ]

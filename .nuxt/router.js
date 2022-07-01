@@ -4,22 +4,12 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-<<<<<<< HEAD
-const _c93fadfe = () => interopDefault(import('..\\pages\\forgot-password\\index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
-const _4acd443d = () => interopDefault(import('..\\pages\\Login\\index.vue' /* webpackChunkName: "pages/Login/index" */))
-const _71ee6996 = () => interopDefault(import('..\\pages\\reset-password\\index.vue' /* webpackChunkName: "pages/reset-password/index" */))
-const _11dfe649 = () => interopDefault(import('..\\pages\\forgot-password\\link-successfully.vue' /* webpackChunkName: "pages/forgot-password/link-successfully" */))
-const _1474e754 = () => interopDefault(import('..\\pages\\Login\\login.vue' /* webpackChunkName: "pages/Login/login" */))
-const _e4ecd130 = () => interopDefault(import('..\\pages\\reset-password\\reset-success.vue' /* webpackChunkName: "pages/reset-password/reset-success" */))
-const _fa2c8ca4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
-=======
 const _2ab6c504 = () => interopDefault(import('../pages/forgot-password/index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
 const _2c6b2b70 = () => interopDefault(import('../pages/Login/index.vue' /* webpackChunkName: "pages/Login/index" */))
 const _643f7290 = () => interopDefault(import('../pages/reset-password/index.vue' /* webpackChunkName: "pages/reset-password/index" */))
 const _344624f8 = () => interopDefault(import('../pages/reset-success/index.vue' /* webpackChunkName: "pages/reset-success/index" */))
 const _1894d468 = () => interopDefault(import('../pages/forgot-password/link-successfully.vue' /* webpackChunkName: "pages/forgot-password/link-successfully" */))
 const _52f7988e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
->>>>>>> origin/Vishal
 
 const emptyFn = () => {}
 
@@ -34,14 +24,14 @@ export const routerOptions = {
 
   routes: [{
     path: "/forgot-password",
-    component: _c93fadfe,
+    component: _2ab6c504,
     name: "forgot-password"
   }, {
     path: "/Login",
-    component: _4acd443d,
+    component: _2c6b2b70,
     name: "Login"
   }, {
-    path: "/reset-password/:id",
+    path: "/reset-password",
     component: _643f7290,
     name: "reset-password"
   }, {
@@ -50,11 +40,11 @@ export const routerOptions = {
     name: "reset-success"
   }, {
     path: "/forgot-password/link-successfully",
-    component: _11dfe649,
+    component: _1894d468,
     name: "forgot-password-link-successfully"
   }, {
     path: "/",
-    component: _fa2c8ca4,
+    component: _52f7988e,
     name: "index"
   }],
 
