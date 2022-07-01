@@ -1,7 +1,7 @@
 export { default as Login } from '../../components/Login.vue'
 export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
-export { default as ForgotPassword } from '../../components/ForgotPassword/forgotPassword.vue'
 export { default as Header } from '../../components/Header/header.vue'
+export { default as ForgotPassword } from '../../components/ForgotPassword/forgotPassword.vue'
 export { default as ResetPassword } from '../../components/ResetPassword/resetPassword.vue'
 export { default as ServiceAuthService } from '../../components/Service/AuthService.js'
 export { default as ConfigDataService } from '../../components/config/DataService.js'
