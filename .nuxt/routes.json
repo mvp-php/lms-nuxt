@@ -7,6 +7,13 @@
     "_name": "_2ab6c504"
   },
   {
+    "name": "link-successfully",
+    "path": "/link-successfully",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/link-successfully/index.vue",
+    "chunkName": "pages/link-successfully/index",
+    "_name": "_8f3f4f4e"
+  },
+  {
     "name": "Login",
     "path": "/Login",
     "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/Login/index.vue",
@@ -26,13 +33,6 @@
     "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/reset-success/index.vue",
     "chunkName": "pages/reset-success/index",
     "_name": "_344624f8"
-  },
-  {
-    "name": "forgot-password-link-successfully",
-    "path": "/forgot-password/link-successfully",
-    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/forgot-password/link-successfully.vue",
-    "chunkName": "pages/forgot-password/link-successfully",
-    "_name": "_1894d468"
   },
   {
     "name": "index",
