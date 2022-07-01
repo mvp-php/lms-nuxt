@@ -65,7 +65,7 @@ export default {
      
       if (cnt == 0) {
         AuthService.callForgotPassword(params).then((result) => {
-          this.$router.push({ path: 'forgot-password/link-successfully' });
+          this.$router.push({ path: 'link-successfully' });
           this.successMessage = result.data.error_msg;
 
           this.successToastrShow();
