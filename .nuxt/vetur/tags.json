@@ -5,11 +5,11 @@
   "NuxtLogo": {
     "description": "Auto imported from components/NuxtLogo.vue"
   },
-  "ForgotPassword": {
-    "description": "Auto imported from components/ForgotPassword/forgotPassword.vue"
-  },
   "Header": {
     "description": "Auto imported from components/Header/header.vue"
+  },
+  "ForgotPassword": {
+    "description": "Auto imported from components/ForgotPassword/forgotPassword.vue"
   },
   "ResetPassword": {
     "description": "Auto imported from components/ResetPassword/resetPassword.vue"
