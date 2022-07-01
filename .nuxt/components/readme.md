@@ -8,8 +8,11 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Login>` | `<login>` (components/Login.vue)
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
+- `<Dashboard>` | `<dashboard>` (components/Dashboard/dashboard.vue)
 - `<ForgotPassword>` | `<forgot-password>` (components/ForgotPassword/forgotPassword.vue)
-- `<Header>` | `<header>` (components/Header/header.vue)
+- `<IncludeFooter>` | `<include-footer>` (components/Include/Footer.vue)
+- `<IncludeHeader>` | `<include-header>` (components/Include/Header.vue)
+- `<IncludeSidebar>` | `<include-sidebar>` (components/Include/Sidebar.vue)
 - `<ResetPassword>` | `<reset-password>` (components/ResetPassword/resetPassword.vue)
 - `<ServiceAuthService>` | `<service-auth-service>` (components/Service/AuthService.js)
 - `<ConfigDataService>` | `<config-data-service>` (components/config/DataService.js)

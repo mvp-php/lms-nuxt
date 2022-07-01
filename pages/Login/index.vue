@@ -75,9 +75,9 @@ export default {
       }
       if (cnt == 0) {
         AuthService.callLogin(params).then((result) => {
-          console.log(result);
-          // localStorage.setItem("userData", JSON.stringify(result.data.data))
-          // this.$router.push({ name: 'user-management' });
+         
+          localStorage.setItem("userData", JSON.stringify(result.data.data))
+          this.$router.push({ name: 'dashboard' });
           this.successMessage = result.data.error_msg;
 
           this.successToastrShow();

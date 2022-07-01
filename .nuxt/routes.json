@@ -1,5 +1,12 @@
 [
   {
+    "name": "dashboard",
+    "path": "/dashboard",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/dashboard/index.vue",
+    "chunkName": "pages/dashboard/index",
+    "_name": "_1726c1d3"
+  },
+  {
     "name": "forgot-password",
     "path": "/forgot-password",
     "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/forgot-password/index.vue",
