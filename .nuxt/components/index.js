@@ -1,5 +1,6 @@
 export { default as Login } from '../../components/Login.vue'
 export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
+export { default as Category } from '../../components/Category/category.vue'
 export { default as Dashboard } from '../../components/Dashboard/dashboard.vue'
 export { default as ForgotPassword } from '../../components/ForgotPassword/forgotPassword.vue'
 export { default as IncludeFooter } from '../../components/Include/Footer.vue'

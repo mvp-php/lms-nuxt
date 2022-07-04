@@ -18,6 +18,7 @@ import Header from '../components/Include/Header.vue';
 import Sidebar from '../components/Include/Sidebar.vue';
 import Footer from '../components/Include/Footer.vue';
 export default {
+  middleware: 'authenticated',
   components:{
     Header,
     Sidebar,

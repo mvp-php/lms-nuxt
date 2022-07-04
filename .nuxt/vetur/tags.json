@@ -5,6 +5,9 @@
   "NuxtLogo": {
     "description": "Auto imported from components/NuxtLogo.vue"
   },
+  "Category": {
+    "description": "Auto imported from components/Category/category.vue"
+  },
   "Dashboard": {
     "description": "Auto imported from components/Dashboard/dashboard.vue"
   },

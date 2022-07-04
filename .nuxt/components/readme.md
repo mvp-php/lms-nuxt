@@ -8,6 +8,7 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Login>` | `<login>` (components/Login.vue)
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
+- `<Category>` | `<category>` (components/Category/category.vue)
 - `<Dashboard>` | `<dashboard>` (components/Dashboard/dashboard.vue)
 - `<ForgotPassword>` | `<forgot-password>` (components/ForgotPassword/forgotPassword.vue)
 - `<IncludeFooter>` | `<include-footer>` (components/Include/Footer.vue)

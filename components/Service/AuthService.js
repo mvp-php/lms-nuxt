@@ -2,6 +2,7 @@ import http from "../config/DataService";
 class AuthService {
  
     callLogin(data){
+        console.log(data);
         return http.post(`/call-login/`,data);
     }
     

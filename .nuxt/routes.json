@@ -1,5 +1,12 @@
 [
   {
+    "name": "category",
+    "path": "/category",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/category/index.vue",
+    "chunkName": "pages/category/index",
+    "_name": "_beef9e16"
+  },
+  {
     "name": "dashboard",
     "path": "/dashboard",
     "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/dashboard/index.vue",
