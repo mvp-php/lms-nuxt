@@ -1,24 +1,27 @@
 <template>
-    <header>
-        <div class="header-main">
-            <div class="header-inner">
-                <div class="logo">
-                    <img src="../../assets/img/logo-blue.png" class="logo-blue mb-20" alt="logo-blue">
-                </div>
-                <div>
-                    <img src="../../assets/img/svg/avtar1.svg" class="header-profile" alt="avtar-header">
-                </div>
-            </div>
+  <header>
+    <div class="header-main">
+      <div class="header-inner">
+        <div class="logo">
+          <ImageComponent :log="require('~/assets/img/logo-blue.png')" class="logo-blue mb-20" alt="logo-blue"></ImageComponent>
+    
         </div>
-    </header>
+        <div>
+          <ImageComponent :log="require('~/assets/img/svg/avtar1.svg')" class="header-profile" alt="avtar-header"></ImageComponent>
+          
+        </div>
+      </div>
+    </div>
+  </header>
 </template>
 
-
 <script>
+import ImageComponent from '../element/image.vue';
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  name: 'UserForm',
+  components:{
+    ImageComponent
   }
+
 }
 </script>
