@@ -2,11 +2,11 @@
     <div class="alert-main">
         <div class="cus-alert success-alert ">
             <div class="warning-inner">
-                <imageComponent src="../../pages/assets/img/svg/success-alert.png" alt="" class="warning-img" />
+                <imageComponent :log="require('~/assets/img/svg/success-alert.png')" alt="" class="warning-img" />
                 <div>{{ successMessage }}</div>
             </div>
             <button v-on:click="successToasterHide()" class="slds-button alert-btn">
-                <imageComponent src="../../pages/assets/img/svg/success-close.png" alt=""/>
+                <imageComponent :log="require('~/assets/img/svg/success-close.png')" alt=""/>
             </button>
         </div>
     </div>

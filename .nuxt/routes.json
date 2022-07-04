@@ -1,10 +1,17 @@
 [
   {
-    "name": "categorys",
-    "path": "/categorys",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\categorys\\\\index.vue",
-    "chunkName": "pages/categorys/index",
-    "_name": "_571776d1"
+    "name": "category",
+    "path": "/category",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/category/index.vue",
+    "chunkName": "pages/category/index",
+    "_name": "_beef9e16"
+  },
+  {
+    "name": "dashboard",
+    "path": "/dashboard",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/dashboard/index.vue",
+    "chunkName": "pages/dashboard/index",
+    "_name": "_1726c1d3"
   },
   {
     "name": "forgot-password",
@@ -12,6 +19,13 @@
     "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\forgot-password\\\\index.vue",
     "chunkName": "pages/forgot-password/index",
     "_name": "_c93fadfe"
+  },
+  {
+    "name": "link-successfully",
+    "path": "/link-successfully",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/link-successfully/index.vue",
+    "chunkName": "pages/link-successfully/index",
+    "_name": "_8f3f4f4e"
   },
   {
     "name": "Login",
@@ -28,25 +42,11 @@
     "_name": "_71ee6996"
   },
   {
-    "name": "forgot-password-link-successfully",
-    "path": "/forgot-password/link-successfully",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\forgot-password\\\\link-successfully.vue",
-    "chunkName": "pages/forgot-password/link-successfully",
-    "_name": "_11dfe649"
-  },
-  {
-    "name": "Login-login",
-    "path": "/Login/login",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\Login\\\\login.vue",
-    "chunkName": "pages/Login/login",
-    "_name": "_1474e754"
-  },
-  {
-    "name": "reset-password-reset-success",
-    "path": "/reset-password/reset-success",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\reset-password\\\\reset-success.vue",
-    "chunkName": "pages/reset-password/reset-success",
-    "_name": "_e4ecd130"
+    "name": "reset-success",
+    "path": "/reset-success",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/reset-success/index.vue",
+    "chunkName": "pages/reset-success/index",
+    "_name": "_344624f8"
   },
   {
     "name": "index",

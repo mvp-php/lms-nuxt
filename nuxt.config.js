@@ -35,6 +35,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/auth-next',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -48,5 +49,16 @@ export default {
       productionTip: false,
       devtools: true
     }
+  },
+  axios: {
+    credentials: true,
+  },
+  auth: {
+    strategies: {
+      laravelSanctum: {
+        provider: 'laravel/sanctum',
+        url: 'http://localhost/api/v1',
+      },
+    },
   },
 }

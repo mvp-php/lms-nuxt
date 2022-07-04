@@ -49,8 +49,8 @@ export default {
   },
 
   methods: {
-    onSubmit(event) {
-      console.log("rere");
+   async onSubmit(event) {
+      
       event.preventDefault();
       var params = {
         email: this.user.email,
@@ -74,19 +74,27 @@ export default {
         cnt = 1;
       }
       if (cnt == 0) {
-        AuthService.callLogin(params).then((result) => {
-          console.log(result);
-          // localStorage.setItem("userData", JSON.stringify(result.data.data))
-          // this.$router.push({ name: 'user-management' });
-          this.successMessage = result.data.error_msg;
+       try {
+        const data = { email: this.email, password: this.password }
+        await this.$auth.loginWith('laravelSanctum', { data:params})
+        .then(() => this.$router.push('/dashboard'))
+      } catch (e) {
+        console.log(e)
+      }
+    }
+        // AuthService.callLogin('laravelSanctum',{'data':params}).then((result) => {
+         
+        //   localStorage.setItem("userData", JSON.stringify(result.data.data))
+        //   this.$router.push({ name: 'dashboard' });
+        //   this.successMessage = result.data.error_msg;
 
-          this.successToastrShow();
-        }).catch(error => {
-          this.errorMessage = error.response.data.error_msg;
-          this.errorToastrShow();
+        //   this.successToastrShow();
+        // }).catch(error => {
+        //   this.errorMessage = error.response.data.error_msg;
+        //   this.errorToastrShow();
 
-        })
-      } else {
+        // })
+       else {
 
       }
 

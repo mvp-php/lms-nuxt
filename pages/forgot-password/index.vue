@@ -1,11 +1,17 @@
 <template>
   <div>
-    <h1 class="login-title mb-30">Forgot Password</h1>
+    <h1 class="login-title mb-30">PASSWORD RESET</h1>
+    <p class="login-text text-white mb-30">To reset your password, please enter your registered email address
+                below.
+                We will send you an email with a link to reset the password.</p>
     <form v-on:submit.prevent="onSubmit">
       <ForgotPassword :the-user="user" />
 
     </form>
-
+<div class="back-login-link">
+  <nuxt-link to="/login">Back to Login page</nuxt-link>
+         
+            </div>
     <errorToastr :errorMessage="errorMessage" v-if="!hides" />
     <successToastr :successMessage="successMessage" v-if="!hidessucces" />
   </div>
@@ -25,16 +31,7 @@ export default {
     successToastr,
     ForgotPassword
   },
-  props: {
-    isTableDataVisible: {
-      type: Boolean,
-      default: true
-    },
-    showForm: {
-      type: Boolean,
-      default: true
-    }
-  },
+
   data() {
     return {
       user: {},
@@ -45,13 +42,9 @@ export default {
       successMessage: ""
     };
   },
-  mounted() {
-    console.log(123, 'abc');
-  },
 
   methods: {
     onSubmit(event) {
-      console.log("rere");
       event.preventDefault();
       var params = {
         email: this.user.email,
@@ -72,9 +65,7 @@ export default {
      
       if (cnt == 0) {
         AuthService.callForgotPassword(params).then((result) => {
-          console.log(result);
-          // localStorage.setItem("userData", JSON.stringify(result.data.data))
-          this.$router.push({ path: 'forgot-password/link-successfully' });
+          this.$router.push({ path: 'link-successfully' });
           this.successMessage = result.data.error_msg;
 
           this.successToastrShow();
@@ -83,21 +74,8 @@ export default {
           this.errorToastrShow();
    
         })
-      } else {
+      } 
 
-      }
-
-
-    },
-
-    onReset(event) {
-      event.preventDefault();
-      // Reset our form values
-      this.form.email = "";
-      this.form.name = "";
-      this.form.address = "";
-      this.form.contact = "";
-      // Trick to reset/clear native browser form validation state
     },
     errorToastrShow() {
       this.hides = false;
@@ -107,7 +85,7 @@ export default {
       this.hidessucces = false;
       setTimeout(() => this.hidessucces = true, 5000);
     },
-
+    
   }
 };
 </script>

@@ -1,12 +1,27 @@
 <template>
-    <Sidebar />
+
+  <div>
+    <section class="login-section">
+      <div class="login-container">
+       
+        <Nuxt />
+      </div>
+    </section>
+
+</div>
 </template> 
 
 <script>
-import Sidebar from '../components/include/Sidebar.vue';
-import Header from '../components/include/Header.vue';
+
 
 export default {
-    components: { Sidebar, Header }
+  components:{
+    
+
+  },
+  created() {
+    this.$router.push('/login')
+  },
+  
 };
 </script>

@@ -5,6 +5,30 @@
   "NuxtLogo": {
     "description": "Auto imported from components/NuxtLogo.vue"
   },
+  "Category": {
+    "description": "Auto imported from components/Category/category.vue"
+  },
+  "Dashboard": {
+    "description": "Auto imported from components/Dashboard/dashboard.vue"
+  },
+  "ForgotPassword": {
+    "description": "Auto imported from components/ForgotPassword/forgotPassword.vue"
+  },
+  "IncludeFooter": {
+    "description": "Auto imported from components/Include/Footer.vue"
+  },
+  "IncludeHeader": {
+    "description": "Auto imported from components/Include/Header.vue"
+  },
+  "IncludeSidebar": {
+    "description": "Auto imported from components/Include/Sidebar.vue"
+  },
+  "ResetPassword": {
+    "description": "Auto imported from components/ResetPassword/resetPassword.vue"
+  },
+  "ServiceAuthService": {
+    "description": "Auto imported from components/Service/AuthService.js"
+  },
   "ConfigDataService": {
     "description": "Auto imported from components/config/DataService.js"
   },
@@ -37,27 +61,6 @@
   },
   "ElementSuccessToastr": {
     "description": "Auto imported from components/element/successToastr.vue"
-  },
-  "ForgotPassword": {
-    "description": "Auto imported from components/ForgotPassword/forgotPassword.vue"
-  },
-  "Header": {
-    "description": "Auto imported from components/Header/header.vue"
-  },
-  "IncludeFooter": {
-    "description": "Auto imported from components/include/Footer.vue"
-  },
-  "IncludeHeader": {
-    "description": "Auto imported from components/include/Header.vue"
-  },
-  "IncludeSidebar": {
-    "description": "Auto imported from components/include/Sidebar.vue"
-  },
-  "ResetPassword": {
-    "description": "Auto imported from components/ResetPassword/resetPassword.vue"
-  },
-  "ServiceAuthService": {
-    "description": "Auto imported from components/Service/AuthService.js"
   },
   "ServiceDropZoneService": {
     "description": "Auto imported from components/Service/DropZoneService.js"
