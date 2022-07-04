@@ -11,6 +11,9 @@ const _8f3f4f4e = () => interopDefault(import('../pages/link-successfully/index.
 const _2c6b2b70 = () => interopDefault(import('../pages/Login/index.vue' /* webpackChunkName: "pages/Login/index" */))
 const _643f7290 = () => interopDefault(import('../pages/reset-password/index.vue' /* webpackChunkName: "pages/reset-password/index" */))
 const _344624f8 = () => interopDefault(import('../pages/reset-success/index.vue' /* webpackChunkName: "pages/reset-success/index" */))
+const _7a858037 = () => interopDefault(import('../pages/user-management/role/index.vue' /* webpackChunkName: "pages/user-management/role/index" */))
+const _33ec854c = () => interopDefault(import('../pages/user-management/user/index.vue' /* webpackChunkName: "pages/user-management/user/index" */))
+const _cfc7a014 = () => interopDefault(import('../pages/user-management/user/create-user.vue' /* webpackChunkName: "pages/user-management/user/create-user" */))
 const _52f7988e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -52,6 +55,18 @@ export const routerOptions = {
     path: "/reset-success",
     component: _344624f8,
     name: "reset-success"
+  }, {
+    path: "/user-management/role",
+    component: _7a858037,
+    name: "user-management-role"
+  }, {
+    path: "/user-management/user",
+    component: _33ec854c,
+    name: "user-management-user"
+  }, {
+    path: "/user-management/user/create-user",
+    component: _cfc7a014,
+    name: "user-management-user-create-user"
   }, {
     path: "/",
     component: _52f7988e,

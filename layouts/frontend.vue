@@ -3,8 +3,10 @@
   <div>
     <Header/>
     <Sidebar/>
- 
+  <div class="content-main">
     <Nuxt />
+  </div>
+    
     <Footer/>
 
 </div>

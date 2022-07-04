@@ -26,8 +26,29 @@
   "ResetPassword": {
     "description": "Auto imported from components/ResetPassword/resetPassword.vue"
   },
+  "Role": {
+    "description": "Auto imported from components/Role/Role.vue"
+  },
   "ServiceAuthService": {
     "description": "Auto imported from components/Service/AuthService.js"
+  },
+  "ServicePaymentPlanService": {
+    "description": "Auto imported from components/Service/PaymentPlanService.js"
+  },
+  "ServiceRoleDataService": {
+    "description": "Auto imported from components/Service/RoleDataService.js"
+  },
+  "ServiceUserService": {
+    "description": "Auto imported from components/Service/UserService.js"
+  },
+  "UserCreateUser": {
+    "description": "Auto imported from components/User/create_user.vue"
+  },
+  "UserList": {
+    "description": "Auto imported from components/User/user_list.vue"
+  },
+  "ConfigAuthHeader": {
+    "description": "Auto imported from components/config/AuthHeader.js"
   },
   "ConfigDataService": {
     "description": "Auto imported from components/config/DataService.js"
@@ -40,6 +61,12 @@
   },
   "ElementNuxtLink": {
     "description": "Auto imported from components/element/NuxtLink.vue"
+  },
+  "ElementTabs": {
+    "description": "Auto imported from components/element/Tabs.vue"
+  },
+  "ElementDataTable": {
+    "description": "Auto imported from components/element/dataTable.vue"
   },
   "ElementErrorToastr": {
     "description": "Auto imported from components/element/errorToastr.vue"

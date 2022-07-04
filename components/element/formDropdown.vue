@@ -1,5 +1,7 @@
 <template>
-    
+    <select>
+        <option value="">Select Role</option>
+    </select>
 </template>
 
 <script>
