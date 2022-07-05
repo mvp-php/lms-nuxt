@@ -16,6 +16,7 @@ You can directly use them in pages and other components without the need to impo
 - `<IncludeSidebar>` | `<include-sidebar>` (components/Include/Sidebar.vue)
 - `<ResetPassword>` | `<reset-password>` (components/ResetPassword/resetPassword.vue)
 - `<Role>` | `<role>` (components/Role/Role.vue)
+- `<RoleCreateRole>` | `<role-create-role>` (components/Role/create_role.vue)
 - `<ServiceAuthService>` | `<service-auth-service>` (components/Service/AuthService.js)
 - `<ServicePaymentPlanService>` | `<service-payment-plan-service>` (components/Service/PaymentPlanService.js)
 - `<ServiceRoleDataService>` | `<service-role-data-service>` (components/Service/RoleDataService.js)

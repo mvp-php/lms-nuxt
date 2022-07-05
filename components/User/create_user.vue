@@ -135,6 +135,9 @@ export default {
             } else if(e.target.value.trim() =='772769426869092353'){
                this.hides = true;
                 this.hidesins = false;
+            }else{
+                this.hides = true;
+                this.hidesins = true;
             }
         },
   }

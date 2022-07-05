@@ -56,6 +56,13 @@
     "_name": "_33ec854c"
   },
   {
+    "name": "user-management-role-create-role",
+    "path": "/user-management/role/create-role",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/user-management/role/create-role.vue",
+    "chunkName": "pages/user-management/role/create-role",
+    "_name": "_1c2f5468"
+  },
+  {
     "name": "user-management-user-create-user",
     "path": "/user-management/user/create-user",
     "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/user-management/user/create-user.vue",

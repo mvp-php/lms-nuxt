@@ -6,7 +6,7 @@
                 <div class="role-main">
                     <div class="mb-18 back-text">
                         <imageComponent :log="require('~/assets/img/svg/arrow-left.svg')" :className="classObj" />
-                        <span>BACK </span>
+                        <nuxt-link to="/user-management/user"><span>BACK </span></nuxt-link>
                     </div>
                     <div class="blue-text mb-20">
                         Create A User

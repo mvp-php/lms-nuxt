@@ -6,13 +6,13 @@
                 <div class="role-main">
                     <div class="mb-18 back-text">
                         <imageComponent :log="require('~/assets/img/svg/arrow-left.svg')" :className="classObj" />
-                        <nuxt-link to="/user-management/user"><span>BACK </span></nuxt-link>
+                        <nuxt-link to="/user-management/role"><span>BACK </span></nuxt-link>
                     </div>
                     <div class="blue-text mb-20">
-                        Edit A User
+                        Create A Role
                     </div>
                     <form v-on:submit.prevent="submitData">
-                        <EditUser :the-user="user" :rolelist="allRoleList" :paymentPlan="paymentPlan" :userForm="userForm"/>
+                        <CreateRole :the-user="user" :EntitiesList="EntitiesList" />
                         <div class="btn-align-end">
                             <ButtonComponent type="submit" class="slds-button slds-button_brand btnmain blue-btn ml-10"
                                 :buttonName="ButtonName" />
@@ -30,18 +30,17 @@
 </template>
 
 <script>
-import EditUser from '../../../../components/User/edit_user.vue';
-import imageComponent from '../../../../components/element/image.vue';
-import RoleDataService from "../../../../components/Service/RoleDataService";
-import PaymentPlanService from "../../../../components/Service/PaymentPlanService";
-import ButtonComponent from '../../../../components/element/formButton.vue';
-import errorToastr from '../../../../components/element/errorToastr.vue';
-import userService from '../../../../components/Service/UserService';
+import CreateRole from '../../../components/Role/create_role.vue';
+
+import RoleDataService from "../../../components/Service/RoleDataService";
+
+import ButtonComponent from '../../../components/element/formButton.vue';
+import errorToastr from '../../../components/element/errorToastr.vue';
+
 export default {
     layout: 'frontend',
     components: {
-        EditUser,
-        imageComponent,
+        CreateRole,
         ButtonComponent,
         errorToastr
     },
@@ -58,65 +57,34 @@ export default {
     data() {
         return {
             user: {},
-            ButtonName: "Save User",
+            ButtonName: "Save Role",
             errorMessage: "",
             classObj: 'arrow-left',
             hides: true,
             hidessucces: true,
             successMessage: "",
-            allRoleList: [],
-            paymentPlan: [],
+           
+            EntitiesList: [],
             dangerHide: true,
-            userForm:[]
         };
     },
     mounted() {
         console.log(123, 'abc');
     },
     created() {
-        this.getRoleList();
-        this.PaymentPlanList();
-        this.getUserDetails();
+        this.getEntitiesAndPermissionList();
+    
     },
     methods: {
-        getRoleList() {
-
-            RoleDataService.getAllRoleList().then(response => {
-
-                this.allRoleList = response.data.data;
-
-            }).catch(e => {
-                console.log(e)
-            });
-
-        },
-        PaymentPlanList() {
-            PaymentPlanService.getPaymentPlan().then(response => {
-
-                this.paymentPlan = response.data.data;
-
-            }).catch(e => {
-                console.log(e)
-            });
-        },
-        getUserDetails(){
-            userService.getUserDetails(this.$route.params.id).then(response => {
-              this.loading = false;
-                    this.userForm= response.data.data;
-                   
-                    this.user = response.data.data;
-                   
-                    if(response.data.data.role_id.trim() =='772769390512275457'){
-                        this.hides = false;
-                this.hidesins = false;
-                    }else if(response.data.data.role_id.trim() =='772769426869092353'){
-                        this.hides = true;
-                        this.hidesins = false;
-                    }
-                    
-                }).catch(e => {
-                console.log(e)
-            });
+        getEntitiesAndPermissionList() {
+            RoleDataService.getEntitiesAndPermissionList()
+                .then(response => {
+                    this.EntitiesList = response.data.data;
+                    console.log(response.data);
+                })
+                .catch(e => {
+                    console.log(e);
+                });
         },
         submitData(event) {
             document.getElementById("first_name_error").textContent = "";
@@ -162,7 +130,7 @@ export default {
             }
 
             if (cnt == 0) {
-                userService.updateUser(this.user,this.$route.params.id)
+                userService.saveUser(this.user)
                     .then((result) => {
                         console.log(result)
 

@@ -1,33 +1,5 @@
 <template>
-  <nav id="pagination">
-    <ul class="page-numbers" v-if="$store.state.totalPageCount">
-      <li v-for="num in this.pageNumbers" v-if="num != null" v-bind:style="{ width: (100 / pageNumberCount) + '%' }">
-        <nuxt-link v-if="num != $route.query.page && num != currentPage" :to="{ path: '/', query: { page: num } }">{{ num }}</nuxt-link>
-        <span v-else>{{ num }}</span>
-      </li>
-    </ul>
-    <ul class="page-guides" v-if="this.$store.state.totalPageCount != 1">
-      <li>
-        <nuxt-link v-if="$route.query.page != 1 && $route.query.page" :to="{ path: '/', query: { page: 1 }}">最初</nuxt-link>
-        <span v-else>initial</span>
-      </li>
-      <li>
-        <nuxt-link v-if="this.prevpage != null" :to="{ path: '/', query: { page: this.prevpage }}">&laquo; 前へ</nuxt-link>
-        <span v-else>&laquo; 
-before</span>
-      </li>
-      <li>
-        <nuxt-link v-if="this.nextpage != null && $route.query.page != $store.state.totalPageCount" :to="{ path: '/', query: { page: this.nextpage }}">次へ &raquo;</nuxt-link>
-        <span v-else>
-next &raquo;</span>
-      </li>
-      <li>
-        <nuxt-link v-if="$route.query.page != $store.state.totalPageCount" :to="{ path: '/', query: { page: $store.state.totalPageCount }}">最後</nuxt-link>
-        <span v-else>
-at last</span>
-      </li>
-    </ul>
-  </nav>
+  
 </template>
 
 <script>

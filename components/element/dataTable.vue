@@ -79,19 +79,19 @@
 
                     </td>
                     <td class="slds-cell_action-mode" role="gridcell">
-                        <div class="slds-truncate" title="30%">
+                        <div class="slds-truncate" >
                             <div class="action-main">
                                 <ul class="action-ul">
                                     <li> 
-                                        <a href="javascript:void(0)" v-on:click="openViewModel(item.id)"
-                                            :id='item.id'><img src="../../assets/img/svg/eye-blue.svg" alt="icon"></a>
+                                        <a class="" title="View" href="javascript:void(0)"  v-on:click="openViewModel(item.id)" ><imageComponent :log="require('~/assets/img/svg/eye-blue.svg')" ></imageComponent></a>
+                                        
                                     </li>
                                     <li>
-                                        <router-link :to="`/user-management/user/edit-user/${item.id}`" class=""><img
-                                                src="../../assets/img/svg/edit.svg" alt="icon"></router-link>
+                                        <a class="" title="Edit" href="javascript:void(0)"  v-on:click="openEditModel(item.id)" ><imageComponent :log="require('~/assets/img/svg/edit.svg')" ></imageComponent></a>
+                                      
                                     </li>
 
-                                    <li> <a class="" href="#" v-on:click="openDeleteModel(item.id)" ><img src="../../assets/img/svg/delete.svg" alt="icon"></a>
+                                    <li> <a class="" title="Delete" href="javascript:void(0)"  v-on:click="openDeleteModel(item.id)" ><img src="../../assets/img/svg/delete.svg" alt="icon"></a>
                                     </li>
                                 </ul>
                             </div>
@@ -105,21 +105,34 @@
                 </tr>
             </tbody>
         </table>
-
+    <Paginate/>
     </div>
 
 </template>
 
 <script>
-
+import Paginate from '../../components/element/Paginate.vue';
+import imageComponent from '../../components/element/image.vue';
 export default {
     name: "Data-table",
     props: ['header','tableData','no_record_avalible'],
     components:{
- 
+     Paginate,
+     imageComponent
     },
     created(){
        
+    },
+    methods:{
+        openViewModel(id){
+           this.$parent.viewMethod(id);
+        },
+        openDeleteModel(id){
+            this.$parent.deleteMethod(id);
+        },
+        openEditModel(id){
+            this.$parent.editMethod(id);
+        }
     }
-}
+} 
 </script>

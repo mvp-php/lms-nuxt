@@ -29,6 +29,9 @@
   "Role": {
     "description": "Auto imported from components/Role/Role.vue"
   },
+  "RoleCreateRole": {
+    "description": "Auto imported from components/Role/create_role.vue"
+  },
   "ServiceAuthService": {
     "description": "Auto imported from components/Service/AuthService.js"
   },
