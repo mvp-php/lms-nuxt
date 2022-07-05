@@ -17,6 +17,7 @@ You can directly use them in pages and other components without the need to impo
 - `<ResetPassword>` | `<reset-password>` (components/ResetPassword/resetPassword.vue)
 - `<Role>` | `<role>` (components/Role/Role.vue)
 - `<RoleCreateRole>` | `<role-create-role>` (components/Role/create_role.vue)
+- `<RoleEditRole>` | `<role-edit-role>` (components/Role/edit_role.vue)
 - `<ServiceAuthService>` | `<service-auth-service>` (components/Service/AuthService.js)
 - `<ServicePaymentPlanService>` | `<service-payment-plan-service>` (components/Service/PaymentPlanService.js)
 - `<ServiceRoleDataService>` | `<service-role-data-service>` (components/Service/RoleDataService.js)
@@ -39,3 +40,4 @@ You can directly use them in pages and other components without the need to impo
 - `<ElementFormTextBoxField>` | `<element-form-text-box-field>` (components/element/formTextBoxField.vue)
 - `<ElementImage>` | `<element-image>` (components/element/image.vue)
 - `<ElementSuccessToastr>` | `<element-success-toastr>` (components/element/successToastr.vue)
+- `<ElementTextArea>` | `<element-text-area>` (components/element/textArea.vue)

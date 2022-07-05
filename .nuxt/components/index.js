@@ -9,6 +9,7 @@ export { default as IncludeSidebar } from '../../components/Include/Sidebar.vue'
 export { default as ResetPassword } from '../../components/ResetPassword/resetPassword.vue'
 export { default as Role } from '../../components/Role/Role.vue'
 export { default as RoleCreateRole } from '../../components/Role/create_role.vue'
+export { default as RoleEditRole } from '../../components/Role/edit_role.vue'
 export { default as ServiceAuthService } from '../../components/Service/AuthService.js'
 export { default as ServicePaymentPlanService } from '../../components/Service/PaymentPlanService.js'
 export { default as ServiceRoleDataService } from '../../components/Service/RoleDataService.js'
@@ -31,6 +32,7 @@ export { default as ElementFormLabel } from '../../components/element/formLabel.
 export { default as ElementFormTextBoxField } from '../../components/element/formTextBoxField.vue'
 export { default as ElementImage } from '../../components/element/image.vue'
 export { default as ElementSuccessToastr } from '../../components/element/successToastr.vue'
+export { default as ElementTextArea } from '../../components/element/textArea.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

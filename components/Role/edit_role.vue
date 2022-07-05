@@ -58,28 +58,38 @@
 import Inputs from '../element/formTextBoxField.vue';
 import Labels from '../element/formLabel.vue';
 import textAreaComponent from '../element/textArea.vue';
-
+import RoleDataService from "../Service/RoleDataService";
 export default {
   name: 'create-role',
   components: {
     Inputs,
     Labels,
     textAreaComponent
-   
-
   },
+  created() {
+         this.getPermissionList();
+       
+       
+    },
   data() {
     return {
         hides: true,
-        hidesins:true
+        hidesins:true,
+        EntitiesList: [],
     }
   },
-  props: ['theUser','EntitiesList'],
+  props: ['theUser'],
   methods: {
-        validateMail(){
-            alert("JJ")
-            
-        }
+        getPermissionList() {
+            RoleDataService.getEntitiesAndPermissionList()
+                .then(response => {
+                    this.EntitiesList = response.data;
+                    
+                })
+                .catch(e => {
+                    console.log(e);
+                });
+        },
   }
 }
 </script>

@@ -8,7 +8,7 @@
                         <div class="slds-form-element">
                             <div class="slds-form-element__control search-inp-control">
 
-                                <input type="text" id="text-input-id-50" placeHolder="Search user here…"
+                                <input type="text" id="text-input-id-50" placeHolder="Search role here…"
                                     class="slds-input search-inp" v-on:keyup="setCanMessageSubmit($event)" />
 
 
@@ -37,10 +37,10 @@
 
         <div class="user-record-modal">
             <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
-                class="slds-modal " id="add-category" ref="addsubcategory">
+                class="slds-modal " id="role" ref="addrole">
                 <div class="slds-modal__container addcategory-dialog-modal p-0">
                     <div class="slds-modal__header modal-main-record-title category-title">
-                        <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">View User Details</h1>
+                        <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">View Role Details</h1>
                         <button
                             class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse close-modal-record">
                             <svg xmlns="http://www.w3.org/2000/svg" width="11.354" height="11.385"
@@ -58,48 +58,12 @@
                     <div class="slds-modal__content slds-p-around_medium modal-content-group-view"
                         id="modal-content-id-1">
                         <div class="modal-manage-group-main">
-                            <div class="group-row-main">
+                            <div class="group-row-main ">
                                 <div class="group-col1">
                                     <div class="course-row-manage">
                                         <div class="course-col1">
                                             <div class="course-title-main">
-                                                <p class="mb-0">First Name</p>
-                                            </div>
-                                        </div>
-                                        <div class="course-col2">
-                                            <div class="course-title-desc">
-                                                <p class="mb-0">{{ viewDetails.first_name }}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="course-row-manage">
-                                        <div class="course-col1">
-                                            <div class="course-title-main">
-                                                <p class="mb-0">Last Name</p>
-                                            </div>
-                                        </div>
-                                        <div class="course-col2">
-                                            <div class="course-title-desc">
-                                                <p class="mb-0">{{ viewDetails.last_name }}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="course-row-manage">
-                                        <div class="course-col1">
-                                            <div class="course-title-main">
-                                                <p class="mb-0">Email</p>
-                                            </div>
-                                        </div>
-                                        <div class="course-col2">
-                                            <div class="course-title-desc">
-                                                <p class="mb-0">{{ viewDetails.email }}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="course-row-manage">
-                                        <div class="course-col1 mt-0" style="margin-top:0px !important">
-                                            <div class="course-title-main">
-                                                <p class="mb-0">Role</p>
+                                                <p class="mb-0">User Role Titlee</p>
                                             </div>
                                         </div>
                                         <div class="course-col2">
@@ -108,6 +72,20 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="course-row-manage">
+                                        <div class="course-col1 removeLastChild">
+                                            <div class="course-title-main">
+                                                <p class="mb-0">No of User</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-col2">
+                                            <div class="course-title-desc">
+                                                <p class="mb-0">{{ viewDetails.no_of_user }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
 
                                 </div>
                             </div>
@@ -117,14 +95,14 @@
 
 
             </section>
-            <div class="slds-backdrop " role="presentation" id="add-category-backdrop" ref="addsubcategorybackdrop">
+            <div class="slds-backdrop " role="presentation" id="role-backdrop" ref="addRoleBackup">
             </div>
-            <div class="slds-backdrop " role="presentation" id="edit-category-backdrop" ref="editsubcategorybackdrop">
+            <div class="slds-backdrop " role="presentation" id="edit-role-backdrop" ref="editsubcategorybackdrop">
             </div>
         </div>
         <div class="user-record-modal">
         <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal"
-            id="delete-modal" ref="deleteUserModel">
+            id="delete-modal" ref="deleteRoleModel">
             <div class="slds-modal__container record-dialog-modal">
                 <div class="slds-modal__header modal-main-record-title">
                     <!-- <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">USER ROLE DETAILS</h1> -->
@@ -149,16 +127,20 @@
                             
                         </div>
                         <div class="delete-text">
-                            <h3>Are you sure you want to delete this user?</h3>
-                            <p>Do you really want to delete these user? This
+                            <h3>Are you sure you want to delete this role?</h3>
+                            <p>Do you really want to delete these role? This
                                 process cannot be undone</p>
                         </div>
                     </div>
                     <div class="delete-modal-footer">
-                        <button class="slds-button slds-button_neutral btnmain blue-btn modal-btn"
-                            aria-label="Cancel and close" v-on:click="deleteUser()">Yes</button>
-                        <button class="slds-button slds-button_brand btnmain light-blue-btn modal-btn" id="close-btn1"
-                            v-on:click="closeDeleteModel()">No </button>
+                        <ButtonComponent class="slds-button slds-button_neutral btnmain blue-btn modal-btn"
+                            aria-label="Cancel and close" v-on:click="deleteRole()" buttonName="Yes"></ButtonComponent>
+                        
+                        <ButtonComponent class="slds-button slds-button_brand btnmain light-blue-btn modal-btn"
+                            id="close-btn1"
+                            v-on:click="closeDeleteModel()" buttonName="No">No</ButtonComponent>
+                        
+       
                     </div>
                 </div>
             </div>
@@ -175,6 +157,7 @@ import roleService from "../../../components/Service/RoleDataService";
 import roles from '../../../components/Role/Role.vue';
 import dataTable from '../../../components/element/dataTable.vue';
 import ImageComponent from '../../../components/element/image.vue';
+import ButtonComponent from '../../../components/element/formButton.vue';
 export default {
     layout: 'frontend',
     name: 'UserList',
@@ -183,7 +166,8 @@ export default {
         Tabs,
         dataTable,
         roles,
-        ImageComponent
+        ImageComponent,
+        ButtonComponent
 
     },
     data() {
@@ -210,7 +194,7 @@ export default {
         },
         
         getRoleList(value = "") {
-            roleService.getRoleList()
+            roleService.getRoleList(value)
                 .then(async response => {
                  
                     this.tableData = await response.data.data;
@@ -222,36 +206,36 @@ export default {
         },
         openViewModel: function (id) {
             console.log(id, "vishal");
-            userService.getViewUserDetail(id).then((result) => {
+            roleService.getViewRoleDetail(id).then((result) => {
                 this.viewDetails = result.data.data;
             }).catch((err) => {
-                console.error(err);
+                this.$router.push('/user-management/role');
             });
-            this.$refs.addsubcategory.classList.add("slds-fade-in-open");
-            this.$refs.addsubcategorybackdrop.classList.add("slds-backdrop_open");
+            this.$refs.addrole.classList.add("slds-fade-in-open");
+            this.$refs.addRoleBackup.classList.add("slds-backdrop_open");
         },
         closeViewModel() {
-            this.$refs.addsubcategory.classList.remove("slds-fade-in-open");
-            this.$refs.addsubcategorybackdrop.classList.remove("slds-backdrop_open");
+            this.$refs.addrole.classList.remove("slds-fade-in-open");
+            this.$refs.addRoleBackup.classList.remove("slds-backdrop_open");
         },
         userDelete(id) {
-            this.$refs.deleteUserModel.classList.add("slds-fade-in-open");
+            this.$refs.deleteRoleModel.classList.add("slds-fade-in-open");
             this.DeleteId = id;
         },
-        deleteUser(){
-            userService.deleteUser(this.DeleteId).then((result) => {
+        deleteRole(){
+            roleService.deleteRole(this.DeleteId).then((result) => {
                 console.log(result);
-             this.getUserList();
+             this.getRoleList();
              this.closeDeleteModel();
             }).catch((err) => {
                 console.error(err);
             });
         },
         closeDeleteModel() {
-            this.$refs.deleteUserModel.classList.remove("slds-fade-in-open");
+            this.$refs.deleteRoleModel.classList.remove("slds-fade-in-open");
         },
         userEdit(id){
-            this.$router.push('/user-management/user/edit-user/'+id);
+            this.$router.push('/user-management/role/edit-role/'+id);
         }
     }
 

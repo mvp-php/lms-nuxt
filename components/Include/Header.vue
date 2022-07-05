@@ -8,7 +8,7 @@
         </div>
         
         <div>
-          <ImageComponent :log="require('~/assets/img/svg/avtar1.svg')" class="header-profile" alt="avtar-header"></ImageComponent>
+          <a @click="toogles()"><ImageComponent :log="require('~/assets/img/svg/avtar1.svg')" cliickEvent="say()" class="header-profile" alt="avtar-header"></ImageComponent></a>
           <div class="log-dropdown position-relative">
                   <ul class="log-drop" id="logout" style="display: none;">
                       <li>
@@ -28,6 +28,13 @@ export default {
   name: 'UserForm',
   components:{
     ImageComponent
+  },
+
+  methods :{
+      toogles(){
+        document.getElementById("logout").toggle();
+        
+      }
   }
 
 }

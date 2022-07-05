@@ -4,3 +4,6 @@
 .alert-main{
     z-index:999 !important;
 }
+.removeLastChild{
+    margin-top: 0px !important;
+}

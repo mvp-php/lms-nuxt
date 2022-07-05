@@ -14,6 +14,7 @@ const _7a858037 = () => interopDefault(import('../pages/user-management/role/ind
 const _33ec854c = () => interopDefault(import('../pages/user-management/user/index.vue' /* webpackChunkName: "pages/user-management/user/index" */))
 const _1c2f5468 = () => interopDefault(import('../pages/user-management/role/create-role.vue' /* webpackChunkName: "pages/user-management/role/create-role" */))
 const _cfc7a014 = () => interopDefault(import('../pages/user-management/user/create-user.vue' /* webpackChunkName: "pages/user-management/user/create-user" */))
+const _112a3669 = () => interopDefault(import('../pages/user-management/role/edit-role/_id.vue' /* webpackChunkName: "pages/user-management/role/edit-role/_id" */))
 const _37789cd3 = () => interopDefault(import('../pages/user-management/user/edit-user/_id.vue' /* webpackChunkName: "pages/user-management/user/edit-user/_id" */))
 const _5b28d8f8 = () => interopDefault(import('../pages/reset-password/_id.vue' /* webpackChunkName: "pages/reset-password/_id" */))
 const _52f7988e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
@@ -69,6 +70,10 @@ export const routerOptions = {
     path: "/user-management/user/create-user",
     component: _cfc7a014,
     name: "user-management-user-create-user"
+  }, {
+    path: "/user-management/role/edit-role/:id",
+    component: _112a3669,
+    name: "user-management-role-edit-role-id"
   }, {
     path: "/user-management/user/edit-user/:id",
     component: _37789cd3,

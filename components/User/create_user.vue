@@ -140,6 +140,9 @@ export default {
                 this.hidesins = true;
             }
         },
+        getName() {
+console.log("rer");
+         },   
   }
 }
 </script>

@@ -32,6 +32,9 @@
   "RoleCreateRole": {
     "description": "Auto imported from components/Role/create_role.vue"
   },
+  "RoleEditRole": {
+    "description": "Auto imported from components/Role/edit_role.vue"
+  },
   "ServiceAuthService": {
     "description": "Auto imported from components/Service/AuthService.js"
   },
@@ -97,5 +100,8 @@
   },
   "ElementSuccessToastr": {
     "description": "Auto imported from components/element/successToastr.vue"
+  },
+  "ElementTextArea": {
+    "description": "Auto imported from components/element/textArea.vue"
   }
 }

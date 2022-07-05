@@ -70,6 +70,13 @@
     "_name": "_cfc7a014"
   },
   {
+    "name": "user-management-role-edit-role-id",
+    "path": "/user-management/role/edit-role/:id",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/user-management/role/edit-role/_id.vue",
+    "chunkName": "pages/user-management/role/edit-role/_id",
+    "_name": "_112a3669"
+  },
+  {
     "name": "user-management-user-edit-user-id",
     "path": "/user-management/user/edit-user/:id",
     "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/user-management/user/edit-user/_id.vue",

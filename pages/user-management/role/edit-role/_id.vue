@@ -9,10 +9,10 @@
                         <nuxt-link to="/user-management/role"><span>BACK </span></nuxt-link>
                     </div>
                     <div class="blue-text mb-20">
-                        Create A Role
+                        Edit A Role
                     </div>
                     <form v-on:submit.prevent="submitData">
-                        <CreateRole :the-user="user" :EntitiesList="EntitiesList" />
+                        <EditRole :the-user="user" />
                         <div class="btn-align-end">
                             <ButtonComponent type="submit" class="slds-button slds-button_brand btnmain blue-btn ml-10"
                                 :buttonName="ButtonName" />
@@ -30,59 +30,53 @@
 </template>
 
 <script>
-import CreateRole from '../../../components/Role/create_role.vue';
+import EditRole from '../../../../components/Role/edit_role.vue';
 
-import RoleDataService from "../../../components/Service/RoleDataService";
+import RoleDataService from "../../../../components/Service/RoleDataService";
 
-import ButtonComponent from '../../../components/element/formButton.vue';
-import errorToastr from '../../../components/element/errorToastr.vue';
-
+import ButtonComponent from '../../../../components/element/formButton.vue';
+import errorToastr from '../../../../components/element/errorToastr.vue';
+import imageComponent from '../../../../components/element/image.vue';
 export default {
     layout: 'frontend',
     components: {
-        CreateRole,
+        EditRole,
+        
         ButtonComponent,
-        errorToastr
+        errorToastr,
+        imageComponent
     },
-    props: {
-        isTableDataVisible: {
-            type: Boolean,
-            default: true
-        },
-        showForm: {
-            type: Boolean,
-            default: true
-        }
-    },
+    
     data() {
         return {
             user: {},
-            ButtonName: "Save Role",
+            ButtonName: "Save User",
             errorMessage: "",
             classObj: 'arrow-left',
-            hides: true,
-            hidessucces: true,
+            
             successMessage: "",
-           
-            EntitiesList: [],
+            
+            
             dangerHide: true,
+            userForm:[]
         };
     },
-    mounted() {
-        this.getEntitiesAndPermissionList();
-    },
     
+    created() {
+    
+        this.getRoleDetails();
+       
+    },
     methods: {
-        getEntitiesAndPermissionList() {
-            this.EntitiesList = [];
-            RoleDataService.getEntitiesAndPermissionList()
-                .then(response => {
-                    this.EntitiesList = response.data.data;
-                    console.log(response.data);
-                })
-                .catch(e => {
-                    console.log(e);
-                });
+        
+        
+        getRoleDetails(){
+            RoleDataService.getDetailsById(this.$route.params.id).then(response => {
+                    this.user = response.data.data;
+                   
+                }).catch(e => {
+                console.log(e)
+            });
         },
         submitData(event) {
             document.getElementById("role_title_error").textContent = "";
@@ -94,11 +88,12 @@ export default {
                 cnt =1;
             }
             
+            
 
             
 
             if (cnt == 0) {
-                RoleDataService.create(this.user)
+                RoleDataService.updateRole(this.user,this.$route.params.id)
                     .then((result) => {
                         console.log(result)
 

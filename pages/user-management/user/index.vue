@@ -155,10 +155,14 @@
                         </div>
                     </div>
                     <div class="delete-modal-footer">
-                        <button class="slds-button slds-button_neutral btnmain blue-btn modal-btn"
-                            aria-label="Cancel and close" v-on:click="deleteUser()">Yes</button>
-                        <button class="slds-button slds-button_brand btnmain light-blue-btn modal-btn" id="close-btn1"
-                            v-on:click="closeDeleteModel()">No </button>
+                        <ButtonComponent class="slds-button slds-button_neutral btnmain blue-btn modal-btn"
+                            aria-label="Cancel and close" v-on:click="deleteUser()" buttonName="Yes"></ButtonComponent>
+                        
+                        <ButtonComponent class="slds-button slds-button_brand btnmain light-blue-btn modal-btn"
+                            id="close-btn1"
+                            v-on:click="closeDeleteModel()" buttonName="No">No</ButtonComponent>
+                        
+       
                     </div>
                 </div>
             </div>
@@ -175,6 +179,7 @@ import userService from "../../../components/Service/UserService";
 import userListNew from '../../../components/User/user_list.vue';
 import dataTable from '../../../components/element/dataTable.vue';
 import ImageComponent from '../../../components/element/image.vue';
+import ButtonComponent from '../../../components/element/formButton.vue';
 export default {
     layout: 'frontend',
     name: 'UserList',
@@ -183,7 +188,8 @@ export default {
         Tabs,
         dataTable,
         userListNew,
-        ImageComponent
+        ImageComponent,
+        ButtonComponent
 
     },
     data() {
