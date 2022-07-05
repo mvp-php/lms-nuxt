@@ -9,10 +9,10 @@
                         <span>BACK </span>
                     </div>
                     <div class="blue-text mb-20">
-                        Create A User
+                        Edit A User
                     </div>
                     <form v-on:submit.prevent="submitData">
-                        <CreateUser :the-user="user" :rolelist="allRoleList" :paymentPlan="paymentPlan" />
+                        <EditUser :the-user="user" :rolelist="allRoleList" :paymentPlan="paymentPlan" :userForm="userForm"/>
                         <div class="btn-align-end">
                             <ButtonComponent type="submit" class="slds-button slds-button_brand btnmain blue-btn ml-10"
                                 :buttonName="ButtonName" />
@@ -30,17 +30,17 @@
 </template>
 
 <script>
-import CreateUser from '../../../components/User/create_user.vue';
-import imageComponent from '../../../components/element/image.vue';
-import RoleDataService from "../../../components/Service/RoleDataService";
-import PaymentPlanService from "../../../components/Service/PaymentPlanService";
-import ButtonComponent from '../../../components/element/formButton.vue';
-import errorToastr from '../../../components/element/errorToastr.vue';
-import userService from '../../../components/Service/UserService';
+import EditUser from '../../../../components/User/edit_user.vue';
+import imageComponent from '../../../../components/element/image.vue';
+import RoleDataService from "../../../../components/Service/RoleDataService";
+import PaymentPlanService from "../../../../components/Service/PaymentPlanService";
+import ButtonComponent from '../../../../components/element/formButton.vue';
+import errorToastr from '../../../../components/element/errorToastr.vue';
+import userService from '../../../../components/Service/UserService';
 export default {
     layout: 'frontend',
     components: {
-        CreateUser,
+        EditUser,
         imageComponent,
         ButtonComponent,
         errorToastr
@@ -67,6 +67,7 @@ export default {
             allRoleList: [],
             paymentPlan: [],
             dangerHide: true,
+            userForm:[]
         };
     },
     mounted() {
@@ -75,6 +76,7 @@ export default {
     created() {
         this.getRoleList();
         this.PaymentPlanList();
+        this.getUserDetails();
     },
     methods: {
         getRoleList() {
@@ -94,6 +96,25 @@ export default {
                 this.paymentPlan = response.data.data;
 
             }).catch(e => {
+                console.log(e)
+            });
+        },
+        getUserDetails(){
+     console.log(this.$route.params.id);
+            userService.getUserDetails(this.$route.params.id).then(response => {
+              this.loading = false;
+                    this.userDetails= response.data.data;
+                    console.log(this.userDetails);
+                    this.userForm = response.data.data;
+                   
+                    if(response.data.data.role_id.trim() =='772769390512275457'){
+                        this.hides = false;
+                        this.hides = false;
+                    }else if(response.data.data.role_id.trim() =='772769426869092353'){
+
+                    }
+                    
+                }).catch(e => {
                 console.log(e)
             });
         },

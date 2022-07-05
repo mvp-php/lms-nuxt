@@ -2,5 +2,5 @@ export default function authHeader() {
  
 
 
-    return { Authorization: 'Bearer 776130444172591105|0U4j2t4iu2LiCETbL8wRZHPzWzXevJWY0bMEO9AF'};
+    return { Authorization: 'Bearer 776362176911572993|38GL7UVsWDSRz7Ss31E6CTrabHfTTIJ500bPC4Gt'};
   }

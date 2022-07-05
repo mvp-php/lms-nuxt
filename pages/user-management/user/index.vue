@@ -65,7 +65,7 @@ export default {
         this.tablsList=[];
         var tabs = [{ "Key": "Role", 'url': 'role' }, { "Key": "User", 'url': 'user' }];
         this.tablsList = tabs;
-        this.header = ["", 'SrNo.', 'User Name', 'Email Id', 'Role', 'Created On', 'Action'];
+        this.header = ["", 'Sr No.', 'User Name', 'Email Id', 'Role', 'Created On', 'Action'];
         this.getUserList();
     },
     methods: {

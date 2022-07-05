@@ -1,10 +1,13 @@
 <template>
+<span>
+
 <div class="create-role-main">
+  
     <div class="slds-form-element custom-grid">
         <Labels labelName="First Name" className="slds-form-element__label custom-label" for="text-input-id-46" required="true"/>
         
         <div class="slds-form-element__control custom-grid-control mb-20">
-            <Inputs fieldId="first_name" placeHolder="First name"  class="slds-input custom-grid-input "  className="slds-input" v-model.trim="theUser.first_name" />
+            <Inputs fieldId="first_name" placeHolder="First name"  class="slds-input custom-grid-input "  className="slds-input" v-model.trim="theUser.first_name" :value="text" />
             
             <span class="text-danger" id="first_name_error" ref="caterror"></span>
         </div>
@@ -102,7 +105,7 @@
     </div>
 
 </div>
- 
+</span> 
 </template>
 
 <script>
@@ -125,7 +128,7 @@ export default {
         hidesins:true
     }
   },
-  props: ['theUser','rolelist','paymentPlan'],
+  props: ['theUser','rolelist','paymentPlan','userForm'],
   methods: {
     ChangeRole(e) {
        

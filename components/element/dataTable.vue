@@ -7,7 +7,7 @@
                 <tr class="slds-line-height_reset">
                    
                     <th class=" slds-cell_action-mode" scope="col" v-for="item in header"
-                        :key="item" :style="[item =='' ? {'width': '3.25rem'} : {}]" v-bind:class = "(item =='')?'slds-text-align_right slds-cell_action-mode':'slds-is-resizable slds-is-sortable slds-cell_action-mode'">
+                        :key="item" :style="[item =='' ? {'width': '3.25rem'} : {}]" v-bind:class = "(item =='')?' slds-cell_action-mode':'slds-is-resizable slds-is-sortable slds-cell_action-mode'">
                         <div v-if="item == ''">
                             <span id="column-group-header" class="slds-assistive-text">Choose a
                                 row</span>
@@ -56,7 +56,7 @@
 
                <tr aria-selected="false" v-if="tableData.length !=0" class="slds-hint-parent" v-for="(item, key) in tableData" :key="item">
 
-                    <td class="slds-cell_action-mode" role="gridcell" v-for="(column, k) in item" :key="column" v-bind:class = "(column =='')?'slds-text-align_right slds-cell_action-mode':'slds-cell_action-mode'">
+                    <td class="slds-cell_action-mode" role="gridcell" v-for="(column, k) in item" :key="column" v-bind:class = "(column =='')?'slds-pl-20 slds-cell_action-mode':'slds-cell_action-mode'">
 
                         <div v-if="column === ''">
                             <div class="slds-checkbox cus-check1">
@@ -70,7 +70,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div v-else-if="k == 'id'">
+                        <div v-else-if="k == 'id'" class="">
                             {{ key + 1 }}
                         </div>
                         <div v-else>
@@ -87,7 +87,7 @@
                                             :id='item.id'><img src="../../assets/img/svg/eye-blue.svg" alt="icon"></a>
                                     </li>
                                     <li>
-                                        <router-link :to="`/edit-user/${item.id}`" class=""><img
+                                        <router-link :to="`/user-management/user/edit-user/${item.id}`" class=""><img
                                                 src="../../assets/img/svg/edit.svg" alt="icon"></router-link>
                                     </li>
 
@@ -105,13 +105,19 @@
                 </tr>
             </tbody>
         </table>
+
     </div>
+
 </template>
 
 <script>
+
 export default {
     name: "Data-table",
     props: ['header','tableData','no_record_avalible'],
+    components:{
+ 
+    },
     created(){
        
     }

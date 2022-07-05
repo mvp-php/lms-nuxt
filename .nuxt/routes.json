@@ -35,13 +35,6 @@
     "_name": "_2c6b2b70"
   },
   {
-    "name": "reset-password",
-    "path": "/reset-password",
-    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/reset-password/index.vue",
-    "chunkName": "pages/reset-password/index",
-    "_name": "_643f7290"
-  },
-  {
     "name": "reset-success",
     "path": "/reset-success",
     "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/reset-success/index.vue",
@@ -68,6 +61,20 @@
     "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/user-management/user/create-user.vue",
     "chunkName": "pages/user-management/user/create-user",
     "_name": "_cfc7a014"
+  },
+  {
+    "name": "user-management-user-edit-user-id",
+    "path": "/user-management/user/edit-user/:id",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/user-management/user/edit-user/_id.vue",
+    "chunkName": "pages/user-management/user/edit-user/_id",
+    "_name": "_37789cd3"
+  },
+  {
+    "name": "reset-password-id",
+    "path": "/reset-password/:id?",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/reset-password/_id.vue",
+    "chunkName": "pages/reset-password/_id",
+    "_name": "_5b28d8f8"
   },
   {
     "name": "index",

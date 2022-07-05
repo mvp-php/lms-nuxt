@@ -44,6 +44,9 @@
   "UserCreateUser": {
     "description": "Auto imported from components/User/create_user.vue"
   },
+  "UserEditUser": {
+    "description": "Auto imported from components/User/edit_user.vue"
+  },
   "UserList": {
     "description": "Auto imported from components/User/user_list.vue"
   },
@@ -61,6 +64,9 @@
   },
   "ElementNuxtLink": {
     "description": "Auto imported from components/element/NuxtLink.vue"
+  },
+  "ElementPaginate": {
+    "description": "Auto imported from components/element/Paginate.vue"
   },
   "ElementTabs": {
     "description": "Auto imported from components/element/Tabs.vue"
