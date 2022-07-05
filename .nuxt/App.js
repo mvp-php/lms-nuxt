@@ -8,8 +8,9 @@ import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
 import _2d217e9e from '../layouts/auth.vue'
 import _6f6c098b from '../layouts/default.vue'
+import _0d9ac408 from '../layouts/frontend.vue'
 
-const layouts = { "_auth": sanitizeComponent(_2d217e9e),"_default": sanitizeComponent(_6f6c098b) }
+const layouts = { "_auth": sanitizeComponent(_2d217e9e),"_default": sanitizeComponent(_6f6c098b),"_frontend": sanitizeComponent(_0d9ac408) }
 
 export default {
   render (h, props) {

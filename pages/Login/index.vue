@@ -49,8 +49,8 @@ export default {
   },
 
   methods: {
-    onSubmit(event) {
-      console.log("rere");
+   async onSubmit(event) {
+      
       event.preventDefault();
       var params = {
         email: this.user.email,
@@ -74,10 +74,10 @@ export default {
         cnt = 1;
       }
       if (cnt == 0) {
-        AuthService.callLogin(params).then((result) => {
-          console.log(result);
-          // localStorage.setItem("userData", JSON.stringify(result.data.data))
-          // this.$router.push({ name: 'user-management' });
+       AuthService.callLogin(params).then((result) => {
+         
+          localStorage.setItem("userData", JSON.stringify(result.data.data))
+          this.$router.push({ name: 'dashboard' });
           this.successMessage = result.data.error_msg;
 
           this.successToastrShow();
@@ -86,7 +86,9 @@ export default {
           this.errorToastrShow();
 
         })
-      } else {
+    }
+        
+       else {
 
       }
 

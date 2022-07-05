@@ -5,20 +5,56 @@
   "NuxtLogo": {
     "description": "Auto imported from components/NuxtLogo.vue"
   },
-  "Header": {
-    "description": "Auto imported from components/Header/header.vue"
+  "Category": {
+    "description": "Auto imported from components/Category/category.vue"
+  },
+  "Dashboard": {
+    "description": "Auto imported from components/Dashboard/dashboard.vue"
   },
   "ForgotPassword": {
     "description": "Auto imported from components/ForgotPassword/forgotPassword.vue"
   },
+  "IncludeFooter": {
+    "description": "Auto imported from components/Include/Footer.vue"
+  },
+  "IncludeHeader": {
+    "description": "Auto imported from components/Include/Header.vue"
+  },
+  "IncludeSidebar": {
+    "description": "Auto imported from components/Include/Sidebar.vue"
+  },
   "ResetPassword": {
     "description": "Auto imported from components/ResetPassword/resetPassword.vue"
+  },
+  "Role": {
+    "description": "Auto imported from components/Role/Role.vue"
+  },
+  "RoleCreateRole": {
+    "description": "Auto imported from components/Role/create_role.vue"
   },
   "ServiceAuthService": {
     "description": "Auto imported from components/Service/AuthService.js"
   },
-  "ServiceDropZoneService": {
-    "description": "Auto imported from components/Service/DropZoneService.js"
+  "ServicePaymentPlanService": {
+    "description": "Auto imported from components/Service/PaymentPlanService.js"
+  },
+  "ServiceRoleDataService": {
+    "description": "Auto imported from components/Service/RoleDataService.js"
+  },
+  "ServiceUserService": {
+    "description": "Auto imported from components/Service/UserService.js"
+  },
+  "UserCreateUser": {
+    "description": "Auto imported from components/User/create_user.vue"
+  },
+  "UserEditUser": {
+    "description": "Auto imported from components/User/edit_user.vue"
+  },
+  "UserList": {
+    "description": "Auto imported from components/User/user_list.vue"
+  },
+  "ConfigAuthHeader": {
+    "description": "Auto imported from components/config/AuthHeader.js"
   },
   "ConfigDataService": {
     "description": "Auto imported from components/config/DataService.js"
@@ -31,6 +67,15 @@
   },
   "ElementNuxtLink": {
     "description": "Auto imported from components/element/NuxtLink.vue"
+  },
+  "ElementPaginate": {
+    "description": "Auto imported from components/element/Paginate.vue"
+  },
+  "ElementTabs": {
+    "description": "Auto imported from components/element/Tabs.vue"
+  },
+  "ElementDataTable": {
+    "description": "Auto imported from components/element/dataTable.vue"
   },
   "ElementErrorToastr": {
     "description": "Auto imported from components/element/errorToastr.vue"

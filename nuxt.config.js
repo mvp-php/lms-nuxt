@@ -12,7 +12,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon1.ico' }
     ]
   },
 
@@ -21,7 +21,9 @@ export default {
 
 
   ],
-
+  server: {
+    port: 4500,
+},
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
@@ -35,6 +37,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/auth-next',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -48,5 +51,16 @@ export default {
       productionTip: false,
       devtools: true
     }
+  },
+  axios: {
+    credentials: true,
+  },
+  auth: {
+    strategies: {
+      laravelSanctum: {
+        provider: 'laravel/sanctum',
+        url: 'http://localhost/api/v1',
+      },
+    },
   },
 }
