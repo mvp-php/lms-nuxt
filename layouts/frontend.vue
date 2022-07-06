@@ -3,8 +3,10 @@
   <div>
     <Header/>
     <Sidebar/>
- 
+  <div class="content-main">
     <Nuxt />
+  </div>
+    
     <Footer/>
 
 </div>
@@ -12,6 +14,7 @@
 <style>
 @import '@/assets/styles/salesforce-lightning-design-system.min.css';
 @import '@/assets/styles/style.css';
+@import '@/assets/styles/developer.css';
 </style>
 <script>
 import Header from '../components/Include/Header.vue';

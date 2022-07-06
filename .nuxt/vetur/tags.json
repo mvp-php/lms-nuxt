@@ -5,14 +5,20 @@
   "NuxtLogo": {
     "description": "Auto imported from components/NuxtLogo.vue"
   },
+  "Category": {
+    "description": "Auto imported from components/Category/category.vue"
+  },
+  "ConfigAuthHeader": {
+    "description": "Auto imported from components/config/AuthHeader.js"
+  },
   "ConfigDataService": {
     "description": "Auto imported from components/config/DataService.js"
   },
   "Dashboard": {
     "description": "Auto imported from components/Dashboard/dashboard.vue"
   },
-  "Category": {
-    "description": "Auto imported from components/Category/category.vue"
+  "ElementDataTable": {
+    "description": "Auto imported from components/element/dataTable.vue"
   },
   "ElementDropzone": {
     "description": "Auto imported from components/element/Dropzone.vue"
@@ -44,8 +50,14 @@
   "ElementNuxtLink": {
     "description": "Auto imported from components/element/NuxtLink.vue"
   },
+  "ElementPaginate": {
+    "description": "Auto imported from components/element/Paginate.vue"
+  },
   "ElementSuccessToastr": {
     "description": "Auto imported from components/element/successToastr.vue"
+  },
+  "ElementTabs": {
+    "description": "Auto imported from components/element/Tabs.vue"
   },
   "ForgotPassword": {
     "description": "Auto imported from components/ForgotPassword/forgotPassword.vue"
@@ -62,6 +74,12 @@
   "ResetPassword": {
     "description": "Auto imported from components/ResetPassword/resetPassword.vue"
   },
+  "RoleCreateRole": {
+    "description": "Auto imported from components/Role/create_role.vue"
+  },
+  "Role": {
+    "description": "Auto imported from components/Role/Role.vue"
+  },
   "ServiceAuthService": {
     "description": "Auto imported from components/Service/AuthService.js"
   },
@@ -70,5 +88,23 @@
   },
   "ServiceDropZoneService": {
     "description": "Auto imported from components/Service/DropZoneService.js"
+  },
+  "ServicePaymentPlanService": {
+    "description": "Auto imported from components/Service/PaymentPlanService.js"
+  },
+  "ServiceRoleDataService": {
+    "description": "Auto imported from components/Service/RoleDataService.js"
+  },
+  "ServiceUserService": {
+    "description": "Auto imported from components/Service/UserService.js"
+  },
+  "UserCreateUser": {
+    "description": "Auto imported from components/User/create_user.vue"
+  },
+  "UserEditUser": {
+    "description": "Auto imported from components/User/edit_user.vue"
+  },
+  "UserList": {
+    "description": "Auto imported from components/User/user_list.vue"
   }
 }

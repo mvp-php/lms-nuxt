@@ -9,7 +9,8 @@
 <script>
 
 export default {
-    props: ['fieldId', 'FieldType', 'value', 'placeHolder', 'className', 'modelname', 'password'],
+    props: ['fieldId', 'FieldType', 'bindValue', 'placeHolder', 'className', 'modelname', 'password', 'searchKeyup'],
+
 
 };
 </script>

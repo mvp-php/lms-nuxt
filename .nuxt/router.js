@@ -10,9 +10,14 @@ const _0b936e12 = () => interopDefault(import('..\\pages\\dashboard\\index.vue' 
 const _c93fadfe = () => interopDefault(import('..\\pages\\forgot-password\\index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
 const _50386f68 = () => interopDefault(import('..\\pages\\link-successfully\\index.vue' /* webpackChunkName: "pages/link-successfully/index" */))
 const _4acd443d = () => interopDefault(import('..\\pages\\Login\\index.vue' /* webpackChunkName: "pages/Login/index" */))
-const _71ee6996 = () => interopDefault(import('..\\pages\\reset-password\\index.vue' /* webpackChunkName: "pages/reset-password/index" */))
 const _1ff24881 = () => interopDefault(import('..\\pages\\reset-success\\index.vue' /* webpackChunkName: "pages/reset-success/index" */))
 const _1474e754 = () => interopDefault(import('..\\pages\\Login\\login.vue' /* webpackChunkName: "pages/Login/login" */))
+const _5171608b = () => interopDefault(import('..\\pages\\user-management\\role\\index.vue' /* webpackChunkName: "pages/user-management/role/index" */))
+const _762a03d4 = () => interopDefault(import('..\\pages\\user-management\\user\\index.vue' /* webpackChunkName: "pages/user-management/user/index" */))
+const _7bf7a720 = () => interopDefault(import('..\\pages\\user-management\\role\\create-role.vue' /* webpackChunkName: "pages/user-management/role/create-role" */))
+const _c7e92d80 = () => interopDefault(import('..\\pages\\user-management\\user\\create-user.vue' /* webpackChunkName: "pages/user-management/user/create-user" */))
+const _661cefb8 = () => interopDefault(import('..\\pages\\user-management\\user\\edit-user\\_id.vue' /* webpackChunkName: "pages/user-management/user/edit-user/_id" */))
+const _7d6bd246 = () => interopDefault(import('..\\pages\\reset-password\\_id.vue' /* webpackChunkName: "pages/reset-password/_id" */))
 const _fa2c8ca4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -51,10 +56,6 @@ export const routerOptions = {
     component: _4acd443d,
     name: "Login"
   }, {
-    path: "/reset-password",
-    component: _71ee6996,
-    name: "reset-password"
-  }, {
     path: "/reset-success",
     component: _1ff24881,
     name: "reset-success"
@@ -62,6 +63,30 @@ export const routerOptions = {
     path: "/Login/login",
     component: _1474e754,
     name: "Login-login"
+  }, {
+    path: "/user-management/role",
+    component: _5171608b,
+    name: "user-management-role"
+  }, {
+    path: "/user-management/user",
+    component: _762a03d4,
+    name: "user-management-user"
+  }, {
+    path: "/user-management/role/create-role",
+    component: _7bf7a720,
+    name: "user-management-role-create-role"
+  }, {
+    path: "/user-management/user/create-user",
+    component: _c7e92d80,
+    name: "user-management-user-create-user"
+  }, {
+    path: "/user-management/user/edit-user/:id",
+    component: _661cefb8,
+    name: "user-management-user-edit-user-id"
+  }, {
+    path: "/reset-password/:id?",
+    component: _7d6bd246,
+    name: "reset-password-id"
   }, {
     path: "/",
     component: _fa2c8ca4,

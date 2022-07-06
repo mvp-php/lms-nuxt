@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="slds-form-element custom-form-element mb-30">
-            <Labels labelName="RE ENTER NEW PASSWORD" className="slds-form-element__label text-white" />
+            <Labels labelName="CONFIRM NEW PASSWORD" className="slds-form-element__label text-white" />
             <div class="slds-form-element__control">
 
                 <Inputs fieldId="password" :password="confirmShowPassword" placeHolder="Password" className="slds-input"

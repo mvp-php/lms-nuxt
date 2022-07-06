@@ -74,26 +74,20 @@ export default {
         cnt = 1;
       }
       if (cnt == 0) {
-       try {
-        const data = { email: this.email, password: this.password }
-        await this.$auth.loginWith('laravelSanctum', { data:params})
-        .then(() => this.$router.push('/dashboard'))
-      } catch (e) {
-        console.log(e)
-      }
-    }
-        // AuthService.callLogin('laravelSanctum',{'data':params}).then((result) => {
+       AuthService.callLogin(params).then((result) => {
          
-        //   localStorage.setItem("userData", JSON.stringify(result.data.data))
-        //   this.$router.push({ name: 'dashboard' });
-        //   this.successMessage = result.data.error_msg;
+          localStorage.setItem("userData", JSON.stringify(result.data.data))
+          this.$router.push({ name: 'dashboard' });
+          this.successMessage = result.data.error_msg;
 
-        //   this.successToastrShow();
-        // }).catch(error => {
-        //   this.errorMessage = error.response.data.error_msg;
-        //   this.errorToastrShow();
+          this.successToastrShow();
+        }).catch(error => {
+          this.errorMessage = error.response.data.error_msg;
+          this.errorToastrShow();
 
-        // })
+        })
+    }
+        
        else {
 
       }
