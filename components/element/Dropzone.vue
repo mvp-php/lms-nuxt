@@ -1,5 +1,5 @@
 <template>
-    <dropzone id="foo" ref="el" :options="options" :destroyDropzone="true">
+    <dropzone id="foo" ref="el" :options="options" :destroyDropzone="true" @vdropzone-success="fileUploadSuccessEvent">
         <!-- <div class="dropzone-custom-content">
             <h3 class="dropzone-custom-title">Drag and drop to upload content!</h3>
             <div class="subtitle">...or click to select a file from your computer</div>
@@ -9,8 +9,9 @@
 <script>
 import Dropzone from 'nuxt-dropzone'
 import 'nuxt-dropzone/dropzone.css'
-import DropZoneService from '../Service/DropZoneService';
+// import DropZoneService from '../Service/DropZoneService';
 export default {
+    props: ['fileUploadSuccessEvent'],
     components: {
         Dropzone
     },
@@ -27,7 +28,7 @@ export default {
                 clickable: true,
                 maxFiles: 5,
                 parallelUploads: 5,
-                headers: { "My-Awesome-Header": "header value" },
+                headers: { "My-Awesome-Header": "header value" }
             },
             loading: true,
             loading: {
@@ -38,29 +39,35 @@ export default {
             headers: {
                 "Content-Type": "multipart/form-data",
             },
-            methods: {
-                sendingEvent(file, xhr, formData) {
-                    formData.append('paramName', 'some value or other');
-                },
-                async submit() {
-                    DropZoneService.testDropzone(this.form).then((result) => {
-                    }).catch(error => {
-                    })
-                },
-                start() {
-                    this.loading = true
-                },
-                finish() {
-                    this.loading = false
-                },
-                onError(e) {
-                    console.log(e, "kjuuhhhh");
-                },
-            }
         }
     },
     mounted() {
         const instance = this.$refs.el.dropzone
+    },
+    methods: {
+        // fileUploadSuccessEvent(file, response) {
+        //     console.log(response, "response");
+        // }
+        //     sendingEvent(file, xhr, formData) {
+        //         console.log(file)
+        //         formData.append('paramName', 'some value or other');
+        //     },
+        //     async submit() {
+        //         DropZoneService.testDropzone(this.form).then((result) => {
+        //             console.log("Result", result);
+        //         }).catch(error => {
+        //         })
+        //     },
+        //     start() {
+        //         this.loading = true
+        //     },
+        //     finish() {
+        //       this.loading = false
+        //     },
+        //     onError(e) {
+        //         console.log(e, "kjuuhhhh");
+        //     },
     }
+
 }
 </script>

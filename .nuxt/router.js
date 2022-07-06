@@ -4,14 +4,16 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _beef9e16 = () => interopDefault(import('../pages/category/index.vue' /* webpackChunkName: "pages/category/index" */))
-const _1726c1d3 = () => interopDefault(import('../pages/dashboard/index.vue' /* webpackChunkName: "pages/dashboard/index" */))
-const _2ab6c504 = () => interopDefault(import('../pages/forgot-password/index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
-const _8f3f4f4e = () => interopDefault(import('../pages/link-successfully/index.vue' /* webpackChunkName: "pages/link-successfully/index" */))
-const _2c6b2b70 = () => interopDefault(import('../pages/Login/index.vue' /* webpackChunkName: "pages/Login/index" */))
-const _643f7290 = () => interopDefault(import('../pages/reset-password/index.vue' /* webpackChunkName: "pages/reset-password/index" */))
-const _344624f8 = () => interopDefault(import('../pages/reset-success/index.vue' /* webpackChunkName: "pages/reset-success/index" */))
-const _52f7988e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _e3c19d20 = () => interopDefault(import('..\\pages\\category\\index.vue' /* webpackChunkName: "pages/category/index" */))
+const _571776d1 = () => interopDefault(import('..\\pages\\categorys\\index.vue' /* webpackChunkName: "pages/categorys/index" */))
+const _0b936e12 = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index" */))
+const _c93fadfe = () => interopDefault(import('..\\pages\\forgot-password\\index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
+const _50386f68 = () => interopDefault(import('..\\pages\\link-successfully\\index.vue' /* webpackChunkName: "pages/link-successfully/index" */))
+const _4acd443d = () => interopDefault(import('..\\pages\\Login\\index.vue' /* webpackChunkName: "pages/Login/index" */))
+const _71ee6996 = () => interopDefault(import('..\\pages\\reset-password\\index.vue' /* webpackChunkName: "pages/reset-password/index" */))
+const _1ff24881 = () => interopDefault(import('..\\pages\\reset-success\\index.vue' /* webpackChunkName: "pages/reset-success/index" */))
+const _1474e754 = () => interopDefault(import('..\\pages\\Login\\login.vue' /* webpackChunkName: "pages/Login/login" */))
+const _fa2c8ca4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -26,11 +28,15 @@ export const routerOptions = {
 
   routes: [{
     path: "/category",
-    component: _beef9e16,
+    component: _e3c19d20,
     name: "category"
   }, {
+    path: "/categorys",
+    component: _571776d1,
+    name: "categorys"
+  }, {
     path: "/dashboard",
-    component: _1726c1d3,
+    component: _0b936e12,
     name: "dashboard"
   }, {
     path: "/forgot-password",
@@ -38,7 +44,7 @@ export const routerOptions = {
     name: "forgot-password"
   }, {
     path: "/link-successfully",
-    component: _8f3f4f4e,
+    component: _50386f68,
     name: "link-successfully"
   }, {
     path: "/Login",
@@ -50,8 +56,12 @@ export const routerOptions = {
     name: "reset-password"
   }, {
     path: "/reset-success",
-    component: _344624f8,
+    component: _1ff24881,
     name: "reset-success"
+  }, {
+    path: "/Login/login",
+    component: _1474e754,
+    name: "Login-login"
   }, {
     path: "/",
     component: _fa2c8ca4,

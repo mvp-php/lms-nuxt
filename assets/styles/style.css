@@ -470,9 +470,9 @@ img.filter {
     line-height: 21px;
 }
 .modal-main-record-title {
+    text-align: start;
     border-bottom: 0px;
     padding: 20px 19.6px 10px 20px;
-    text-align: start;
     font-family: 'Poppins-SemiBold';
     color: var(--blue2);
     border-top-left-radius: 5px;
@@ -481,6 +481,7 @@ img.filter {
 .modal-main-record-title .slds-modal__title {
     line-height: 30px;
     font-size: 20px;
+    text-align:left;
 }
 .close-modal-record {
     top: 20px !important;

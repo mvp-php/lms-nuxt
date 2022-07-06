@@ -2,16 +2,23 @@
   {
     "name": "category",
     "path": "/category",
-    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/category/index.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\category\\\\index.vue",
     "chunkName": "pages/category/index",
-    "_name": "_beef9e16"
+    "_name": "_e3c19d20"
+  },
+  {
+    "name": "categorys",
+    "path": "/categorys",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\categorys\\\\index.vue",
+    "chunkName": "pages/categorys/index",
+    "_name": "_571776d1"
   },
   {
     "name": "dashboard",
     "path": "/dashboard",
-    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/dashboard/index.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\dashboard\\\\index.vue",
     "chunkName": "pages/dashboard/index",
-    "_name": "_1726c1d3"
+    "_name": "_0b936e12"
   },
   {
     "name": "forgot-password",
@@ -23,9 +30,9 @@
   {
     "name": "link-successfully",
     "path": "/link-successfully",
-    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/link-successfully/index.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\link-successfully\\\\index.vue",
     "chunkName": "pages/link-successfully/index",
-    "_name": "_8f3f4f4e"
+    "_name": "_50386f68"
   },
   {
     "name": "Login",
@@ -44,9 +51,16 @@
   {
     "name": "reset-success",
     "path": "/reset-success",
-    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/reset-success/index.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\reset-success\\\\index.vue",
     "chunkName": "pages/reset-success/index",
-    "_name": "_344624f8"
+    "_name": "_1ff24881"
+  },
+  {
+    "name": "Login-login",
+    "path": "/Login/login",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\Login\\\\login.vue",
+    "chunkName": "pages/Login/login",
+    "_name": "_1474e754"
   },
   {
     "name": "index",

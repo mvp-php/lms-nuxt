@@ -3,8 +3,8 @@
   <div>
     <section class="login-section">
       <div class="login-container">
-        <imageComponent src="../assets/img/logo-light.png" class="logo-light mb-20" alt="logo" /> 
- 
+        <imageComponent src="../assets/img/logo-light.png" class="logo-light mb-20" alt="logo" />
+
         <h1 class="login-title mb-30">LOGIN</h1>
         <form v-on:submit.prevent="onSubmit">
           <Login :the-user="user"></Login>
@@ -17,13 +17,12 @@
   </div>
 </template>
 <style>
-
 </style>
 <script>
 import imageComponent from '../../components/element/image.vue';
 import AuthService from '../../components/Service/AuthService';
 export default {
-  components:{
+  components: {
     imageComponent
   },
   props: {
@@ -55,34 +54,34 @@ export default {
       document.getElementById("email_error").textContent = "";
       document.getElementById("password_error").textContent = "";
 
-      var cnt =0;
+      var cnt = 0;
 
-        if(!this.user.email){
-            document.getElementById("email_error").textContent = "Enter the email address";
-            event.preventDefault();
-            cnt =1;
-        }
+      if (!this.user.email) {
+        document.getElementById("email_error").textContent = "Enter the email address";
+        event.preventDefault();
+        cnt = 1;
+      }
 
-        if(!this.user.password){
-            document.getElementById("password_error").textContent = "Enter the password";
-            event.preventDefault();
-            cnt =1;
-        }
-        if(cnt ==0){
-          AuthService.callLogin(params).then((result) => {
-              console.log(result);
-              localStorage.setItem("userData", JSON.stringify(result.data.data))
-              this.$router.push({ name: 'user-management' });
-            }).catch(error => {
-              
-            
+      if (!this.user.password) {
+        document.getElementById("password_error").textContent = "Enter the password";
+        event.preventDefault();
+        cnt = 1;
+      }
+      if (cnt == 0) {
+        AuthService.callLogin(params).then((result) => {
+          console.log(result);
+          localStorage.setItem("userData", JSON.stringify(result.data.data))
+          this.$router.push({ name: 'user-management' });
+        }).catch(error => {
 
-          })
-        }else{
 
-        }
-      
-      
+
+        })
+      } else {
+
+      }
+
+
     },
     onReset(event) {
       event.preventDefault();

@@ -6,6 +6,6 @@ export default axios.create({
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
         "Content-type": "application/json",
-        'content-type': 'multipart/form-data'
+        // 'content-type': 'multipart/form-data'
     }
 });
