@@ -1,7 +1,7 @@
 <template>
 
-    <span>
-      <dataTable :header="header" :tableData="tableData" :no_record_avalible="no_record_avalible"/>
+    <span class="slds-user-table">
+      <dataTable :header="header" :tableData="tableData" :no_record_avalible="no_record_avalible" :paginateObjs="paginateObj" url="/user-management/role" :searchKeyword="searchkeyword"/>
     </span>
 
 </template>
@@ -10,11 +10,14 @@
 import dataTable from '../element/dataTable.vue';
 export default {
     name: 'UserForm',
-    props:['header','tableData','no_record_avalible','openViewModel'],
+    props:['header','tableData','no_record_avalible','openViewModel','paginateObj','searchkeyword'],
     components:{
         dataTable
     },
     methods:{
+         getPaginatesNew:function(currentPage,value){
+            this.$parent.getPaginatesMain(currentPage,value);
+        },
         viewMethod: function(id) { 
            this.$parent.openViewModel(id);
         },
@@ -23,6 +26,9 @@ export default {
         },
         editMethod: function(id){
             this.$parent.userEdit(id);
+        },
+        bulkDeleted: function(keyDelete){
+            this.$parent.bulkDeleteds(keyDelete);
         }
     }
     

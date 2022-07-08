@@ -6,8 +6,8 @@ class UserService {
     return http.post(`/user-save/`,data, { headers: authHeader() });
   }
 
-  getUserList(data){
-    return http.get(`/user-list?search=`+data,{ headers: authHeader() });
+  getUserList(data,currentPage){
+    return http.get(`/user-list?page=`+currentPage+`&search=`+data,{ headers: authHeader() });
   }
   
   getUserDetails(id){
@@ -23,9 +23,14 @@ class UserService {
 
   deleteUser(id){
   
-    return http.post(`/user-delete/`,{
-      id: id,
-  },{ headers: authHeader() });
+    return http.post(`/user-delete/`,{id: id,},{ headers: authHeader() });
+  }
+  bulkUserDelete(bulkId){
+    return http.post(`/user-bulk-delete/`,{id: bulkId,},{ headers: authHeader() });
+  }
+
+  callLogout(){
+      return http.post(`/call-logout/`,'',{ headers: authHeader() });
   }
 }
 export default new UserService();

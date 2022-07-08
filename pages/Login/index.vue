@@ -77,7 +77,7 @@ export default {
        AuthService.callLogin(params).then((result) => {
          
           localStorage.setItem("userData", JSON.stringify(result.data.data))
-          this.$router.push({ name: 'dashboard' });
+          this.$router.push({ path: '/user-management/role' });
           this.successMessage = result.data.error_msg;
 
           this.successToastrShow();

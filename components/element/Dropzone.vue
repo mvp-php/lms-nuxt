@@ -9,6 +9,7 @@
 <script>
 import Dropzone from 'nuxt-dropzone'
 import 'nuxt-dropzone/dropzone.css'
+import authHeader from '../config/AuthHeader';
 // import DropZoneService from '../Service/DropZoneService';
 export default {
     props: ['fileUploadSuccessEvent'],
@@ -28,7 +29,7 @@ export default {
                 clickable: true,
                 maxFiles: 1,
                 parallelUploads: 5,
-                headers: { "My-Awesome-Header": "header value" }
+                headers: { "My-Awesome-Header": "header value"}
             },
             dataV: this.data,
             loading: true,

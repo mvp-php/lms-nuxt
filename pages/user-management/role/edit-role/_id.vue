@@ -9,10 +9,10 @@
                         <nuxt-link to="/user-management/role"><span>BACK </span></nuxt-link>
                     </div>
                     <div class="blue-text mb-20">
-                        Create A Role
+                        Edit A Role
                     </div>
                     <form v-on:submit.prevent="submitData">
-                        <CreateRole :the-user="user" :EntitiesList="EntitiesList" />
+                        <EditRole :the-user="user" :selectedPermission="selectedPermission"/>
                         <div class="btn-align-end">
                             <ButtonComponent type="submit" class="slds-button slds-button_brand btnmain blue-btn ml-10"
                                 :buttonName="ButtonName" />
@@ -30,71 +30,62 @@
 </template>
 
 <script>
-import imageComponent from '../../../components/element/image.vue';
-import CreateRole from '../../../components/Role/create_role.vue';
+import EditRole from '../../../../components/Role/edit_role.vue';
 
-import RoleDataService from "../../../components/Service/RoleDataService";
+import RoleDataService from "../../../../components/Service/RoleDataService";
 
-import ButtonComponent from '../../../components/element/formButton.vue';
-import errorToastr from '../../../components/element/errorToastr.vue';
-
+import ButtonComponent from '../../../../components/element/formButton.vue';
+import errorToastr from '../../../../components/element/errorToastr.vue';
+import imageComponent from '../../../../components/element/image.vue';
 export default {
     layout: 'frontend',
     components: {
-        CreateRole,
+        EditRole,
+        
         ButtonComponent,
         errorToastr,
         imageComponent
     },
-    props: {
-        isTableDataVisible: {
-            type: Boolean,
-            default: true
-        },
-        showForm: {
-            type: Boolean,
-            default: true
-        }
-    },
+    
     data() {
         return {
             user: {
+
                 permission:[],
                 role_title:'',
                 description:''
-                
             },
-            ButtonName: "Save Role",
+            ButtonName: "Update Role",
             errorMessage: "",
             classObj: 'arrow-left',
-            hides: true,
-            hidessucces: true,
+            
             successMessage: "",
-           
-            EntitiesList: [],
+            
+            
             dangerHide: true,
-            selectedArray:''
+            userForm:[],
         };
     },
-    mounted() {
-        this.getEntitiesAndPermissionList();
-    },
     
+    created() {
+    
+        this.getRoleDetails();
+       
+    },
     methods: {
-        getEntitiesAndPermissionList() {
-            this.EntitiesList = [];
-            RoleDataService.getEntitiesAndPermissionList()
-                .then(response => {
-                    this.EntitiesList = response.data.data;
-                    console.log(response.data);
-                })
-                .catch(e => {
-                    console.log(e);
-                });
+        
+        
+        getRoleDetails(){
+            RoleDataService.getDetailsById(this.$route.params.id).then(response => {
+                    this.user = response.data.data;
+                   
+                    
+                }).catch(e => {
+                console.log(e)
+            });
         },
         submitData(event) {
             document.getElementById("role_title_error").textContent = "";
-           
             
             var cnt = 0;
             if (!this.user.role_title) {
@@ -102,23 +93,18 @@ export default {
                 event.preventDefault();
                 cnt =1;
             }
-           console.log(this.user);
             if (this.user.permission.length ==0) {
                 document.getElementById("permission_error").textContent = "Please select any one permission";
                 event.preventDefault();
                 cnt =1;
             }
-            
 
             if (cnt == 0) {
-               
-                RoleDataService.create(this.user)
+                RoleDataService.updateRole(this.user,this.$route.params.id)
                     .then((result) => {
                         console.log(result)
-                       
-                 
-                        this.$router.push({ path: '/user-management/role',params: { success: 1 } });
-                       
+
+                        this.$router.push({ path: '/user-management/role' });
                     }).catch(error => {
 
                         this.errorMessage = error.response.data.error_msg;
@@ -129,10 +115,6 @@ export default {
                     })
             }
 
-        },
-        selectedId:function(selected){
-        
-            document.getElementById("permission_error").textContent = '';
         },
         dangerToasterShow() {
 
