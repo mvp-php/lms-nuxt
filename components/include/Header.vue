@@ -14,8 +14,9 @@
                       <li>
                           <a href="javscript:void(0)" @click="Logout()">Logout</a>
                       </li>
-                  </ul>
+                  </ul> 
               </div>
+              <li></li>
         </div>
       </div>
     </div>

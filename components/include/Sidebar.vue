@@ -17,7 +17,7 @@
                 <div class="sidebar-tooltip">Dashboard</div>
               </div>
           </li>
-          <li>
+          <li> 
             <router-link to="/user-management/role">
               <div class="side-svg-main slds-align_absolute-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
