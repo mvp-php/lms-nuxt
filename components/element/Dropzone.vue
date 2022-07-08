@@ -18,7 +18,7 @@ export default {
     data() {
         return {
             options: {
-                url: process.env.baseUrl + "/test-dropzone",
+                url: process.env.baseUrl + "/dropzone-image-upload",
                 thumbnailWidth: 200,
                 paramName: "image",
                 acceptedFiles: ".png, .jpeg, .jpg, .gif",
@@ -26,10 +26,11 @@ export default {
                 addRemoveLinks: true,
                 uploadMultiple: false,
                 clickable: true,
-                maxFiles: 5,
+                maxFiles: 1,
                 parallelUploads: 5,
                 headers: { "My-Awesome-Header": "header value" }
             },
+            dataV: this.data,
             loading: true,
             loading: {
                 color: 'blue',

@@ -8,14 +8,14 @@
   "Category": {
     "description": "Auto imported from components/Category/category.vue"
   },
+  "Dashboard": {
+    "description": "Auto imported from components/Dashboard/dashboard.vue"
+  },
   "ConfigAuthHeader": {
     "description": "Auto imported from components/config/AuthHeader.js"
   },
   "ConfigDataService": {
     "description": "Auto imported from components/config/DataService.js"
-  },
-  "Dashboard": {
-    "description": "Auto imported from components/Dashboard/dashboard.vue"
   },
   "ElementDataTable": {
     "description": "Auto imported from components/element/dataTable.vue"
@@ -34,6 +34,9 @@
   },
   "ElementFormLabel": {
     "description": "Auto imported from components/element/formLabel.vue"
+  },
+  "ElementFormSelectField": {
+    "description": "Auto imported from components/element/formSelectField.vue"
   },
   "ElementFormTextareaField": {
     "description": "Auto imported from components/element/formTextareaField.vue"
@@ -94,6 +97,9 @@
   },
   "ServiceRoleDataService": {
     "description": "Auto imported from components/Service/RoleDataService.js"
+  },
+  "ServiceSubcategoryService": {
+    "description": "Auto imported from components/Service/SubcategoryService.js"
   },
   "ServiceUserService": {
     "description": "Auto imported from components/Service/UserService.js"

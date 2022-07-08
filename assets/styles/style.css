@@ -613,9 +613,6 @@ img.filter {
     max-width: 95px;
     min-width: 95px;
 }   
-.group-row-main .group-col1 .course-row-manage:last-child .course-col1 {
-    margin-top: 10px;
-}
 .table-modal-manages {
     background:var(--white);
     border-radius: 5px;

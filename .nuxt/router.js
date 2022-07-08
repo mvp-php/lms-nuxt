@@ -5,12 +5,12 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _e3c19d20 = () => interopDefault(import('..\\pages\\category\\index.vue' /* webpackChunkName: "pages/category/index" */))
-const _571776d1 = () => interopDefault(import('..\\pages\\categorys\\index.vue' /* webpackChunkName: "pages/categorys/index" */))
 const _0b936e12 = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index" */))
 const _c93fadfe = () => interopDefault(import('..\\pages\\forgot-password\\index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
 const _50386f68 = () => interopDefault(import('..\\pages\\link-successfully\\index.vue' /* webpackChunkName: "pages/link-successfully/index" */))
 const _4acd443d = () => interopDefault(import('..\\pages\\Login\\index.vue' /* webpackChunkName: "pages/Login/index" */))
 const _1ff24881 = () => interopDefault(import('..\\pages\\reset-success\\index.vue' /* webpackChunkName: "pages/reset-success/index" */))
+const _060c77b0 = () => interopDefault(import('..\\pages\\SubCategory\\index.vue' /* webpackChunkName: "pages/SubCategory/index" */))
 const _1474e754 = () => interopDefault(import('..\\pages\\Login\\login.vue' /* webpackChunkName: "pages/Login/login" */))
 const _5171608b = () => interopDefault(import('..\\pages\\user-management\\role\\index.vue' /* webpackChunkName: "pages/user-management/role/index" */))
 const _762a03d4 = () => interopDefault(import('..\\pages\\user-management\\user\\index.vue' /* webpackChunkName: "pages/user-management/user/index" */))
@@ -36,10 +36,6 @@ export const routerOptions = {
     component: _e3c19d20,
     name: "category"
   }, {
-    path: "/categorys",
-    component: _571776d1,
-    name: "categorys"
-  }, {
     path: "/dashboard",
     component: _0b936e12,
     name: "dashboard"
@@ -59,6 +55,10 @@ export const routerOptions = {
     path: "/reset-success",
     component: _1ff24881,
     name: "reset-success"
+  }, {
+    path: "/SubCategory",
+    component: _060c77b0,
+    name: "SubCategory"
   }, {
     path: "/Login/login",
     component: _1474e754,

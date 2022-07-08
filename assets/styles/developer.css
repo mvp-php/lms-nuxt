@@ -4,3 +4,10 @@
 .alert-main{
     z-index:999 !important;
 }
+/* New */
+.alert-main {
+    max-width: 350px;
+}
+.slds-modal-category .course-col1 {
+    max-width: 160px;
+}

@@ -7,13 +7,6 @@
     "_name": "_e3c19d20"
   },
   {
-    "name": "categorys",
-    "path": "/categorys",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\categorys\\\\index.vue",
-    "chunkName": "pages/categorys/index",
-    "_name": "_571776d1"
-  },
-  {
     "name": "dashboard",
     "path": "/dashboard",
     "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\dashboard\\\\index.vue",
@@ -47,6 +40,13 @@
     "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\reset-success\\\\index.vue",
     "chunkName": "pages/reset-success/index",
     "_name": "_1ff24881"
+  },
+  {
+    "name": "SubCategory",
+    "path": "/SubCategory",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\SubCategory\\\\index.vue",
+    "chunkName": "pages/SubCategory/index",
+    "_name": "_060c77b0"
   },
   {
     "name": "Login-login",

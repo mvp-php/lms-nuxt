@@ -6,8 +6,14 @@ class CategoryService {
     getCategoryList(data) {
         return http.get(`/category-list`);
     }
-    getEditDetails(id){
+    getEditDetails(id) {
         return http.get(`/get-category/${id}`);
-      }
+    }
+    updateCategory(data) {
+        return http.post(`/update-category`, data);
+    }
+    deleteCategory(id) {
+        return http.post(`/delete-category`, {id: id,});
+    }
 }
 export default new CategoryService();
