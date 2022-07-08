@@ -14,11 +14,16 @@
 
                             </div>
                         </div>
-                        <nuxt-link to="user/create-user" class="slds-button slds-button_brand btnmain blue-btn ml-10">
+                        <nuxt-link to="/user-management/user/create-user"
+                            class="slds-button slds-button_brand btnmain blue-btn ml-10">
                             Create User</nuxt-link>
 
                         <button class="slds-button slds-button_brand btnmain light-blue-btn ml-10" href="#">Set Default
                             Roles</button>
+
+                        <button class="slds-button slds-button_brand btnmain light-blue-btn ml-10"
+                            href="javascript:void(0)" @click="BulkDelete()" v-if="!bulk_delete_button">Delete
+                            User</button>
                     </div>
                     <div class="slds-tabs_default cus-tab-default">
 
@@ -26,7 +31,7 @@
 
                         <div class="table-main">
                             <userListNew :header="header" :tableData="tableData"
-                                :no_record_avalible="no_record_avalible" />
+                                :no_record_avalible="no_record_avalible" :bulkUserDeleted="bulkDeleted" :paginateObj="paginate" :searchkeyword="searchkeyword" :pageCount="pageCount"/>
                         </div>
                     </div>
 
@@ -123,53 +128,53 @@
             </div>
         </div>
         <div class="user-record-modal">
-        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal"
-            id="delete-modal" ref="deleteUserModel">
-            <div class="slds-modal__container record-dialog-modal">
-                <div class="slds-modal__header modal-main-record-title">
-                    <!-- <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">USER ROLE DETAILS</h1> -->
-                    <button v-on:click="closeDeleteModel()"
-                        class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse close-modal-record">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11.354" height="11.385"
-                            viewBox="0 0 11.354 11.385">
-                            <g id="icons_utility_close-copy" data-name="icons/utility/close-copy"
-                                transform="translate(-0.462 -0.462)">
-                                <path id="Mask"
-                                    d="M7.677,5.954l4-4.031a.446.446,0,0,0,0-.646L11.062.631a.446.446,0,0,0-.646,0L6.385,4.662a.3.3,0,0,1-.431,0L1.923.6a.446.446,0,0,0-.646,0l-.646.646a.446.446,0,0,0,0,.646L4.662,5.923a.3.3,0,0,1,0,.431L.6,10.415a.446.446,0,0,0,0,.646l.646.646a.446.446,0,0,0,.646,0L5.923,7.677a.3.3,0,0,1,.431,0l4.031,4.031a.446.446,0,0,0,.646,0l.646-.646a.446.446,0,0,0,0-.646l-4-4.031a.3.3,0,0,1,0-.431Z"
-                                    fill="#06529c" />
-                            </g>
-                        </svg>
-                        <span class="slds-assistive-text">Cancel and close</span>
-                    </button>
-                </div>
-                <div class="slds-modal__content slds-p-around_medium modal-content-record" id="modal-content-id-1">
-                    <div class="delete-modal-main">
-                        <div class="del-big-img">
-                            <ImageComponent :log="require('~/assets/img/svg/delete.svg')" class="header-profile" alt="avtar-header"></ImageComponent>
-                            
+            <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal"
+                id="delete-modal" ref="deleteUserModel">
+                <div class="slds-modal__container record-dialog-modal">
+                    <div class="slds-modal__header modal-main-record-title">
+                        <!-- <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">USER ROLE DETAILS</h1> -->
+                        <button v-on:click="closeDeleteModel()"
+                            class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse close-modal-record">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11.354" height="11.385"
+                                viewBox="0 0 11.354 11.385">
+                                <g id="icons_utility_close-copy" data-name="icons/utility/close-copy"
+                                    transform="translate(-0.462 -0.462)">
+                                    <path id="Mask"
+                                        d="M7.677,5.954l4-4.031a.446.446,0,0,0,0-.646L11.062.631a.446.446,0,0,0-.646,0L6.385,4.662a.3.3,0,0,1-.431,0L1.923.6a.446.446,0,0,0-.646,0l-.646.646a.446.446,0,0,0,0,.646L4.662,5.923a.3.3,0,0,1,0,.431L.6,10.415a.446.446,0,0,0,0,.646l.646.646a.446.446,0,0,0,.646,0L5.923,7.677a.3.3,0,0,1,.431,0l4.031,4.031a.446.446,0,0,0,.646,0l.646-.646a.446.446,0,0,0,0-.646l-4-4.031a.3.3,0,0,1,0-.431Z"
+                                        fill="#06529c" />
+                                </g>
+                            </svg>
+                            <span class="slds-assistive-text">Cancel and close</span>
+                        </button>
+                    </div>
+                    <div class="slds-modal__content slds-p-around_medium modal-content-record" id="modal-content-id-1">
+                        <div class="delete-modal-main">
+                            <div class="del-big-img">
+                                <ImageComponent :log="require('~/assets/img/svg/delete.svg')" alt="avtar-header">
+                                </ImageComponent>
+
+                            </div>
+                            <div class="delete-text">
+                                <h3>Are you sure?</h3>
+                                <p>Do you really want to delete these user? This
+                                    process cannot be undone</p>
+                            </div>
                         </div>
-                        <div class="delete-text">
-                            <h3>Are you sure you want to delete this user?</h3>
-                            <p>Do you really want to delete these user? This
-                                process cannot be undone</p>
+                        <div class="delete-modal-footer">
+                            <button class="slds-button slds-button_neutral btnmain blue-btn modal-btn" @click="deleteUser()">Yes
+                            </button>
+                           
+                            <button id="close-btn1"  class="slds-button slds-button_brand btnmain light-blue-btn modal-btn" @click="closeDeleteModel()">No
+                            </button>
                         </div>
                     </div>
-                    <div class="delete-modal-footer">
-                        <ButtonComponent class="slds-button slds-button_neutral btnmain blue-btn modal-btn"
-                            aria-label="Cancel and close" v-on:click="deleteUser()" buttonName="Yes"></ButtonComponent>
-                        
-                        <ButtonComponent class="slds-button slds-button_brand btnmain light-blue-btn modal-btn"
-                            id="close-btn1"
-                            v-on:click="closeDeleteModel()" buttonName="No">No</ButtonComponent>
-                        
-       
-                    </div>
                 </div>
+            </section>
+            <div class="slds-backdrop" role="presentation" id="delete-modal-backdrop">
             </div>
-        </section>
-        <div class="slds-backdrop" role="presentation" id="delete-modal-backdrop">
         </div>
-    </div>
+        <errorToastr :errorMessage="errorMessage" v-if="!errorToastrHide" />
+         <successToastr :successMessage="successMessage" v-if="!successToastrHide" />
     </span>
 </template>
 
@@ -180,6 +185,8 @@ import userListNew from '../../../components/User/user_list.vue';
 import dataTable from '../../../components/element/dataTable.vue';
 import ImageComponent from '../../../components/element/image.vue';
 import ButtonComponent from '../../../components/element/formButton.vue';
+import errorToastr from '../../../components/element/errorToastr.vue';
+import successToastr from '../../../components/element/successToastr.vue';
 export default {
     layout: 'frontend',
     name: 'UserList',
@@ -189,9 +196,11 @@ export default {
         dataTable,
         userListNew,
         ImageComponent,
-        ButtonComponent
-
+        ButtonComponent,
+        errorToastr,
+        successToastr
     },
+    
     data() {
         return {
             tablsList: [],
@@ -199,30 +208,47 @@ export default {
             header: [],
             tableData: [],
             no_record_avalible: "",
-            viewDetails: []
+            viewDetails: [],
+            deletedId: '',
+            bulk_delete_button: true,
+            errorMessage: "",
+            errorToastrHide: true,
+            successMessage: "",
+            successToastrHide: true,
+            paginate:'',
+            searchkeyword:'',
+            pageCount:''
         }
     },
     created() {
+        this.$store.commit('CHANGE_NAV_LAYOUT',"users");
         this.tablsList = [];
-        var tabs = [{ "Key": "Role", 'url': 'role' }, { "Key": "User", 'url': 'user' }];
+        var tabs = [{ "Key": "User Roles", 'url': 'role' }, { "Key": "User", 'url': 'user' }];
         this.tablsList = tabs;
         this.header = ["", 'Sr No.', 'User Name', 'Email Id', 'Role', 'Created On', 'Action'];
-        this.getUserList();
+        this.getUserList("",1);
+
     },
     methods: {
+         getPaginatesMain:function(currentPage,value){
+            this.getUserList(value,currentPage);
+        },
         setCanMessageSubmit($event) {
             console.log($event.target.value);
-            this.getUserList($event.target.value)
+            this.getUserList($event.target.value,1)
         },
-        getUserList(value = "") {
-            userService.getUserList(value)
+        getUserList(value="",currentPage="") {
+            userService.getUserList(value,currentPage)
                 .then(async response => {
 
                     this.responseList = response.data.data;
 
                     this.tableData = this.responseList;
 
-                    this.no_record_avalible = response.data.error_msg
+                    this.no_record_avalible = response.data.error_msg;
+                    this.paginate =  response.data.paginate;
+                    this.searchkeyword = value;
+                    this.pageCount = page;
                 }).catch(e => {
                     console.log(e)
                 });
@@ -245,11 +271,12 @@ export default {
             this.$refs.deleteUserModel.classList.add("slds-fade-in-open");
             this.DeleteId = id;
         },
-        deleteUser(){
+        deleteUser() {
+            console.log("dsds");
             userService.deleteUser(this.DeleteId).then((result) => {
                 console.log(result);
-             this.getUserList();
-             this.closeDeleteModel();
+                this.getUserList("",1);
+                this.closeDeleteModel();
             }).catch((err) => {
                 console.error(err);
             });
@@ -257,9 +284,33 @@ export default {
         closeDeleteModel() {
             this.$refs.deleteUserModel.classList.remove("slds-fade-in-open");
         },
-        userEdit(id){
-            this.$router.push('/user-management/user/edit-user/'+id);
-        }
+        userEdit(id) {
+            this.$router.push('/user-management/user/edit-user/' + id);
+        },
+        bulkDeleteds: function (id) {
+            if (id.length != 0) {
+                this.bulk_delete_button = false;
+            } else {
+                this.bulk_delete_button = true;
+            }
+            this.deletedId = id;
+        },
+
+        BulkDelete() {
+            userService.bulkUserDelete(this.deletedId).then((result) => {
+                console.log(result);
+                this.getUserList("",1);
+                this.successMessage = result.data.error_msg;
+                this.successToastrShow();
+            }).catch((err) => {
+                console.error(err);
+            });
+        },
+        successToastrShow() {
+            this.successToastrHide = false;
+            setTimeout(() => this.successToastrHide = true, 5000);
+        },
+
     }
 
 }

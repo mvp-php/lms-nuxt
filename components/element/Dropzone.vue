@@ -1,5 +1,5 @@
 <template>
-    <dropzone id="foo" ref="el" :options="options" :destroyDropzone="true">
+    <dropzone id="foo" ref="el" :options="options" :destroyDropzone="true" @vdropzone-success="fileUploadSuccessEvent">
         <!-- <div class="dropzone-custom-content">
             <h3 class="dropzone-custom-title">Drag and drop to upload content!</h3>
             <div class="subtitle">...or click to select a file from your computer</div>
@@ -7,23 +7,31 @@
     </dropzone>
 </template>
 <script>
-
 import Dropzone from 'nuxt-dropzone'
 import 'nuxt-dropzone/dropzone.css'
-import axios from 'axios';
+import authHeader from '../config/AuthHeader';
+// import DropZoneService from '../Service/DropZoneService';
 export default {
+    props: ['fileUploadSuccessEvent'],
     components: {
         Dropzone
     },
     data() {
         return {
             options: {
-                url: "http://127.0.0.1:8000/api/v1/test-dropzone",
+                url: process.env.baseUrl + "/dropzone-image-upload",
                 thumbnailWidth: 200,
+                paramName: "image",
+                acceptedFiles: ".png, .jpeg, .jpg, .gif",
                 maxFilesize: 0.5,
                 addRemoveLinks: true,
-                headers: { "My-Awesome-Header": "header value" }
+                uploadMultiple: false,
+                clickable: true,
+                maxFiles: 1,
+                parallelUploads: 5,
+                headers: { "My-Awesome-Header": "header value"}
             },
+            dataV: this.data,
             loading: true,
             loading: {
                 color: 'blue',
@@ -33,29 +41,35 @@ export default {
             headers: {
                 "Content-Type": "multipart/form-data",
             },
-            methods: {
-                sendingEvent(file, xhr, formData) {
-                    console.log(file);
-                    formData.append('paramName', 'some value or other');
-                },
-                async submit() {
-                    let rsp = await this.$axios.$post('http://127.0.0.1:8000/api/v1/test-dropzone', this.form, {
-                        'content-type': 'multipart/form-data'
-                    })
-                    console.log(rsp.response)
-                },
-                start() {
-                    this.loading = true
-                },
-                finish() {
-                    this.loading = false
-                }
-            }
         }
     },
     mounted() {
-        // Everything is mounted and you can access the dropzone instance
         const instance = this.$refs.el.dropzone
+    },
+    methods: {
+        // fileUploadSuccessEvent(file, response) {
+        //     console.log(response, "response");
+        // }
+        //     sendingEvent(file, xhr, formData) {
+        //         console.log(file)
+        //         formData.append('paramName', 'some value or other');
+        //     },
+        //     async submit() {
+        //         DropZoneService.testDropzone(this.form).then((result) => {
+        //             console.log("Result", result);
+        //         }).catch(error => {
+        //         })
+        //     },
+        //     start() {
+        //         this.loading = true
+        //     },
+        //     finish() {
+        //       this.loading = false
+        //     },
+        //     onError(e) {
+        //         console.log(e, "kjuuhhhh");
+        //     },
     }
+
 }
 </script>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="510" height="1059" viewBox="0 0 510 1059">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1902" data-name="Rectangle 1902" width="510" height="1059" transform="translate(930 930)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_1152" data-name="Rectangle 1152" width="1060.817" height="801.607" fill="rgba(121,196,242,0.25)"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="Rectangle_1151" data-name="Rectangle 1151" width="1060.815" height="801.605" fill="rgba(121,196,242,0.25)"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <path id="Path_521" data-name="Path 521" d="M1053.595,463.566c-21.076-86.085-84.689-151.542-165.291-181.9a18.326,18.326,0,0,1-11.362-21.859q.366-1.381.714-2.773c28.161-112.5-36.115-225.085-143.563-251.463C652.9-14.365,570.278,20.635,522.6,87.477a108.548,108.548,0,0,1-110.011,43.266A346.268,346.268,0,0,0,262.7,133.567C78.451,177.807-34.834,361.05,9.674,542.848S239.63,836.159,423.882,791.919A346.666,346.666,0,0,0,512.2,757.477c35.349-19.756,78.279-19.338,114.047,1.166,61.57,35.295,138.1,47.941,214.772,29.532,152.339-36.578,247.514-181.91,212.578-324.609" transform="translate(0 0.003)" fill="rgba(121,196,242,0.25)"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_147" data-name="Mask Group 147" transform="translate(-930 -930)" clip-path="url(#clip-path)">
+    <g id="clo" transform="matrix(0.407, 0.914, -0.914, 0.407, 1580.773, 816.728)">
+      <g id="Group_453" data-name="Group 453" transform="translate(-50 2.335)" clip-path="url(#clip-path-2)">
+        <g id="Group_452" data-name="Group 452" transform="translate(0.003 0.002)" opacity="0.4">
+          <g id="Group_451" data-name="Group 451">
+            <g id="Group_450" data-name="Group 450" clip-path="url(#clip-path-3)">
+              <g id="Group_449" data-name="Group 449" transform="translate(0 -0.002)">
+                <g id="Group_448" data-name="Group 448" clip-path="url(#clip-path-4)">
+                  <rect id="Rectangle_1150" data-name="Rectangle 1150" width="883.087" height="1148.287" transform="matrix(0.029, -1, 1, 0.029, -59.985, 835.432)" fill="rgba(121,196,242,0.25)"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

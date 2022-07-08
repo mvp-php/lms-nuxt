@@ -6,8 +6,8 @@ class RoleDataService {
     return http.get(`/entities-list/`, { headers: authHeader() });
   }
 
-  getRoleList(data){
-    return http.get(`/role-list?search=`+data, { headers: authHeader() });
+  getRoleList(page,data){
+    return http.get(`/role-list?page=`+page+`&search=`+data, { headers: authHeader() });
   }
   create(data){
     return http.post(`/call-role/`,data, { headers: authHeader() });
@@ -30,6 +30,10 @@ class RoleDataService {
   deleteRole(id){
   
     return http.post(`/role-delete/`,{id: id},{ headers: authHeader() });
+  }
+  bulkRoleDelete(id){
+  
+    return http.post(`/bulk-role-delete/`,{id: id},{ headers: authHeader() });
   }
   
 }

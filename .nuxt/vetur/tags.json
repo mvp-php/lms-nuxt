@@ -38,11 +38,17 @@
   "ServiceAuthService": {
     "description": "Auto imported from components/Service/AuthService.js"
   },
+  "ServiceCategoryService": {
+    "description": "Auto imported from components/Service/CategoryService.js"
+  },
   "ServicePaymentPlanService": {
     "description": "Auto imported from components/Service/PaymentPlanService.js"
   },
   "ServiceRoleDataService": {
     "description": "Auto imported from components/Service/RoleDataService.js"
+  },
+  "ServiceSubcategoryService": {
+    "description": "Auto imported from components/Service/SubcategoryService.js"
   },
   "ServiceUserService": {
     "description": "Auto imported from components/Service/UserService.js"
@@ -85,6 +91,9 @@
   },
   "ElementFormButton": {
     "description": "Auto imported from components/element/formButton.vue"
+  },
+  "ElementFormCheckbox": {
+    "description": "Auto imported from components/element/formCheckbox.vue"
   },
   "ElementFormDropdown": {
     "description": "Auto imported from components/element/formDropdown.vue"

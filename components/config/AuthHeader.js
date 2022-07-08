@@ -1,6 +1,12 @@
 export default function authHeader() {
- 
 
+  if (typeof window !== 'undefined') {
 
-    return { Authorization: 'Bearer 776362176911572993|38GL7UVsWDSRz7Ss31E6CTrabHfTTIJ500bPC4Gt'};
+    // Perform localStorage action
+     var user = JSON.parse(localStorage.getItem('userData'));
+    console.log(user[0].token); 
+    return { Authorization: 'Bearer '+user[0].token  };
   }
+
+
+}

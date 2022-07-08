@@ -13,27 +13,26 @@
         <Labels labelName="Description" className="slds-form-element__label custom-label" for="text-input-id-46" required="false"/>
         
         <div class="slds-form-element__control custom-grid-control mb-20">
-            <textAreaComponent fieldId="description" placeholder="Description comes here with a character" v-model.trim="theUser.role_title" class="slds-textarea custom-grid-textarea mb-30"></textAreaComponent>
+            <textAreaComponent fieldId="description" placeholder="Description comes here with a character" v-model.trim="theUser.description" class="slds-textarea custom-grid-textarea mb-30" :bindValue="`${theUser.description}`"></textAreaComponent>
            
         </div>
     </div>
-    
+
     <div v-for="item in EntitiesList" :key="item">
     <div class="slds-form-element check-element-main mb-35" v-for="(value, key) in item" :key="value">
         <label class="slds-form-element__label custom-label" for="textarea-id-01">{{ key }}
             <span class="require-danger">*</span>
         </label>
+    
+        <div class="check-boxes" >
         
-        
-        
-        <div class="check-boxes" v-for="operation in value" :key="operation">
-        
-            <div class="slds-form-element  check-element-inner">
+            <div class="slds-form-element  check-element-inner" v-for="operation in value" :key="operation">
                 <div class="slds-form-element__control">
                     <div class="slds-checkbox role-check-main">
-                        <input type="checkbox" name="options[]" id=""
-                            value="checkbox-unique-id-`${operation.id}`" class="role-check" />
-                        <label class="slds-checkbox__label" for="checkbox-unique-id-1">
+                         <input type="checkbox" v-model="theUser.permission" :id="`${operation.id}`"
+                                        :value="`${operation.id}`"  tabindex="0"  className="role-check"
+                                        aria-labelledby="check-select-all-label column-group-header" @click="getChecked()"/>
+                        <label class="slds-checkbox__label" :for="`${operation.id}`">
                             <span class="slds-checkbox_faux"></span>
                             <span class="slds-form-element__label">{{operation.title}}</span>
                         </label>
@@ -66,9 +65,10 @@ export default {
     Labels,
     textAreaComponent
   },
+   props: ['theUser'],
   created() {
-         this.getPermissionList();
-       
+        this.getPermissionList();
+     
        
     },
   data() {
@@ -78,18 +78,21 @@ export default {
         EntitiesList: [],
     }
   },
-  props: ['theUser'],
+ 
   methods: {
         getPermissionList() {
+       
             RoleDataService.getEntitiesAndPermissionList()
                 .then(response => {
-                    this.EntitiesList = response.data;
-                    
+                    this.EntitiesList = response.data.data;
                 })
                 .catch(e => {
                     console.log(e);
                 });
         },
+        getChecked(){
+            
+        }
   }
 }
 </script>

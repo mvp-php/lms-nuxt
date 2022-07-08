@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import imageComponent from '../../../components/element/image.vue';
 import CreateRole from '../../../components/Role/create_role.vue';
 
 import RoleDataService from "../../../components/Service/RoleDataService";
@@ -42,7 +43,8 @@ export default {
     components: {
         CreateRole,
         ButtonComponent,
-        errorToastr
+        errorToastr,
+        imageComponent
     },
     props: {
         isTableDataVisible: {
@@ -56,7 +58,12 @@ export default {
     },
     data() {
         return {
-            user: {},
+            user: {
+                permission:[],
+                role_title:'',
+                description:''
+                
+            },
             ButtonName: "Save Role",
             errorMessage: "",
             classObj: 'arrow-left',
@@ -66,6 +73,7 @@ export default {
            
             EntitiesList: [],
             dangerHide: true,
+            selectedArray:''
         };
     },
     mounted() {
@@ -86,6 +94,7 @@ export default {
         },
         submitData(event) {
             document.getElementById("role_title_error").textContent = "";
+           
             
             var cnt = 0;
             if (!this.user.role_title) {
@@ -93,16 +102,23 @@ export default {
                 event.preventDefault();
                 cnt =1;
             }
-            
-
+           console.log(this.user);
+            if (this.user.permission.length ==0) {
+                document.getElementById("permission_error").textContent = "Please select any one permission";
+                event.preventDefault();
+                cnt =1;
+            }
             
 
             if (cnt == 0) {
+               
                 RoleDataService.create(this.user)
                     .then((result) => {
                         console.log(result)
-
+                       
+                 
                         this.$router.push({ path: '/user-management/role' });
+                       
                     }).catch(error => {
 
                         this.errorMessage = error.response.data.error_msg;
@@ -113,6 +129,10 @@ export default {
                     })
             }
 
+        },
+        selectedId:function(selected){
+        
+            document.getElementById("permission_error").textContent = '';
         },
         dangerToasterShow() {
 

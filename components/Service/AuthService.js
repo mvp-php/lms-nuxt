@@ -13,5 +13,7 @@ class AuthService {
     callResetPassword(data,id){
         return http.post(`/reset-password/`+id,data);
     }
+
+   
   }
   export default new AuthService();

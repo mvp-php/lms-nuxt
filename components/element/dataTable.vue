@@ -13,10 +13,10 @@
                                 row</span>
                             <div class="slds-th__action slds-th__action_form p-0">
                                 <div class="slds-checkbox">
-                                    <input type="checkbox" name="options" id="checkbox-unique-id-293"
-                                        value="checkbox-unique-id-293" tabindex="0"
-                                        aria-labelledby="check-select-all-label column-group-header" />
-                                    <label class="slds-checkbox__label" for="checkbox-unique-id-293"
+                                    <input type="checkbox" name="options" id="common"
+                                        value="1" tabindex="0"
+                                        aria-labelledby="check-select-all-label column-group-header" @click="checkAll()"/>
+                                    <label class="slds-checkbox__label" for="common"
                                         id="check-select-all-label">
                                         <span class="slds-checkbox_faux"></span>
                                         <span class="slds-form-element__label slds-assistive-text">Select
@@ -60,10 +60,10 @@
 
                         <div v-if="column === ''">
                             <div class="slds-checkbox cus-check1">
-                                <input type="checkbox" name="options" id="checkbox-1" value="checkbox-01" tabindex="0"
-                                    aria-labelledby="check-button-label-01 column-group-header" />
+                                <input type="checkbox" name="options[]" :id="`${item.id}`" :value="`${item.id}`" tabindex="0"
+                                    aria-labelledby="check-button-label-01 column-group-header" class="allselect" @click="Unselect()"/>
                                 
-                                <label class="slds-checkbox__label" for="checkbox-01" id="check-button-label-01">
+                                <label class="slds-checkbox__label" :for="`${item.id}`" :id="`${item.id}`">
                                     <span class="slds-checkbox_faux"></span>
                                     <span class="slds-form-element__label slds-assistive-text">Select
                                         item 1</span>
@@ -73,8 +73,16 @@
                         <div v-else-if="k == 'id'" class="">
                             {{ key + 1 }}
                         </div>
-                        <div v-else>
+                        
+                        
+                        <div v-else-if="k !='subcategory'">
                             <div class="slds-truncate" title="4">{{ column }}</div>
+                        </div>
+                        <div v-if="k == 'subcategory'" class="">
+                            <a v-on:click="openSubCategoryModel(item.id)"
+                                                    href="javascript:void(0)" class="btn btn-table-add"> <img
+                                                        src="../../assets/img/svg/plus-add.svg" alt="add-img"
+                                                        class="all-img-add"> add</a>
                         </div>
 
                     </td>
@@ -105,7 +113,7 @@
                 </tr>
             </tbody>
         </table>
-    <Paginate/>
+    <Paginate :paginateObjFinal="paginateObjs" :url="url" :searchKeyword="searchKeyword"/>
     </div>
 
 </template>
@@ -115,7 +123,13 @@ import Paginate from '../../components/element/Paginate.vue';
 import imageComponent from '../../components/element/image.vue';
 export default {
     name: "Data-table",
-    props: ['header','tableData','no_record_avalible'],
+    props: ['header','tableData','no_record_avalible','paginateObjs','url','searchKeyword'],
+    data(){
+        return{
+            selectedValue:[],
+            selectedChecked:[]
+        }
+    },
     components:{
      Paginate,
      imageComponent
@@ -124,6 +138,9 @@ export default {
        
     },
     methods:{
+        getPaginates:function(currentPage,value){
+            this.$parent.getPaginatesNew(currentPage,value);
+        },
         openViewModel(id){
            this.$parent.viewMethod(id);
         },
@@ -132,6 +149,53 @@ export default {
         },
         openEditModel(id){
             this.$parent.editMethod(id);
+        },
+        checkAll(){
+            var slides = document.getElementsByClassName("allselect");
+            if(event.target.checked ==true){
+                
+                
+                for(var i = 0; i < slides.length; i++)
+                {
+                    slides[i].checked = true;
+                    this.selectedValue.push(slides[i].id);
+                }
+            }else{
+                for(var i = 0; i < slides.length; i++)
+                {
+                    slides[i].checked = false;
+                    this.selectedValue=[];
+                }
+            }
+            this.bulkUserDelete(this.selectedValue);
+        },
+        Unselect(){
+         
+            var selectedChecked = [];
+           if(event.target.checked ==false){
+                console.log(event.target.value,"vishal");
+            this.selectedValue.filter(function (elm){
+               
+                if(event.target.value != elm){
+                     console.log(event.target.value+'====='+elm);
+                    selectedChecked.push(elm);
+                }else{
+                   
+                }
+            });
+           }else{
+                selectedChecked.push(event.target.value)
+              
+           }
+            this.selectedValue =selectedChecked;
+            this.bulkUserDelete(this.selectedValue);
+        },
+        bulkUserDelete(keyArray){
+            this.$parent.bulkDeleted(keyArray);
+        },
+        openSubCategoryModel(id){
+            console.log(id);
+            this.$parent.getsOpenSubcategoryModel(id);
         }
     }
 } 

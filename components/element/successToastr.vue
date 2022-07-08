@@ -26,8 +26,7 @@ export default {
     },
     methods: {
         successToasterHide() {
-            this.hidessucces = true;
-            console.log(this.hidessucces)
+            this.$parent.successToastrShow()
         }
     }
 }

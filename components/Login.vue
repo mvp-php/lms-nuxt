@@ -14,8 +14,11 @@
         <Inputs fieldId="password" :password="showPassword" placeHolder="Password" className="slds-input"
           v-model.trim="theUser.password" />
         <span class="eye-btn toggle-password" @click="toggleShow">
-          <imageComponent :log="require('~/assets/img/svg/eye.svg')" alt="icon"
+          <imageComponent :log="require('~/assets/img/svg/eye.svg')" v-if="showPassword" alt="icon"
             :class="{ 'fa-eye-slash': showPassword, 'fa-eye': !showPassword }" />
+
+            <imageComponent :log="require('~/assets/img/svg/hide_password.svg')" v-if="!showPassword" alt="icon"
+             />
 
         </span>
 

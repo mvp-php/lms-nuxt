@@ -1,8 +1,9 @@
 <template>
 
   <div>
+   
     <Header/>
-    <Sidebar/>
+    <Sidebar :selectedTab="selectedTab"/>
   <div class="content-main">
     <Nuxt />
   </div>
@@ -22,12 +23,14 @@ import Sidebar from '../components/Include/Sidebar.vue';
 import Footer from '../components/Include/Footer.vue';
 export default {
   middleware: 'authenticated',
+  props:['selectedTab'],
   components:{
     Header,
     Sidebar,
     Footer
   },
-  methods:{
+  created(){
+      console.log(this.selectedTab)
   }
   
 };

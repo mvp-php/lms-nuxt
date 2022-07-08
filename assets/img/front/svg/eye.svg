@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.334" height="13.864" viewBox="0 0 20.334 13.864">
+  <g id="eye" transform="translate(0 -74.667)">
+    <g id="Group_2" data-name="Group 2" transform="translate(0 74.667)">
+      <g id="Group_1" data-name="Group 1" transform="translate(0 0)">
+        <path id="Path_1" data-name="Path 1" d="M173.44,170.667a2.773,2.773,0,1,0,2.773,2.773A2.775,2.775,0,0,0,173.44,170.667Z" transform="translate(-163.273 -166.508)" fill="#0b2740"/>
+        <path id="Path_2" data-name="Path 2" d="M10.167,74.667A10.931,10.931,0,0,0,0,81.6a10.922,10.922,0,0,0,20.334,0A10.927,10.927,0,0,0,10.167,74.667Zm0,11.553A4.621,4.621,0,1,1,14.788,81.6,4.623,4.623,0,0,1,10.167,86.22Z" transform="translate(0 -74.667)" fill="#0b2740"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -29,14 +29,14 @@
     </div>
     <div class="slds-form-element custom-grid">
         <Labels labelName="Role" className="slds-form-element__label custom-label" for="text-input-id-46" required="true"/>
-        
+   
         <div class="slds-form-element__control custom-grid-control mb-20">
             <select 
                 v-model="theUser.role_id"
                 class="slds-select custom-grid-input" @change="ChangeRole($event)">
                 <option value="">Select Role</option>
                 <option v-for="roles in rolelist" :key="roles"
-                    :value="roles.id">
+                    :value="roles.id" :dataId="`${roles.is_system_role}`">
                     {{ roles.role_title }}
                 </option>
 
@@ -128,7 +128,7 @@ export default {
   props: ['theUser','rolelist','paymentPlan'],
   methods: {
     ChangeRole(e) {
-       
+     
             if (e.target.value.trim() == "772769390512275457") {
                 this.hides = false;
                 this.hidesins = false;

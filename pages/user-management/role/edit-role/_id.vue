@@ -12,7 +12,7 @@
                         Edit A Role
                     </div>
                     <form v-on:submit.prevent="submitData">
-                        <EditRole :the-user="user" />
+                        <EditRole :the-user="user" :selectedPermission="selectedPermission"/>
                         <div class="btn-align-end">
                             <ButtonComponent type="submit" class="slds-button slds-button_brand btnmain blue-btn ml-10"
                                 :buttonName="ButtonName" />
@@ -49,8 +49,13 @@ export default {
     
     data() {
         return {
-            user: {},
-            ButtonName: "Save User",
+            user: {
+
+                permission:[],
+                role_title:'',
+                description:''
+            },
+            ButtonName: "Update Role",
             errorMessage: "",
             classObj: 'arrow-left',
             
@@ -58,7 +63,7 @@ export default {
             
             
             dangerHide: true,
-            userForm:[]
+            userForm:[],
         };
     },
     
@@ -74,6 +79,7 @@ export default {
             RoleDataService.getDetailsById(this.$route.params.id).then(response => {
                     this.user = response.data.data;
                    
+                    
                 }).catch(e => {
                 console.log(e)
             });
@@ -87,10 +93,11 @@ export default {
                 event.preventDefault();
                 cnt =1;
             }
-            
-            
-
-            
+            if (this.user.permission.length ==0) {
+                document.getElementById("permission_error").textContent = "Please select any one permission";
+                event.preventDefault();
+                cnt =1;
+            }
 
             if (cnt == 0) {
                 RoleDataService.updateRole(this.user,this.$route.params.id)
