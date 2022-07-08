@@ -8,10 +8,7 @@
         </div>
         
         <div>
-          <span  @click="toggleShow">
-             <ImageComponent :log="require('~/assets/img/svg/avtar1.svg')" class="header-profile" alt="avtar-header"></ImageComponent>
-          </span>
-         
+          <ImageComponent :log="require('~/assets/img/svg/avtar1.svg')" class="header-profile" alt="avtar-header"></ImageComponent>
           <div class="log-dropdown position-relative">
                   <ul class="log-drop" id="logout" style="display: none;">
                       <li>
@@ -31,12 +28,7 @@ export default {
   name: 'UserForm',
   components:{
     ImageComponent
-  },
-  methods:{
-    toggleShow(){
-      console.log("sdsd");
-      // $("#logout").show();
-    }
   }
+
 }
 </script>
