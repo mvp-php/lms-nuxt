@@ -12,7 +12,8 @@
                         Edit A User
                     </div>
                     <form v-on:submit.prevent="submitData">
-                        <EditUser :the-user="user" :rolelist="allRoleList" :paymentPlan="paymentPlan" :userForm="userForm"/>
+                        <EditUser :the-user="user" :rolelist="allRoleList" :paymentPlan="paymentPlan"
+                            :userForm="userForm" />
                         <div class="btn-align-end">
                             <ButtonComponent type="submit" class="slds-button slds-button_brand btnmain blue-btn ml-10"
                                 :buttonName="ButtonName" />
@@ -67,7 +68,7 @@ export default {
             allRoleList: [],
             paymentPlan: [],
             dangerHide: true,
-            userForm:[]
+            userForm: []
         };
     },
     mounted() {
@@ -99,24 +100,24 @@ export default {
                 console.log(e)
             });
         },
-        getUserDetails(){
+        getUserDetails() {
             userService.getUserDetails(this.$route.params.id).then(response => {
-              this.loading = false;
-                    this.userForm= response.data.data;
-                   
-                    this.user = response.data.data;
-                   
-                    if(response.data.data.role_id.trim() =='772769390512275457'){
-                        this.hides = false;
-                this.hidesins = false;
-                    }else if(response.data.data.role_id.trim() =='772769426869092353'){
-                        this.hides = true;
-                        this.hidesins = false;
-                    }
-                    
-                }).catch(e => {
+                this.loading = false;
+                this.userForm = response.data.data;
+
+                this.user = response.data.data;
+                if(this.user.title =='Student' && this.user.is_system_role ==1){
+                   const editButtonRef= this.$refs.test('false');
+                
+                }
+
+
+            }).catch(e => {
                 console.log(e)
             });
+        },
+        hide(){
+            this.hides = true;
         },
         submitData(event) {
             document.getElementById("first_name_error").textContent = "";
@@ -127,49 +128,49 @@ export default {
             if (!this.user.first_name) {
                 document.getElementById("first_name_error").textContent = "Enter the first name";
                 event.preventDefault();
-                cnt =1;
+                cnt = 1;
             }
             if (!this.user.last_name) {
                 document.getElementById("last_name_error").textContent = "Enter the last name";
                 event.preventDefault();
-                cnt =1;
+                cnt = 1;
             }
             if (!this.user.email) {
                 document.getElementById("email_error").textContent = "Enter the email id";
                 event.preventDefault();
-                cnt =1;
+                cnt = 1;
             }
             if (!this.user.role_id) {
                 document.getElementById("role_error").textContent = "Select one role at a time";
                 event.preventDefault();
-                cnt =1;
+                cnt = 1;
             }
 
-            if(this.user.role_id =='772769390512275457'){
+             if(this.user.srole_title =='Student'){
                 document.getElementById("members_error").textContent = "";
                 document.getElementById("amount_error").textContent = "";
 
                 if (!this.user.member_ship_id) {
                     document.getElementById("members_error").textContent = "Select one plan at a time";
                     event.preventDefault();
-                    cnt =1;
+                    cnt = 1;
                 }
                 if (!this.user.amount) {
                     document.getElementById("amount_error").textContent = "Enter the amount";
                     event.preventDefault();
-                    cnt =1;
+                    cnt = 1;
                 }
             }
 
             if (cnt == 0) {
-                userService.updateUser(this.user,this.$route.params.id)
+                userService.updateUser(this.user, this.$route.params.id)
                     .then((result) => {
                         console.log(result)
 
                         this.$router.push({ path: '/user-management/user' });
                     }).catch(error => {
 
-                        this.errorMessage = error.response.data.error_msg;
+                        this.errorMessage = error.response.data.response_msg;
 
                         this.dangerToasterShow();
 
@@ -183,6 +184,9 @@ export default {
             this.dangerHide = false;
             setTimeout(() => this.dangerHide = true, 5000);
         },
+        errorClose() {
+            this.dangerHide = true;
+        }
     }
 };
 </script>

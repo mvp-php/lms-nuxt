@@ -82,7 +82,7 @@ export default {
 
           this.successToastrShow();
         }).catch(error => {
-          this.errorMessage = error.response.data.error_msg;
+          this.errorMessage = error.response.data.response_msg;
           this.errorToastrShow();
 
         })
@@ -112,7 +112,9 @@ export default {
       this.hidessucces = false;
       setTimeout(() => this.hidessucces = true, 5000);
     },
-
+    errorClose:function(){
+            this.hides = true;
+        },
   }
 };
 </script>

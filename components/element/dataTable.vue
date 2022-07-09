@@ -1,5 +1,6 @@
 <template>
     <div class="table-main">
+      
         <table aria-multiselectable="true"
             class="group-table1 slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols table-main border-0"
             role="grid" aria-label="Example advanced table of Opportunities in actionable mode">
@@ -52,7 +53,7 @@
                 </tr>
             </thead>
             <tbody>
-               
+
 
                <tr aria-selected="false" v-if="tableData.length !=0" class="slds-hint-parent" v-for="(item, key) in tableData" :key="item">
 
@@ -71,7 +72,9 @@
                             </div>
                         </div>
                         <div v-else-if="k == 'id'" class="">
-                            {{ key + 1 }}
+                            {{ 
+                                
+                            key + 1 }}
                         </div>
                         
                         
@@ -86,10 +89,11 @@
                         </div>
 
                     </td>
+                    
                     <td class="slds-cell_action-mode" role="gridcell">
                         <div class="slds-truncate" >
                             <div class="action-main">
-                                <ul class="action-ul">
+                                <ul class="action-ul" >
                                     <li> 
                                         <a class="" title="View" href="javascript:void(0)"  v-on:click="openViewModel(item.id)" ><imageComponent :log="require('~/assets/img/svg/eye-blue.svg')" ></imageComponent></a>
                                         
@@ -107,13 +111,13 @@
                     </td>
                 </tr>
                 <tr aria-selected="false" v-if="tableData.length ==0" class="slds-hint-parent">
-                     <td class="slds-cell_action-mode" role="gridcell">
+                     <td class="slds-cell_action-mode slds-text-align_center" :colspan="header.length" role="gridcell">
                         {{no_record_avalible}}
                      </td>
                 </tr>
             </tbody>
         </table>
-    <Paginate :paginateObjFinal="paginateObjs" :url="url" :searchKeyword="searchKeyword"/>
+        <Paginate :paginateObjFinal="paginateObjs" :searchKeyword="searchKeyword" :pageCount="pageCount"/>
     </div>
 
 </template>
@@ -123,7 +127,7 @@ import Paginate from '../../components/element/Paginate.vue';
 import imageComponent from '../../components/element/image.vue';
 export default {
     name: "Data-table",
-    props: ['header','tableData','no_record_avalible','paginateObjs','url','searchKeyword'],
+    props: ['header','tableData','no_record_avalible','paginateObjs','searchKeyword','pageCount'],
     data(){
         return{
             selectedValue:[],

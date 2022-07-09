@@ -32,5 +32,13 @@ class UserService {
   callLogout(){
       return http.post(`/call-logout/`,'',{ headers: authHeader() });
   }
+
+  callUpdatePassword(data){
+    return http.post(`/call-update-password/`,data,{ headers: authHeader() });
+  }
+  importCSVFile(data){
+  
+    return http.post(`/import-csv/`,data,{ headers: authHeader() });
+  }
 }
 export default new UserService();

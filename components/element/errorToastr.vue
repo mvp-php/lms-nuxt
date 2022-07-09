@@ -36,7 +36,7 @@ export default {
     },
     methods: {
         errorToastrHide() {
-            this.hides = true;
+            this.$parent.errorClose();
            
         }
     }

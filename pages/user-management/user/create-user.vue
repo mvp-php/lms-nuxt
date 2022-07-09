@@ -124,11 +124,11 @@ export default {
                 cnt =1;
             }
 
-            if(this.user.role_id =='772769390512275457'){
+            if(this.user.srole_title =='Student'){
                 document.getElementById("members_error").textContent = "";
                 document.getElementById("amount_error").textContent = "";
 
-                if (!this.user.member_ship_id) {
+                if (!this.user.entity_id) {
                     document.getElementById("members_error").textContent = "Select one plan at a time";
                     event.preventDefault();
                     cnt =1;
@@ -148,7 +148,7 @@ export default {
                         this.$router.push({ path: '/user-management/user' });
                     }).catch(error => {
 
-                        this.errorMessage = error.response.data.error_msg;
+                        this.errorMessage = error.response.data.response_msg;
 
                         this.dangerToasterShow();
 
@@ -162,6 +162,9 @@ export default {
             this.dangerHide = false;
             setTimeout(() => this.dangerHide = true, 5000);
         },
+        errorClose(){
+            this.dangerHide = true;
+            }
     }
 };
 </script>

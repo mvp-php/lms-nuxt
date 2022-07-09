@@ -527,9 +527,10 @@ export default {
       
                 CategoryService.addCategory(this.categoryData).then((result) => {
                     this.getAllCatData();
-                    this.successToasterShow();
-                         this.closeModel();
                     this.successMessage = result.data.error_msg;
+                    this.successToasterShow();
+                    this.closeModel();
+                    
                    
                    this.clearModel();
                     

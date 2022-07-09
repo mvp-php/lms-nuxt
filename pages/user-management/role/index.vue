@@ -71,7 +71,7 @@
                                         </div>
                                         <div class="course-col2">
                                             <div class="course-title-desc">
-                                                <p class="mb-0">{{ viewDetails.role_title }}</p>
+                                                <p class="mb-0">{{ viewDetails.title }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -199,6 +199,7 @@ export default {
             paginate:'',
             searchkeyword:'',
             pageCount:'',
+           
         }
     },
     created() {
@@ -228,9 +229,9 @@ export default {
                 .then(async response => {
                  
                     this.tableData = await response.data.data;
-                    this.no_record_avalible = response.data.error_msg
+                    this.no_record_avalible = response.data.response_msg
                     this.paginate = response.data.paginate;
-                    this.pageCount = page;
+                    this.pageCount = response.data.data.length;
                     this.searchkeyword = value;
             }).catch(e => {
                 console.log(e)
@@ -252,8 +253,10 @@ export default {
             this.$refs.addRoleBackup.classList.remove("slds-backdrop_open");
         },
         userDelete(id) {
+           
             this.$refs.deleteRoleModel.classList.add("slds-fade-in-open");
             this.DeleteId = id;
+           
         },
         deleteRole(){
             roleService.deleteRole(this.DeleteId).then((result) => {
@@ -276,9 +279,12 @@ export default {
             } else {
                 this.bulk_delete_button = true;
             }
-            this.deletedId = id;
+            this.DeleteId = id;
+
+           
         },
         BulkDelete() {
+
             roleService.bulkRoleDelete(this.deletedId).then((result) => {
                 console.log(result);
                 this.getRoleList(1,"");

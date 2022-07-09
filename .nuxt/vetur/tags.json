@@ -23,6 +23,12 @@
   "IncludeSidebar": {
     "description": "Auto imported from components/Include/Sidebar.vue"
   },
+  "Profile": {
+    "description": "Auto imported from components/Profile/profile.vue"
+  },
+  "ProfileUpdatePassword": {
+    "description": "Auto imported from components/Profile/update_password.vue"
+  },
   "ResetPassword": {
     "description": "Auto imported from components/ResetPassword/resetPassword.vue"
   },
@@ -53,11 +59,17 @@
   "ServiceUserService": {
     "description": "Auto imported from components/Service/UserService.js"
   },
+  "SubcategorySubCategory": {
+    "description": "Auto imported from components/Subcategory/sub_category.vue"
+  },
   "UserCreateUser": {
     "description": "Auto imported from components/User/create_user.vue"
   },
   "UserEditUser": {
     "description": "Auto imported from components/User/edit_user.vue"
+  },
+  "UserImportCsv": {
+    "description": "Auto imported from components/User/import_csv.vue"
   },
   "UserList": {
     "description": "Auto imported from components/User/user_list.vue"

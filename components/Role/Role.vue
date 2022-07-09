@@ -1,7 +1,7 @@
 <template>
 
     <span class="slds-roll-table">
-      <dataTable :header="header" :tableData="tableData" :no_record_avalible="no_record_avalible" :paginateObjs="paginateObj" url="/user-management/role" :searchKeyword="searchkeyword" />
+      <dataTable :header="header" :tableData="tableData" :no_record_avalible="no_record_avalible" :paginateObjs="paginateObj"  :searchKeyword="searchkeyword" :pageCount="pageCount"/>
     </span>
 
 </template>

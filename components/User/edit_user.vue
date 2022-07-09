@@ -38,8 +38,8 @@
                 class="slds-select custom-grid-input" @change="ChangeRole($event)">
                 <option value="">Select Role</option>
                 <option v-for="roles in rolelist" :key="roles"
-                    :value="roles.id">
-                    {{ roles.role_title }}
+                    :value="roles.id" :data-option="`${roles.is_system_role}`">
+                    {{ roles.title }}
                 </option>
 
             </select>
@@ -49,7 +49,7 @@
     
     <div id="studentId">
         
-        <div class="slds-form-element custom-grid" v-if="userForm.role_id =='772769390512275457'">
+        <div class="slds-form-element custom-grid" ref="test" v-if="!hides">
             <Labels labelName="Select Membership" className="slds-form-element__label custom-label" for="text-input-id-46" required="true"/>
            
             <div class="slds-form-element__control custom-grid-control mb-20">
@@ -68,7 +68,7 @@
             </div>
 
         </div>
-        <span id="instructors_id" v-if="userForm.role_id =='772769390512275457' || userForm.role_id =='772769426869092353'">
+        <span id="instructors_id" v-if="!hidesins">
             <div class="slds-form-element custom-grid valid-col1">
                 <Labels labelName="Valid From" className="slds-form-element__label custom-label" for="text-input-id-46"/>
            
@@ -91,7 +91,7 @@
         
        
 
-        <div class="slds-form-element custom-grid" v-if="userForm.role_id =='772769390512275457'">
+        <div class="slds-form-element custom-grid" v-if="!hides">
             <Labels labelName="Amount" className="slds-form-element__label custom-label" for="text-input-id-46" required="true"/> 
                
             
@@ -130,26 +130,32 @@ export default {
     }
   },
   props: ['theUser','rolelist','paymentPlan','userForm'],
-    
+afterMounted(){
+  console.log(this.theUser)
+},
   methods: {
     ChangeRole(e) {
-       
-            if (e.target.value.trim() == "772769390512275457") {
-                this.hides = false;
-                this.hidesins = false;
-            } else if(e.target.value.trim() =='772769426869092353'){
-               this.hides = true;
-                this.hidesins = false;
-            }else{
-                this.hides = true;
-                this.hidesins = true;
+     
+            if (e.target.options.selectedIndex > -1) {
+                var systemRole = e.target.options[e.target.options.selectedIndex].dataset.option;
+                var systemText = e.target.options[e.target.options.selectedIndex].text;
+            
+                if (systemText == 'Student' && systemRole == 1) {
+                    this.hides = false;
+                    this.hidesins = false;
+                } else if (systemText == 'Instuctor' && systemRole == 1) {
+                    this.hides = true;
+                    this.hidesins = false;
+                } else {
+                    this.hides = true;
+                    this.hidesins = true;
+                }
+                this.theUser.srole_title = systemText;
             }
         },
         
-  },
-  created(){
-   
   }
+  
   
 }
 </script>

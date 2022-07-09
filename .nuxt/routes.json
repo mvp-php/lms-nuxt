@@ -35,11 +35,39 @@
     "_name": "_2c6b2b70"
   },
   {
+    "name": "reset-password",
+    "path": "/reset-password",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/reset-password/index.vue",
+    "chunkName": "pages/reset-password/index",
+    "_name": "_643f7290"
+  },
+  {
     "name": "reset-success",
     "path": "/reset-success",
     "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/reset-success/index.vue",
     "chunkName": "pages/reset-success/index",
     "_name": "_344624f8"
+  },
+  {
+    "name": "sub-category",
+    "path": "/sub-category",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/sub-category/index.vue",
+    "chunkName": "pages/sub-category/index",
+    "_name": "_7211eba2"
+  },
+  {
+    "name": "update-profile",
+    "path": "/update-profile",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/update-profile/index.vue",
+    "chunkName": "pages/update-profile/index",
+    "_name": "_4025e6dc"
+  },
+  {
+    "name": "update-profile-update-password",
+    "path": "/update-profile/update-password",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/update-profile/update-password.vue",
+    "chunkName": "pages/update-profile/update-password",
+    "_name": "_250d4029"
   },
   {
     "name": "user-management-role",

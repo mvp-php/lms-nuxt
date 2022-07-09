@@ -4,25 +4,25 @@
     <div class="sidebar-inner text-center">
       <div>
         <ul class="sidebar-list">
-          <li class="active">
-            
-              <div class="slds-align_absolute-center side-svg-main">
-                <svg xmlns="http://www.w3.org/2000/svg" width="13.16" height="15" viewBox="0 0 13.16 15">
-                  <g id="icons_utility_standard_objects" data-name="icons/utility/standard_objects"
-                    transform="translate(-0.846 -0.615)">
-                    <path id="Mask"
-                      d="M13.757,12.138,7.894,15.475a1.014,1.014,0,0,1-1.029,0L1.033,12.138a.3.3,0,0,1,0-.561l1.372-.78a.283.283,0,0,1,.312,0l3.555,2.027a2.386,2.386,0,0,0,2.245,0L12.073,10.8a.283.283,0,0,1,.312,0l1.372.78a.3.3,0,0,1,0,.561Zm0-3.742L7.894,11.733a1.014,1.014,0,0,1-1.029,0L1.033,8.4a.3.3,0,0,1,0-.561l1.372-.78a.283.283,0,0,1,.312,0L6.272,9.082a2.386,2.386,0,0,0,2.245,0l3.555-2.027a.283.283,0,0,1,.312,0l1.372.78a.3.3,0,0,1,0,.561Zm-6.83-.405L1.064,4.654a.3.3,0,0,1,0-.561L6.927.756a1.014,1.014,0,0,1,1.029,0l5.863,3.337a.3.3,0,0,1,0,.561L7.956,7.991A1.19,1.19,0,0,1,6.927,7.991Z"
-                      transform="translate(0)" fill="#fff" />
-                  </g>
-                </svg>
-                <div class="sidebar-tooltip">Dashboard</div>
-              </div>
-   
+          <li :class="{ active : active_el == 1 }"  @click="activate(1)">
+
+            <div class="slds-align_absolute-center side-svg-main">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13.16" height="15" viewBox="0 0 13.16 15">
+                <g id="icons_utility_standard_objects" data-name="icons/utility/standard_objects"
+                  transform="translate(-0.846 -0.615)">
+                  <path id="Mask"
+                    d="M13.757,12.138,7.894,15.475a1.014,1.014,0,0,1-1.029,0L1.033,12.138a.3.3,0,0,1,0-.561l1.372-.78a.283.283,0,0,1,.312,0l3.555,2.027a2.386,2.386,0,0,0,2.245,0L12.073,10.8a.283.283,0,0,1,.312,0l1.372.78a.3.3,0,0,1,0,.561Zm0-3.742L7.894,11.733a1.014,1.014,0,0,1-1.029,0L1.033,8.4a.3.3,0,0,1,0-.561l1.372-.78a.283.283,0,0,1,.312,0L6.272,9.082a2.386,2.386,0,0,0,2.245,0l3.555-2.027a.283.283,0,0,1,.312,0l1.372.78a.3.3,0,0,1,0,.561Zm-6.83-.405L1.064,4.654a.3.3,0,0,1,0-.561L6.927.756a1.014,1.014,0,0,1,1.029,0l5.863,3.337a.3.3,0,0,1,0,.561L7.956,7.991A1.19,1.19,0,0,1,6.927,7.991Z"
+                    transform="translate(0)" fill="#fff" />
+                </g>
+              </svg>
+              <div class="sidebar-tooltip">Dashboard</div>
+            </div>
+
           </li>
-          {{ selectedTab}}
           
-               <li><NuxtLink to="/user-management/role">
-           
+          <li :class="[active_el ==2 ? 'active' : '']"  @click="activate(2)">
+            <NuxtLink to="/user-management/role">
+
               <div class="side-svg-main slds-align_absolute-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
                   <g id="icons_utility_user-copy" data-name="icons/utility/user-copy"
@@ -34,10 +34,11 @@
                 </svg>
                 <div class="sidebar-tooltip">User Management</div>
               </div>
-             
-            </NuxtLink>  </li>
-         
-          <li>
+
+            </NuxtLink>
+          </li>
+
+          <li :class="[active_el ==3 ? 'active' : '']"  @click="activate(3)">
             <NuxtLink to="/category">
               <div class="side-svg-main slds-align_absolute-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20.542" height="15" viewBox="0 0 20.542 15">
@@ -163,8 +164,20 @@
 
 export default {
   name: 'side-bar',
-  props:['selectedTab'],
-
-
+  props: ['selectedTab'],
+data(){
+    return{
+      active_el:0
+    }
+    
+  },
+  mounted(){
+    this.active_el =2;
+  },
+  methods:{
+    activate(id){
+      this.active_el = id;
+    }
+  }
 }
 </script>

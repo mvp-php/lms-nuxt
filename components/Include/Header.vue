@@ -21,7 +21,7 @@
                   </ImageComponent>
                   Edit profile
                 </a></li>
-              <li><a href="">
+              <li><a href="javscript:void(0)" @click="updateProfile()">
                   <ImageComponent :log="require('~/assets/img/front/upload.png')" alt="" class="log-drop-img">
                   </ImageComponent>
                   Update password
@@ -82,6 +82,9 @@ export default {
 
 
       })
+    },
+    updateProfile(){
+      this.$router.push({ path: '/update-profile' });
     }
   }
 

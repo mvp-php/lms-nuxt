@@ -4,7 +4,7 @@
         <Labels labelName="User Role Title" className="slds-form-element__label custom-label" for="text-input-id-46" required="true"/>
         
         <div class="slds-form-element__control custom-grid-control mb-20">
-            <Inputs fieldId="role_title" placeHolder="Role Title"  class="slds-input custom-grid-input "  className="slds-input" v-model.trim="theUser.role_title"  @blur="validateMail()"/>
+            <Inputs fieldId="role_title" placeHolder="Role Title"  class="slds-input custom-grid-input "  className="slds-input" v-model.trim="theUser.title"  @blur="validateMail()"/>
             
             <span class="text-danger" id="role_title_error" ref="caterror"></span>
         </div>

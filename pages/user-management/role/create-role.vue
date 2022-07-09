@@ -60,7 +60,7 @@ export default {
         return {
             user: {
                 permission:[],
-                role_title:'',
+                title:'',
                 description:''
                 
             },
@@ -97,12 +97,12 @@ export default {
            
             
             var cnt = 0;
-            if (!this.user.role_title) {
+            if (!this.user.title) {
                 document.getElementById("role_title_error").textContent = "Enter the role  title";
                 event.preventDefault();
                 cnt =1;
             }
-           console.log(this.user);
+       
             if (this.user.permission.length ==0) {
                 document.getElementById("permission_error").textContent = "Please select any one permission";
                 event.preventDefault();
@@ -121,7 +121,7 @@ export default {
                        
                     }).catch(error => {
 
-                        this.errorMessage = error.response.data.error_msg;
+                        this.errorMessage = error.response.data.response_msg;
 
                         this.dangerToasterShow();
 
@@ -139,6 +139,9 @@ export default {
             this.dangerHide = false;
             setTimeout(() => this.dangerHide = true, 5000);
         },
+        errorClose(){
+            this.dangerHide = true;
+            }
     }
 };
 </script>

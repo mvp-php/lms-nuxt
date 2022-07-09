@@ -9,7 +9,11 @@ const _1726c1d3 = () => interopDefault(import('../pages/dashboard/index.vue' /* 
 const _2ab6c504 = () => interopDefault(import('../pages/forgot-password/index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
 const _8f3f4f4e = () => interopDefault(import('../pages/link-successfully/index.vue' /* webpackChunkName: "pages/link-successfully/index" */))
 const _2c6b2b70 = () => interopDefault(import('../pages/Login/index.vue' /* webpackChunkName: "pages/Login/index" */))
+const _643f7290 = () => interopDefault(import('../pages/reset-password/index.vue' /* webpackChunkName: "pages/reset-password/index" */))
 const _344624f8 = () => interopDefault(import('../pages/reset-success/index.vue' /* webpackChunkName: "pages/reset-success/index" */))
+const _7211eba2 = () => interopDefault(import('../pages/sub-category/index.vue' /* webpackChunkName: "pages/sub-category/index" */))
+const _4025e6dc = () => interopDefault(import('../pages/update-profile/index.vue' /* webpackChunkName: "pages/update-profile/index" */))
+const _250d4029 = () => interopDefault(import('../pages/update-profile/update-password.vue' /* webpackChunkName: "pages/update-profile/update-password" */))
 const _7a858037 = () => interopDefault(import('../pages/user-management/role/index.vue' /* webpackChunkName: "pages/user-management/role/index" */))
 const _33ec854c = () => interopDefault(import('../pages/user-management/user/index.vue' /* webpackChunkName: "pages/user-management/user/index" */))
 const _1c2f5468 = () => interopDefault(import('../pages/user-management/role/create-role.vue' /* webpackChunkName: "pages/user-management/role/create-role" */))
@@ -51,9 +55,25 @@ export const routerOptions = {
     component: _2c6b2b70,
     name: "Login"
   }, {
+    path: "/reset-password",
+    component: _643f7290,
+    name: "reset-password"
+  }, {
     path: "/reset-success",
     component: _344624f8,
     name: "reset-success"
+  }, {
+    path: "/sub-category",
+    component: _7211eba2,
+    name: "sub-category"
+  }, {
+    path: "/update-profile",
+    component: _4025e6dc,
+    name: "update-profile"
+  }, {
+    path: "/update-profile/update-password",
+    component: _250d4029,
+    name: "update-profile-update-password"
   }, {
     path: "/user-management/role",
     component: _7a858037,

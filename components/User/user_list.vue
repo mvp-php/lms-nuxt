@@ -1,7 +1,7 @@
 <template>
 
     <span class="slds-user-table">
-      <dataTable :header="header" :tableData="tableData" :no_record_avalible="no_record_avalible" :paginateObjs="paginateObj" url="/user-management/role" :searchKeyword="searchkeyword"/>
+      <dataTable :header="header" :tableData="tableData" :no_record_avalible="no_record_avalible" :paginateObjs="paginateObj" url="/user-management/role" :searchKeyword="searchkeyword" :pageCount="pageCount"/>
     </span>
 
 </template>
@@ -10,7 +10,7 @@
 import dataTable from '../element/dataTable.vue';
 export default {
     name: 'UserForm',
-    props:['header','tableData','no_record_avalible','openViewModel','paginateObj','searchkeyword'],
+    props:['header','tableData','no_record_avalible','openViewModel','paginateObj','searchkeyword','pageCount'],
     components:{
         dataTable
     },

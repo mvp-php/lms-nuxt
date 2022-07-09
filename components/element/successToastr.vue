@@ -26,7 +26,7 @@ export default {
     },
     methods: {
         successToasterHide() {
-            this.$parent.successToastrShow()
+            this.$parent.successClose()
         }
     }
 }
