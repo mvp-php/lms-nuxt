@@ -8,7 +8,7 @@
                 <tr class="slds-line-height_reset">
                    
                     <th class=" slds-cell_action-mode" scope="col" v-for="item in header"
-                        :key="item" :style="[item =='' ? {'width': '3.25rem'} : {}]" v-bind:class = "(item =='')?' slds-cell_action-mode':'slds-is-resizable slds-is-sortable slds-cell_action-mode'">
+                         :style="[item =='' ? {'width': '3.25rem'} : {}]" v-bind:class = "(item =='')?' slds-cell_action-mode':'slds-is-resizable slds-is-sortable slds-cell_action-mode'">
                         <div v-if="item == ''">
                             <span id="column-group-header" class="slds-assistive-text">Choose a
                                 row</span>

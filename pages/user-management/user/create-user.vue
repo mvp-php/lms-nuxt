@@ -77,6 +77,7 @@ export default {
         this.PaymentPlanList();
     },
     methods: {
+        
         getRoleList() {
 
             RoleDataService.getAllRoleList().then(response => {
@@ -143,11 +144,10 @@ export default {
             if (cnt == 0) {
                 userService.saveUser(this.user)
                     .then((result) => {
-                        console.log(result)
-
+                       localStorage.setItem('sucess_msg',result.data.response_msg);
+                    
                         this.$router.push({ path: '/user-management/user' });
                     }).catch(error => {
-
                         this.errorMessage = error.response.data.response_msg;
 
                         this.dangerToasterShow();

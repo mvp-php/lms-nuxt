@@ -12,7 +12,7 @@
                         Edit A User
                     </div>
                     <form v-on:submit.prevent="submitData">
-                        <EditUser :the-user="user" :rolelist="allRoleList" :paymentPlan="paymentPlan"
+                        <EditUser :the-user="user"  :roleTitles="roleTitle"  :systemFlag="systemFlag"  :rolelist="allRoleList" :paymentPlan="paymentPlan"
                             :userForm="userForm" />
                         <div class="btn-align-end">
                             <ButtonComponent type="submit" class="slds-button slds-button_brand btnmain blue-btn ml-10"
@@ -68,7 +68,9 @@ export default {
             allRoleList: [],
             paymentPlan: [],
             dangerHide: true,
-            userForm: []
+            userForm: [],
+            roleTitle:'',
+            systemFlag:''
         };
     },
     mounted() {
@@ -104,18 +106,17 @@ export default {
             userService.getUserDetails(this.$route.params.id).then(response => {
                 this.loading = false;
                 this.userForm = response.data.data;
-
-                this.user = response.data.data;
-                if(this.user.title =='Student' && this.user.is_system_role ==1){
-                   const editButtonRef= this.$refs.test('false');
+                this.roleTitle=response.data.data.title;
+                this.systemFlag=response.data.data.is_system_role;
                 
-                }
-
+                this.user = response.data.data;
+                
 
             }).catch(e => {
                 console.log(e)
             });
         },
+        
         hide(){
             this.hides = true;
         },
@@ -150,7 +151,7 @@ export default {
                 document.getElementById("members_error").textContent = "";
                 document.getElementById("amount_error").textContent = "";
 
-                if (!this.user.member_ship_id) {
+                if (!this.user.entity_id) {
                     document.getElementById("members_error").textContent = "Select one plan at a time";
                     event.preventDefault();
                     cnt = 1;

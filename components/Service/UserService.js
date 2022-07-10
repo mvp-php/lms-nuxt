@@ -34,11 +34,19 @@ class UserService {
   }
 
   callUpdatePassword(data){
+    console.log(data,"daksdj")
     return http.post(`/call-update-password/`,data,{ headers: authHeader() });
   }
   importCSVFile(data){
   
     return http.post(`/import-csv/`,data,{ headers: authHeader() });
+  }
+
+  profile(){
+    return http.get(`/call-user-profile/`,{ headers: authHeader() });
+  }
+  profileUpdate(data){
+    return http.post(`/profile-update/`,data,{ headers: authHeader() });
   }
 }
 export default new UserService();

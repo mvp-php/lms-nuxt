@@ -16,12 +16,12 @@
 
           <div class="log-dropdown position-relative" v-if="!toogleShow">
             <ul class="log-drop" id="logout">
-              <li><a href="">
+              <li><a href="javscript:void(0)" @click="updateProfile()">
                   <ImageComponent :log="require('~/assets/img/front/edit.png')" alt="" class="log-drop-img">
                   </ImageComponent>
                   Edit profile
                 </a></li>
-              <li><a href="javscript:void(0)" @click="updateProfile()">
+              <li><a href="javscript:void(0)" @click="updatePassword()">
                   <ImageComponent :log="require('~/assets/img/front/upload.png')" alt="" class="log-drop-img">
                   </ImageComponent>
                   Update password
@@ -85,6 +85,9 @@ export default {
     },
     updateProfile(){
       this.$router.push({ path: '/update-profile' });
+    },
+    updatePassword(){
+      this.$router.push({ path: '/update-password' });
     }
   }
 

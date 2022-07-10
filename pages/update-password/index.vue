@@ -74,7 +74,7 @@ export default {
                 document.getElementById("confirm_password_error").textContent = "Enter confirm password";
                 cnt = 1;
             }
-console.log(this.user)
+
             if (cnt == 0) {
                 userService.callUpdatePassword(this.user)
                     .then((result) => {
