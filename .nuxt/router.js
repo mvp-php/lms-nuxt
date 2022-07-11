@@ -4,7 +4,6 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _e3c19d20 = () => interopDefault(import('..\\pages\\category\\index.vue' /* webpackChunkName: "pages/category/index" */))
 const _c0906b02 = () => interopDefault(import('..\\pages\\category-managment\\index.vue' /* webpackChunkName: "pages/category-managment/index" */))
 const _0b936e12 = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index" */))
 const _c93fadfe = () => interopDefault(import('..\\pages\\forgot-password\\index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
@@ -12,6 +11,7 @@ const _50386f68 = () => interopDefault(import('..\\pages\\link-successfully\\ind
 const _4acd443d = () => interopDefault(import('..\\pages\\Login\\index.vue' /* webpackChunkName: "pages/Login/index" */))
 const _1ff24881 = () => interopDefault(import('..\\pages\\reset-success\\index.vue' /* webpackChunkName: "pages/reset-success/index" */))
 const _060c77b0 = () => interopDefault(import('..\\pages\\SubCategory\\index.vue' /* webpackChunkName: "pages/SubCategory/index" */))
+const _1229e0c8 = () => interopDefault(import('..\\pages\\category-managment\\create-category.vue' /* webpackChunkName: "pages/category-managment/create-category" */))
 const _1474e754 = () => interopDefault(import('..\\pages\\Login\\login.vue' /* webpackChunkName: "pages/Login/login" */))
 const _5171608b = () => interopDefault(import('..\\pages\\user-management\\role\\index.vue' /* webpackChunkName: "pages/user-management/role/index" */))
 const _762a03d4 = () => interopDefault(import('..\\pages\\user-management\\user\\index.vue' /* webpackChunkName: "pages/user-management/user/index" */))
@@ -19,7 +19,9 @@ const _7bf7a720 = () => interopDefault(import('..\\pages\\user-management\\role\
 const _c7e92d80 = () => interopDefault(import('..\\pages\\user-management\\user\\create-user.vue' /* webpackChunkName: "pages/user-management/user/create-user" */))
 const _136bfc98 = () => interopDefault(import('..\\pages\\user-management\\role\\edit-role\\_id.vue' /* webpackChunkName: "pages/user-management/role/edit-role/_id" */))
 const _661cefb8 = () => interopDefault(import('..\\pages\\user-management\\user\\edit-user\\_id.vue' /* webpackChunkName: "pages/user-management/user/edit-user/_id" */))
+const _357c1d9c = () => interopDefault(import('..\\pages\\category-managment\\edit-category\\_id.vue' /* webpackChunkName: "pages/category-managment/edit-category/_id" */))
 const _7d6bd246 = () => interopDefault(import('..\\pages\\reset-password\\_id.vue' /* webpackChunkName: "pages/reset-password/_id" */))
+const _20fab090 = () => interopDefault(import('..\\pages\\SubCategory\\_id.vue' /* webpackChunkName: "pages/SubCategory/_id" */))
 const _fa2c8ca4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -34,10 +36,6 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/category",
-    component: _e3c19d20,
-    name: "category"
-  }, {
     path: "/category-managment",
     component: _c0906b02,
     name: "category-managment"
@@ -65,6 +63,10 @@ export const routerOptions = {
     path: "/SubCategory",
     component: _060c77b0,
     name: "SubCategory"
+  }, {
+    path: "/category-managment/create-category",
+    component: _1229e0c8,
+    name: "category-managment-create-category"
   }, {
     path: "/Login/login",
     component: _1474e754,
@@ -94,9 +96,17 @@ export const routerOptions = {
     component: _661cefb8,
     name: "user-management-user-edit-user-id"
   }, {
+    path: "/category-managment/edit-category/:id",
+    component: _357c1d9c,
+    name: "category-managment-edit-category-id"
+  }, {
     path: "/reset-password/:id?",
     component: _7d6bd246,
     name: "reset-password-id"
+  }, {
+    path: "/SubCategory/:id",
+    component: _20fab090,
+    name: "SubCategory-id"
   }, {
     path: "/",
     component: _fa2c8ca4,

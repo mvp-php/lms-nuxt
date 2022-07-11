@@ -179,6 +179,7 @@
                                                 </label>
                                             </div>
                                         </td>
+                                        {{categoryAllData.error}}
                                         <td class="slds-cell_action-mode" role="gridcell">
                                             <div class="slds-truncate" title="1">{{ index + 1 }}</div>
                                         </td>

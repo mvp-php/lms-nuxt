@@ -11,9 +11,11 @@
                                 class="slds-input search-inp" v-on:keyup="searchText($event)" />
                         </div>
                     </div>
-                    <a class="slds-button slds-button_brand btnmain blue-btn ml-10" href="javascript:void(0)"
-                        id="add-category-btn" v-on:click="openModel()">Add Major
-                        Category</a>
+                    <router-link to="/category-managment/create-category">
+                        <a class="slds-button slds-button_brand btnmain blue-btn ml-10" href="javascript:void(0)"
+                            id="add-category-btn">Add Major
+                            Category</a>
+                    </router-link>
                     <button class="slds-button slds-button_brand btnmain light-blue-btn ml-10" href="javascript:void(0)"
                         @click="BulkDelete()" v-if="!bulk_delete_button">Delete
                         Category</button>
@@ -35,7 +37,7 @@
         <successToastrVue :success-message="successMessage" id="successMsg" class="successMsg" v-if="!hides"
             ref="successNewMsg" />
         <!-- add category  -->
-        <div class="user-record-modal">
+        <!-- <div class="user-record-modal">
             <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
                 class="slds-modal " id="add-category" ref="addcategory">
                 <div class="slds-modal__container addcategory-dialog-modal p-0" ref="newaddcategory">
@@ -57,7 +59,8 @@
                     </div>
                     <div class="slds-modal__content slds-p-around_medium modal-content-category"
                         id="modal-content-id-1">
-                        <form @submit="addNewCategory" ref="add_category_submit" enctype="multipart/form-data">
+                        <form @submit="addNewCategory" ref="add_category_submit" id="add_category_form"
+                            enctype="multipart/form-data">
                             <div class="modal-row">
                                 <div class="modal-category-col1">
                                     <p class="mb-0 user-modal-title">Category Name</p>
@@ -93,7 +96,8 @@
                                 </div>
                                 <div class="modal-record-col2">
                                     <Dropzone v-bind:fileUploadSuccessEvent="fileUploadSuccessEvent"
-                                        modelname="Dropzone" v-model="categoryData.dropzoneImage" />
+                                        modelname="Dropzone" id="myDropzoneElementID"
+                                        v-model="categoryData.dropzoneImage" />
                                 </div>
                             </div>
                             <div class="btn-align-end p-0">
@@ -108,7 +112,7 @@
             </div>
             <div class="slds-backdrop " role="presentation" id="edit-category-backdrop" ref="editcategorybackdrop">
             </div>
-        </div>
+        </div> -->
         <!-- end add category -->
 
         <!-- view model -->
@@ -221,9 +225,9 @@
                                     <div class="slds-form-element__control  ">
 
                                         <FormTextBoxField v-model="editModelData.title"
-                                            @blur="e => editModelData.title = e.target.value" fieldId="category_name"
-                                            :value="editModelData.title" placeHolder="Enter category"
-                                            className="slds-input custom-grid-input" />
+                                            @blur="e => editModelData.title = e.target.value"
+                                            fieldId="category_name_edit" :value="editModelData.title"
+                                            placeHolder="Enter category" className="slds-input custom-grid-input" />
                                         <span class="text-danger" id="catnameeerroredit" ref="caterror"></span>
                                     </div>
                                 </div>
@@ -512,13 +516,14 @@ export default {
         closeModel() {
             this.$refs.addcategory.classList.remove("slds-fade-in-open");
             this.$refs.addcategorybackdrop.classList.remove("slds-backdrop_open");
+            document.getElementById("add_category_form").reset();
         },
         successToasterShow() {
             this.hides = false;
             setTimeout(() => this.hides = true, 5000);
         },
         addNewCategory(e) {
-           
+
             document.getElementById("catnameeerror").textContent = "";
             document.getElementById("catedescerror").textContent = "";
             console.log(this.categoryData.categoryName);
@@ -533,16 +538,13 @@ export default {
             if (this.categoryData.categoryName && this.categoryData.categoryDescription) {
 
                 CategoryService.addCategory(this.categoryData).then((result) => {
-                    
-                    this.$refs["category_name"].$attrs.value = "";
-                    this.$refs["category_description"].$attrs.value = "";
                     this.categoryData.categoryName;
                     this.getAllCatData();
                     this.successToasterShow();
                     this.closeModel();
                     this.successMessage = result.data.error_msg;
 
-                
+
 
 
                 }).catch(error => {
@@ -550,7 +552,7 @@ export default {
                     this.errorMessage = error.response.data.error_msg;
                     this.errorToastrShow();
                 });
-               
+
 
                 e.preventDefault();
             }
@@ -596,6 +598,9 @@ export default {
         closeViewModel() {
             this.$refs.openViewModelNew.classList.remove("slds-fade-in-open");
             this.$refs.openViewModelNewbackdrop.classList.remove("slds-backdrop_open");
+        },
+        viewEditPage: function (id) {
+            this.$router.push({ path: "/category-managment/edit-category/" + id });
         },
         userEdit(id) {
             CategoryService.getEditDetails(id).then((result) => {
@@ -650,7 +655,7 @@ export default {
         deleteCategory() {
             CategoryService.deleteCategory(this.DeleteId).then((result) => {
                 if (result) {
-                    this.$router.push({ name: 'category' })
+                    this.$router.push({ name: 'category-managment' })
                     this.closeDeleteModel();
                     this.getAllCatData();
                     this.successMessage = "Successfully Deleted";
@@ -682,7 +687,7 @@ export default {
             this.$refs.addsubcategorybackdrop.classList.remove("slds-backdrop_open");
         },
         addSubCategory(e) {
-            
+
             document.getElementById("majorCategoryerror").textContent = "";
             document.getElementById("subcatnameeerror").textContent = "";
             document.getElementById("subcatedescerror").textContent = "";
@@ -718,6 +723,10 @@ export default {
                 this.bulk_delete_button = true;
             }
             this.deletedId = id;
+        },
+        mainOpenMainSubCategory:function(id){
+             this.$router.push({ path: 'SubCategory/' + id });
+             
         },
         BulkDelete() {
             CategoryService.bulkCategoryDelete(this.deletedId).then((result) => {

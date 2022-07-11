@@ -5,6 +5,7 @@
       <div>
         <ul class="sidebar-list">
           <li class="active">
+            <router-link to="/home">
               <div class="slds-align_absolute-center side-svg-main">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13.16" height="15" viewBox="0 0 13.16 15">
                   <g id="icons_utility_standard_objects" data-name="icons/utility/standard_objects"
@@ -16,8 +17,9 @@
                 </svg>
                 <div class="sidebar-tooltip">Dashboard</div>
               </div>
+            </router-link>
           </li>
-          <li> 
+          <li>
             <router-link to="/user-management/role">
               <div class="side-svg-main slds-align_absolute-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
@@ -33,7 +35,7 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/category">
+            <router-link to="/category-management">
               <div class="side-svg-main slds-align_absolute-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20.542" height="15" viewBox="0 0 20.542 15">
                   <g id="icons_utility_groups-copy" data-name="icons/utility/groups-copy"

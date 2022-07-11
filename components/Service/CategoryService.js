@@ -21,7 +21,7 @@ class CategoryService {
     }
 
     getCategoryListNew(){
-        return http.get(`/category-sub-list/`,{ headers: authHeader() });
+        return http.get(`/category-list/`,{ headers: authHeader() });
     }
 }
 export default new CategoryService();

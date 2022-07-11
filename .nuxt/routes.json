@@ -1,12 +1,5 @@
 [
   {
-    "name": "category",
-    "path": "/category",
-    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\category\\\\index.vue",
-    "chunkName": "pages/category/index",
-    "_name": "_e3c19d20"
-  },
-  {
     "name": "category-managment",
     "path": "/category-managment",
     "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\category-managment\\\\index.vue",
@@ -54,6 +47,13 @@
     "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\SubCategory\\\\index.vue",
     "chunkName": "pages/SubCategory/index",
     "_name": "_060c77b0"
+  },
+  {
+    "name": "category-managment-create-category",
+    "path": "/category-managment/create-category",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\category-managment\\\\create-category.vue",
+    "chunkName": "pages/category-managment/create-category",
+    "_name": "_1229e0c8"
   },
   {
     "name": "Login-login",
@@ -105,11 +105,25 @@
     "_name": "_661cefb8"
   },
   {
+    "name": "category-managment-edit-category-id",
+    "path": "/category-managment/edit-category/:id",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\category-managment\\\\edit-category\\\\_id.vue",
+    "chunkName": "pages/category-managment/edit-category/_id",
+    "_name": "_357c1d9c"
+  },
+  {
     "name": "reset-password-id",
     "path": "/reset-password/:id?",
     "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\reset-password\\\\_id.vue",
     "chunkName": "pages/reset-password/_id",
     "_name": "_7d6bd246"
+  },
+  {
+    "name": "SubCategory-id",
+    "path": "/SubCategory/:id",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\SubCategory\\\\_id.vue",
+    "chunkName": "pages/SubCategory/_id",
+    "_name": "_20fab090"
   },
   {
     "name": "index",
