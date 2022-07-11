@@ -184,15 +184,17 @@
                                         </td>
                                         <td class="slds-cell_action-mode" role="gridcell">
                                             <div class="slds-truncate" title="Network security">
-                                                {{ categoryD.category_title }}</div>
+                                                {{categoryAllData.title}}
+                                               </div>
                                         </td>
                                         <td class="slds-cell_action-mode" role="gridcell">
                                             <div class="slds-truncate" title="Network security">
-                                                {{ categoryD.category.category_title }}</div>
+                                                {{categoryAllData.description}}
+                                                </div>
                                         </td>
                                         <td class="slds-cell_action-mode" role="gridcell">
                                             <div class="slds-truncate" title="27/01/2022">
-                                                {{ categoryD.created_at }}
+                                                {{categoryAllData.created_a}}
                                             </div>
                                         </td>
                                         <td class="slds-cell_action-mode" role="gridcell">
@@ -439,7 +441,7 @@
                     </div>
                     <div class="slds-modal__content slds-p-around_medium modal-content-category"
                         id="modal-content-id-1">
-                        <form @submit="updateCategory">
+                        <form >
                             <div class="modal-row">
                                 <div class="modal-category-col1">
                                     <p class="mb-0 user-modal-title">Select Major Category</p>
@@ -525,7 +527,7 @@ import FormButton from '../../components/element/formButton.vue';
 import successToastrVue from '../../components/element/successToastr.vue';
 import CategoryService from '../../components/Service/CategoryService';
 import SubcategoryService from '../../components/Service/SubcategoryService';
-export default {
+export default {                                                                                                                                                                                                                                                                                                                                    
     layout: 'frontend',
     name: 'SubCategory',
     props: ['theUser'],

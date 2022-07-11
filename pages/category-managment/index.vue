@@ -518,6 +518,7 @@ export default {
             setTimeout(() => this.hides = true, 5000);
         },
         addNewCategory(e) {
+           
             document.getElementById("catnameeerror").textContent = "";
             document.getElementById("catedescerror").textContent = "";
             console.log(this.categoryData.categoryName);
@@ -553,7 +554,9 @@ export default {
 
                 e.preventDefault();
             }
-             console.log(this.$refs["category_description"].$attrs.value, "NAYAN NAYAN");
+            //  categoryData.categoryName = '';
+            // categoryData.categoryDescription = '';
+            //  console.log(this.$refs["category_description"].$attrs.value, "NAYAN NAYAN");
         },
         errorToastrShow() {
             this.error_hide = false;
@@ -679,7 +682,7 @@ export default {
             this.$refs.addsubcategorybackdrop.classList.remove("slds-backdrop_open");
         },
         addSubCategory(e) {
-
+            
             document.getElementById("majorCategoryerror").textContent = "";
             document.getElementById("subcatnameeerror").textContent = "";
             document.getElementById("subcatedescerror").textContent = "";

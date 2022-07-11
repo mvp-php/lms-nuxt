@@ -7,6 +7,13 @@
     "_name": "_e3c19d20"
   },
   {
+    "name": "category-managment",
+    "path": "/category-managment",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\category-managment\\\\index.vue",
+    "chunkName": "pages/category-managment/index",
+    "_name": "_c0906b02"
+  },
+  {
     "name": "dashboard",
     "path": "/dashboard",
     "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\dashboard\\\\index.vue",
@@ -82,6 +89,13 @@
     "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\user-management\\\\user\\\\create-user.vue",
     "chunkName": "pages/user-management/user/create-user",
     "_name": "_c7e92d80"
+  },
+  {
+    "name": "user-management-role-edit-role-id",
+    "path": "/user-management/role/edit-role/:id",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\user-management\\\\role\\\\edit-role\\\\_id.vue",
+    "chunkName": "pages/user-management/role/edit-role/_id",
+    "_name": "_136bfc98"
   },
   {
     "name": "user-management-user-edit-user-id",

@@ -5,6 +5,7 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _e3c19d20 = () => interopDefault(import('..\\pages\\category\\index.vue' /* webpackChunkName: "pages/category/index" */))
+const _c0906b02 = () => interopDefault(import('..\\pages\\category-managment\\index.vue' /* webpackChunkName: "pages/category-managment/index" */))
 const _0b936e12 = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index" */))
 const _c93fadfe = () => interopDefault(import('..\\pages\\forgot-password\\index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
 const _50386f68 = () => interopDefault(import('..\\pages\\link-successfully\\index.vue' /* webpackChunkName: "pages/link-successfully/index" */))
@@ -16,6 +17,7 @@ const _5171608b = () => interopDefault(import('..\\pages\\user-management\\role\
 const _762a03d4 = () => interopDefault(import('..\\pages\\user-management\\user\\index.vue' /* webpackChunkName: "pages/user-management/user/index" */))
 const _7bf7a720 = () => interopDefault(import('..\\pages\\user-management\\role\\create-role.vue' /* webpackChunkName: "pages/user-management/role/create-role" */))
 const _c7e92d80 = () => interopDefault(import('..\\pages\\user-management\\user\\create-user.vue' /* webpackChunkName: "pages/user-management/user/create-user" */))
+const _136bfc98 = () => interopDefault(import('..\\pages\\user-management\\role\\edit-role\\_id.vue' /* webpackChunkName: "pages/user-management/role/edit-role/_id" */))
 const _661cefb8 = () => interopDefault(import('..\\pages\\user-management\\user\\edit-user\\_id.vue' /* webpackChunkName: "pages/user-management/user/edit-user/_id" */))
 const _7d6bd246 = () => interopDefault(import('..\\pages\\reset-password\\_id.vue' /* webpackChunkName: "pages/reset-password/_id" */))
 const _fa2c8ca4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
@@ -35,6 +37,10 @@ export const routerOptions = {
     path: "/category",
     component: _e3c19d20,
     name: "category"
+  }, {
+    path: "/category-managment",
+    component: _c0906b02,
+    name: "category-managment"
   }, {
     path: "/dashboard",
     component: _0b936e12,
@@ -79,6 +85,10 @@ export const routerOptions = {
     path: "/user-management/user/create-user",
     component: _c7e92d80,
     name: "user-management-user-create-user"
+  }, {
+    path: "/user-management/role/edit-role/:id",
+    component: _136bfc98,
+    name: "user-management-role-edit-role-id"
   }, {
     path: "/user-management/user/edit-user/:id",
     component: _661cefb8,

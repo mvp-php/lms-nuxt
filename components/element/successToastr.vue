@@ -25,9 +25,9 @@ export default {
         }
     },
     methods: {
-        successToasterHide() {
-            this.$parent.successToastrShow()
-        }
+        // successToasterHide() {
+        //     this.$parent.successToastrShow()
+        // }
     }
 }
 </script>
