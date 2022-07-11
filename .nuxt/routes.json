@@ -56,18 +56,18 @@
     "_name": "_7211eba2"
   },
   {
+    "name": "update-password",
+    "path": "/update-password",
+    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/update-password/index.vue",
+    "chunkName": "pages/update-password/index",
+    "_name": "_5c35519e"
+  },
+  {
     "name": "update-profile",
     "path": "/update-profile",
     "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/update-profile/index.vue",
     "chunkName": "pages/update-profile/index",
     "_name": "_4025e6dc"
-  },
-  {
-    "name": "update-profile-update-password",
-    "path": "/update-profile/update-password",
-    "component": "/home/vhits-vishal_d/Documents/lms-nuxt/pages/update-profile/update-password.vue",
-    "chunkName": "pages/update-profile/update-password",
-    "_name": "_250d4029"
   },
   {
     "name": "user-management-role",

@@ -22,6 +22,7 @@ export { default as SubcategorySubCategory } from '../../components/Subcategory/
 export { default as UserCreateUser } from '../../components/User/create_user.vue'
 export { default as UserEditUser } from '../../components/User/edit_user.vue'
 export { default as UserImportCsv } from '../../components/User/import_csv.vue'
+export { default as UserImportUserList } from '../../components/User/import_user_list.vue'
 export { default as UserList } from '../../components/User/user_list.vue'
 export { default as ConfigAuthHeader } from '../../components/config/AuthHeader.js'
 export { default as ConfigDataService } from '../../components/config/DataService.js'

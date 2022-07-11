@@ -71,6 +71,9 @@
   "UserImportCsv": {
     "description": "Auto imported from components/User/import_csv.vue"
   },
+  "UserImportUserList": {
+    "description": "Auto imported from components/User/import_user_list.vue"
+  },
   "UserList": {
     "description": "Auto imported from components/User/user_list.vue"
   },

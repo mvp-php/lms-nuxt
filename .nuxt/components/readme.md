@@ -30,6 +30,7 @@ You can directly use them in pages and other components without the need to impo
 - `<UserCreateUser>` | `<user-create-user>` (components/User/create_user.vue)
 - `<UserEditUser>` | `<user-edit-user>` (components/User/edit_user.vue)
 - `<UserImportCsv>` | `<user-import-csv>` (components/User/import_csv.vue)
+- `<UserImportUserList>` | `<user-import-user-list>` (components/User/import_user_list.vue)
 - `<UserList>` | `<user-list>` (components/User/user_list.vue)
 - `<ConfigAuthHeader>` | `<config-auth-header>` (components/config/AuthHeader.js)
 - `<ConfigDataService>` | `<config-data-service>` (components/config/DataService.js)
