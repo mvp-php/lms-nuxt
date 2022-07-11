@@ -31,6 +31,7 @@ class UserService {
 
   callLogout(){
       return http.post(`/call-logout/`,'',{ headers: authHeader() });
+<<<<<<< HEAD
   }
 
   callUpdatePassword(data){
@@ -47,6 +48,8 @@ class UserService {
   }
   profileUpdate(data){
     return http.post(`/profile-update/`,data,{ headers: authHeader() });
+=======
+>>>>>>> origin/main
   }
 }
 export default new UserService();

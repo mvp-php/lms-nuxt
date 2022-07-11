@@ -4,24 +4,25 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _beef9e16 = () => interopDefault(import('../pages/category/index.vue' /* webpackChunkName: "pages/category/index" */))
-const _1726c1d3 = () => interopDefault(import('../pages/dashboard/index.vue' /* webpackChunkName: "pages/dashboard/index" */))
-const _2ab6c504 = () => interopDefault(import('../pages/forgot-password/index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
-const _8f3f4f4e = () => interopDefault(import('../pages/link-successfully/index.vue' /* webpackChunkName: "pages/link-successfully/index" */))
-const _2c6b2b70 = () => interopDefault(import('../pages/Login/index.vue' /* webpackChunkName: "pages/Login/index" */))
-const _643f7290 = () => interopDefault(import('../pages/reset-password/index.vue' /* webpackChunkName: "pages/reset-password/index" */))
-const _344624f8 = () => interopDefault(import('../pages/reset-success/index.vue' /* webpackChunkName: "pages/reset-success/index" */))
-const _7211eba2 = () => interopDefault(import('../pages/sub-category/index.vue' /* webpackChunkName: "pages/sub-category/index" */))
-const _5c35519e = () => interopDefault(import('../pages/update-password/index.vue' /* webpackChunkName: "pages/update-password/index" */))
-const _4025e6dc = () => interopDefault(import('../pages/update-profile/index.vue' /* webpackChunkName: "pages/update-profile/index" */))
-const _7a858037 = () => interopDefault(import('../pages/user-management/role/index.vue' /* webpackChunkName: "pages/user-management/role/index" */))
-const _33ec854c = () => interopDefault(import('../pages/user-management/user/index.vue' /* webpackChunkName: "pages/user-management/user/index" */))
-const _1c2f5468 = () => interopDefault(import('../pages/user-management/role/create-role.vue' /* webpackChunkName: "pages/user-management/role/create-role" */))
-const _cfc7a014 = () => interopDefault(import('../pages/user-management/user/create-user.vue' /* webpackChunkName: "pages/user-management/user/create-user" */))
-const _112a3669 = () => interopDefault(import('../pages/user-management/role/edit-role/_id.vue' /* webpackChunkName: "pages/user-management/role/edit-role/_id" */))
-const _37789cd3 = () => interopDefault(import('../pages/user-management/user/edit-user/_id.vue' /* webpackChunkName: "pages/user-management/user/edit-user/_id" */))
-const _5b28d8f8 = () => interopDefault(import('../pages/reset-password/_id.vue' /* webpackChunkName: "pages/reset-password/_id" */))
-const _52f7988e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _c0906b02 = () => interopDefault(import('..\\pages\\category-managment\\index.vue' /* webpackChunkName: "pages/category-managment/index" */))
+const _0b936e12 = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index" */))
+const _c93fadfe = () => interopDefault(import('..\\pages\\forgot-password\\index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
+const _50386f68 = () => interopDefault(import('..\\pages\\link-successfully\\index.vue' /* webpackChunkName: "pages/link-successfully/index" */))
+const _4acd443d = () => interopDefault(import('..\\pages\\Login\\index.vue' /* webpackChunkName: "pages/Login/index" */))
+const _1ff24881 = () => interopDefault(import('..\\pages\\reset-success\\index.vue' /* webpackChunkName: "pages/reset-success/index" */))
+const _060c77b0 = () => interopDefault(import('..\\pages\\SubCategory\\index.vue' /* webpackChunkName: "pages/SubCategory/index" */))
+const _1229e0c8 = () => interopDefault(import('..\\pages\\category-managment\\create-category.vue' /* webpackChunkName: "pages/category-managment/create-category" */))
+const _1474e754 = () => interopDefault(import('..\\pages\\Login\\login.vue' /* webpackChunkName: "pages/Login/login" */))
+const _5171608b = () => interopDefault(import('..\\pages\\user-management\\role\\index.vue' /* webpackChunkName: "pages/user-management/role/index" */))
+const _762a03d4 = () => interopDefault(import('..\\pages\\user-management\\user\\index.vue' /* webpackChunkName: "pages/user-management/user/index" */))
+const _7bf7a720 = () => interopDefault(import('..\\pages\\user-management\\role\\create-role.vue' /* webpackChunkName: "pages/user-management/role/create-role" */))
+const _c7e92d80 = () => interopDefault(import('..\\pages\\user-management\\user\\create-user.vue' /* webpackChunkName: "pages/user-management/user/create-user" */))
+const _136bfc98 = () => interopDefault(import('..\\pages\\user-management\\role\\edit-role\\_id.vue' /* webpackChunkName: "pages/user-management/role/edit-role/_id" */))
+const _661cefb8 = () => interopDefault(import('..\\pages\\user-management\\user\\edit-user\\_id.vue' /* webpackChunkName: "pages/user-management/user/edit-user/_id" */))
+const _357c1d9c = () => interopDefault(import('..\\pages\\category-managment\\edit-category\\_id.vue' /* webpackChunkName: "pages/category-managment/edit-category/_id" */))
+const _7d6bd246 = () => interopDefault(import('..\\pages\\reset-password\\_id.vue' /* webpackChunkName: "pages/reset-password/_id" */))
+const _20fab090 = () => interopDefault(import('..\\pages\\SubCategory\\_id.vue' /* webpackChunkName: "pages/SubCategory/_id" */))
+const _fa2c8ca4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -35,24 +36,24 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/category",
-    component: _beef9e16,
-    name: "category"
+    path: "/category-managment",
+    component: _c0906b02,
+    name: "category-managment"
   }, {
     path: "/dashboard",
-    component: _1726c1d3,
+    component: _0b936e12,
     name: "dashboard"
   }, {
     path: "/forgot-password",
-    component: _2ab6c504,
+    component: _c93fadfe,
     name: "forgot-password"
   }, {
     path: "/link-successfully",
-    component: _8f3f4f4e,
+    component: _50386f68,
     name: "link-successfully"
   }, {
     path: "/Login",
-    component: _2c6b2b70,
+    component: _4acd443d,
     name: "Login"
   }, {
     path: "/reset-password",
@@ -60,9 +61,10 @@ export const routerOptions = {
     name: "reset-password"
   }, {
     path: "/reset-success",
-    component: _344624f8,
+    component: _1ff24881,
     name: "reset-success"
   }, {
+<<<<<<< HEAD
     path: "/sub-category",
     component: _7211eba2,
     name: "sub-category"
@@ -74,37 +76,58 @@ export const routerOptions = {
     path: "/update-profile",
     component: _4025e6dc,
     name: "update-profile"
+=======
+    path: "/SubCategory",
+    component: _060c77b0,
+    name: "SubCategory"
+  }, {
+    path: "/category-managment/create-category",
+    component: _1229e0c8,
+    name: "category-managment-create-category"
+  }, {
+    path: "/Login/login",
+    component: _1474e754,
+    name: "Login-login"
+>>>>>>> origin/main
   }, {
     path: "/user-management/role",
-    component: _7a858037,
+    component: _5171608b,
     name: "user-management-role"
   }, {
     path: "/user-management/user",
-    component: _33ec854c,
+    component: _762a03d4,
     name: "user-management-user"
   }, {
     path: "/user-management/role/create-role",
-    component: _1c2f5468,
+    component: _7bf7a720,
     name: "user-management-role-create-role"
   }, {
     path: "/user-management/user/create-user",
-    component: _cfc7a014,
+    component: _c7e92d80,
     name: "user-management-user-create-user"
   }, {
     path: "/user-management/role/edit-role/:id",
-    component: _112a3669,
+    component: _136bfc98,
     name: "user-management-role-edit-role-id"
   }, {
     path: "/user-management/user/edit-user/:id",
-    component: _37789cd3,
+    component: _661cefb8,
     name: "user-management-user-edit-user-id"
   }, {
+    path: "/category-managment/edit-category/:id",
+    component: _357c1d9c,
+    name: "category-managment-edit-category-id"
+  }, {
     path: "/reset-password/:id?",
-    component: _5b28d8f8,
+    component: _7d6bd246,
     name: "reset-password-id"
   }, {
+    path: "/SubCategory/:id",
+    component: _20fab090,
+    name: "SubCategory-id"
+  }, {
     path: "/",
-    component: _52f7988e,
+    component: _fa2c8ca4,
     name: "index"
   }],
 

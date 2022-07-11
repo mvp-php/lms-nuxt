@@ -110,14 +110,23 @@
                         </div>
                     </td>
                 </tr>
+                
                 <tr aria-selected="false" v-if="tableData.length ==0" class="slds-hint-parent">
+<<<<<<< HEAD
                      <td class="slds-cell_action-mode slds-text-align_center" :colspan="header.length" role="gridcell">
+=======
+                     <td class="slds-cell_action-mode slds-text-align_center" :colspan="`${header.length}`" role="gridcell">
+>>>>>>> origin/main
                         {{no_record_avalible}}
                      </td>
                 </tr>
             </tbody>
         </table>
+<<<<<<< HEAD
         <Paginate :paginateObjFinal="paginateObjs" :searchKeyword="searchKeyword" :pageCount="pageCount"/>
+=======
+    <Paginate :paginateObjFinal="paginateObjs" :url="url" :searchKeyword="searchKeyword"/>
+>>>>>>> origin/main
     </div>
 
 </template>
@@ -127,7 +136,11 @@ import Paginate from '../../components/element/Paginate.vue';
 import imageComponent from '../../components/element/image.vue';
 export default {
     name: "Data-table",
+<<<<<<< HEAD
     props: ['header','tableData','no_record_avalible','paginateObjs','searchKeyword','pageCount'],
+=======
+    props: ['header','tableData','no_record_avalible','paginateObjs','url','searchKeyword'],
+>>>>>>> origin/main
     data(){
         return{
             selectedValue:[],

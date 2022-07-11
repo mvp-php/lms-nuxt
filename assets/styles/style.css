@@ -2806,9 +2806,12 @@ img.category-img {
     font-family: 'Poppins-Regular';
   
 }
+<<<<<<< HEAD
 .cus-accordion1-btn:focus,.cus-accordion2-btn:focus,.cus-front-tab li a:focus{
     text-decoration: none !important;
 }
+=======
+>>>>>>> origin/main
 .cus-accordion2-section{
     padding: 20px 20px 20px 40px;
 }
@@ -2858,6 +2861,7 @@ img.category-img {
     margin-bottom:10px;
     font-family: 'poppins-semibold';
 }
+<<<<<<< HEAD
 .cus-accordion1-section .cus-accordion1-btn:after {
     content: '';
     background-image: url(../../assets/img/front/svg/plus.svg);
@@ -3050,6 +3054,26 @@ margin-bottom: 60px;
 .log-drop li:hover a {
     text-decoration: none;
     color: var(--gray4);
+=======
+.mb-0{
+    margin-bottom:0;
+}
+.cus-accordion1-btn span {color: #06529C;font-family: 'Poppins-SemiBold';font-size: 14px;line-height: 20px;}
+/* end front end */
+.log-drop li {
+    box-shadow: 0px 3px 15px rgb(0 0 0 / 8%);
+    padding: 10px;
+    border-radius: 4px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    min-height: 50px;
+    min-width: 120px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+>>>>>>> origin/main
 }
 .slds-prev-box,.slds-next-box {
     background:#06529c33;

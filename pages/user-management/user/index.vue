@@ -18,8 +18,13 @@
                             class="slds-button slds-button_brand btnmain blue-btn ml-10">
                             Create User</nuxt-link>
 
+<<<<<<< HEAD
                         <button class="slds-button slds-button_brand btnmain light-blue-btn ml-10"
                             href="javascript:void(0)" @click="importCSV()">Import User Csv</button>
+=======
+                        <button class="slds-button slds-button_brand btnmain light-blue-btn ml-10" href="#">Set Default
+                            Roles</button>
+>>>>>>> origin/main
 
                         <button class="slds-button slds-button_brand btnmain light-blue-btn ml-10"
                             href="javascript:void(0)" @click="BulkDelete()" v-if="!bulk_delete_button">Delete
@@ -31,8 +36,12 @@
 
                         <div class="table-main">
                             <userListNew :header="header" :tableData="tableData"
+<<<<<<< HEAD
                                 :no_record_avalible="no_record_avalible" :bulkUserDeleted="bulkDeleted"
                                 :paginateObj="paginate" :searchkeyword="searchkeyword" :pageCount="pageCount" />
+=======
+                                :no_record_avalible="no_record_avalible" :bulkUserDeleted="bulkDeleted" :paginateObj="paginate" :searchkeyword="searchkeyword" :pageCount="pageCount"/>
+>>>>>>> origin/main
                         </div>
                     </div>
 
@@ -130,6 +139,7 @@
         </div>
 
         <div class="user-record-modal">
+<<<<<<< HEAD
             <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
                 class="slds-modal " id="add-category" ref="deletedUserModel">
                 <div class="slds-modal__container addcategory-dialog-modal p-0">
@@ -139,6 +149,17 @@
                             class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse close-modal-record">
                             <svg xmlns="http://www.w3.org/2000/svg" width="11.354" height="11.385"
                                 viewBox="0 0 11.354 11.385" v-on:click="closeViewModel()">
+=======
+            <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal"
+                id="delete-modal" ref="deleteUserModel">
+                <div class="slds-modal__container record-dialog-modal">
+                    <div class="slds-modal__header modal-main-record-title">
+                        <!-- <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">USER ROLE DETAILS</h1> -->
+                        <button v-on:click="closeDeleteModel()"
+                            class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse close-modal-record">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11.354" height="11.385"
+                                viewBox="0 0 11.354 11.385">
+>>>>>>> origin/main
                                 <g id="icons_utility_close-copy" data-name="icons/utility/close-copy"
                                     transform="translate(-0.462 -0.462)">
                                     <path id="Mask"
@@ -149,6 +170,7 @@
                             <span class="slds-assistive-text">Cancel and close</span>
                         </button>
                     </div>
+<<<<<<< HEAD
                     <div class="slds-modal__content slds-p-around_medium modal-content-group-view"
                         id="modal-content-id-1">
                         <div class="modal-manage-group-main">
@@ -283,6 +305,36 @@
         </div>
         <errorToastr :errorMessage="errorMessage" v-if="!errorToastrHide" />
         <successToastr :successMessage="successMessage" v-if="!successToastrHide" />
+=======
+                    <div class="slds-modal__content slds-p-around_medium modal-content-record" id="modal-content-id-1">
+                        <div class="delete-modal-main">
+                            <div class="del-big-img">
+                                <ImageComponent :log="require('~/assets/img/svg/delete.svg')" alt="avtar-header">
+                                </ImageComponent>
+
+                            </div>
+                            <div class="delete-text">
+                                <h3>Are you sure?</h3>
+                                <p>Do you really want to delete these user? This
+                                    process cannot be undone</p>
+                            </div>
+                        </div>
+                        <div class="delete-modal-footer">
+                            <button class="slds-button slds-button_neutral btnmain blue-btn modal-btn" @click="deleteUser()">Yes
+                            </button>
+                           
+                            <button id="close-btn1"  class="slds-button slds-button_brand btnmain light-blue-btn modal-btn" @click="closeDeleteModel()">No
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop" role="presentation" id="delete-modal-backdrop">
+            </div>
+        </div>
+        <errorToastr :errorMessage="errorMessage" v-if="!errorToastrHide" />
+         <successToastr :successMessage="successMessage" v-if="!successToastrHide" />
+>>>>>>> origin/main
     </span>
 </template>
 
@@ -295,9 +347,12 @@ import ImageComponent from '../../../components/element/image.vue';
 import ButtonComponent from '../../../components/element/formButton.vue';
 import errorToastr from '../../../components/element/errorToastr.vue';
 import successToastr from '../../../components/element/successToastr.vue';
+<<<<<<< HEAD
 import ImportCSV from '../../../components/User/import_csv.vue';
 import  ImportUserList  from '../../../components/User/import_user_list.vue';
 import axios from 'axios';
+=======
+>>>>>>> origin/main
 export default {
     layout: 'frontend',
     name: 'UserList',
@@ -309,9 +364,13 @@ export default {
         ImageComponent,
         ButtonComponent,
         errorToastr,
+<<<<<<< HEAD
         successToastr,
         ImportCSV,
         ImportUserList
+=======
+        successToastr
+>>>>>>> origin/main
     },
 
     data() {
@@ -328,12 +387,18 @@ export default {
             errorToastrHide: true,
             successMessage: "",
             successToastrHide: true,
+<<<<<<< HEAD
             paginate: '',
             searchkeyword: '',
             pageCount: '',
             csv_file: '',
             ButtonName: "Import",
             deletedUserList: []
+=======
+            paginate:'',
+            searchkeyword:'',
+            pageCount:''
+>>>>>>> origin/main
         }
     },
     created() {
@@ -342,6 +407,7 @@ export default {
         var tabs = [{ "Key": "User Roles", 'url': 'role' }, { "Key": "User", 'url': 'user' }];
         this.tablsList = tabs;
         this.header = ["", 'Sr No.', 'User Name', 'Email Id', 'Role', 'Created On', 'Action'];
+<<<<<<< HEAD
         this.getUserList("", 1);
         this.successM();
     },
@@ -369,16 +435,38 @@ export default {
         },
         getUserList(value = "", currentPage = "") {
             userService.getUserList(value, currentPage)
+=======
+        this.getUserList("",1);
+
+    },
+    methods: {
+         getPaginatesMain:function(currentPage,value){
+            this.getUserList(value,currentPage);
+        },
+        setCanMessageSubmit($event) {
+            console.log($event.target.value);
+            this.getUserList($event.target.value,1)
+        },
+        getUserList(value="",currentPage="") {
+            userService.getUserList(value,currentPage)
+>>>>>>> origin/main
                 .then(async response => {
 
                     this.responseList = response.data.data;
 
                     this.tableData = this.responseList;
 
+<<<<<<< HEAD
                     this.no_record_avalible = response.data.response_msg;
                     this.paginate = response.data.paginate;
                     this.searchkeyword = value;
                     this.pageCount = response.data.data.length;
+=======
+                    this.no_record_avalible = response.data.error_msg;
+                    this.paginate =  response.data.paginate;
+                    this.searchkeyword = value;
+                    this.pageCount = page;
+>>>>>>> origin/main
                 }).catch(e => {
                     console.log(e)
                 });
@@ -402,8 +490,15 @@ export default {
             this.DeleteId = id;
         },
         deleteUser() {
+<<<<<<< HEAD
             userService.deleteUser(this.DeleteId).then((result) => {
                 this.getUserList("", 1);
+=======
+            console.log("dsds");
+            userService.deleteUser(this.DeleteId).then((result) => {
+                console.log(result);
+                this.getUserList("",1);
+>>>>>>> origin/main
                 this.closeDeleteModel();
             }).catch((err) => {
                 console.error(err);
@@ -415,13 +510,17 @@ export default {
         userEdit(id) {
             this.$router.push('/user-management/user/edit-user/' + id);
         },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
         bulkDeleteds: function (id) {
             if (id.length != 0) {
                 this.bulk_delete_button = false;
             } else {
                 this.bulk_delete_button = true;
             }
+<<<<<<< HEAD
             this.DeleteId = id;
         },
 
@@ -431,6 +530,16 @@ export default {
                 console.log(result);
                 this.getUserList("", 1);
                 this.successMessage = result.data.response_msg;
+=======
+            this.deletedId = id;
+        },
+
+        BulkDelete() {
+            userService.bulkUserDelete(this.deletedId).then((result) => {
+                console.log(result);
+                this.getUserList("",1);
+                this.successMessage = result.data.error_msg;
+>>>>>>> origin/main
                 this.successToastrShow();
             }).catch((err) => {
                 console.error(err);
@@ -438,6 +547,7 @@ export default {
         },
         successToastrShow() {
             this.successToastrHide = false;
+<<<<<<< HEAD
             setTimeout(() =>
                 this.successToastrHide = true,
 
@@ -509,6 +619,11 @@ console.log("Hello")
                 console.error(err);
             });
         }
+=======
+            setTimeout(() => this.successToastrHide = true, 5000);
+        },
+
+>>>>>>> origin/main
     }
 
 }
