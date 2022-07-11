@@ -1,0 +1,131 @@
+{
+  "Login": {
+    "description": "Auto imported from components/Login.vue"
+  },
+  "NuxtLogo": {
+    "description": "Auto imported from components/NuxtLogo.vue"
+  },
+  "Category": {
+    "description": "Auto imported from components/Category/category.vue"
+  },
+  "CategoryCreateCategory": {
+    "description": "Auto imported from components/Category/create_category.vue"
+  },
+  "ConfigAuthHeader": {
+    "description": "Auto imported from components/config/AuthHeader.js"
+  },
+  "ConfigDataService": {
+    "description": "Auto imported from components/config/DataService.js"
+  },
+  "Dashboard": {
+    "description": "Auto imported from components/Dashboard/dashboard.vue"
+  },
+  "ElementDataTable": {
+    "description": "Auto imported from components/element/dataTable.vue"
+  },
+  "ElementDropzone": {
+    "description": "Auto imported from components/element/Dropzone.vue"
+  },
+  "ElementErrorToastr": {
+    "description": "Auto imported from components/element/errorToastr.vue"
+  },
+  "ElementFormButton": {
+    "description": "Auto imported from components/element/formButton.vue"
+  },
+  "ElementFormCheckbox": {
+    "description": "Auto imported from components/element/formCheckbox.vue"
+  },
+  "ElementFormDropdown": {
+    "description": "Auto imported from components/element/formDropdown.vue"
+  },
+  "ElementFormLabel": {
+    "description": "Auto imported from components/element/formLabel.vue"
+  },
+  "ElementFormSelectField": {
+    "description": "Auto imported from components/element/formSelectField.vue"
+  },
+  "ElementFormTextareaField": {
+    "description": "Auto imported from components/element/formTextareaField.vue"
+  },
+  "ElementFormTextBoxField": {
+    "description": "Auto imported from components/element/formTextBoxField.vue"
+  },
+  "ElementImage": {
+    "description": "Auto imported from components/element/image.vue"
+  },
+  "Element": {
+    "description": "Auto imported from components/element/index.vue"
+  },
+  "ElementLoadingBar": {
+    "description": "Auto imported from components/element/LoadingBar.vue"
+  },
+  "ElementNuxtLink": {
+    "description": "Auto imported from components/element/NuxtLink.vue"
+  },
+  "ElementPaginate": {
+    "description": "Auto imported from components/element/Paginate.vue"
+  },
+  "ElementSuccessToastr": {
+    "description": "Auto imported from components/element/successToastr.vue"
+  },
+  "ElementTabs": {
+    "description": "Auto imported from components/element/Tabs.vue"
+  },
+  "ElementTextArea": {
+    "description": "Auto imported from components/element/textArea.vue"
+  },
+  "ForgotPassword": {
+    "description": "Auto imported from components/ForgotPassword/forgotPassword.vue"
+  },
+  "IncludeFooter": {
+    "description": "Auto imported from components/include/Footer.vue"
+  },
+  "IncludeHeader": {
+    "description": "Auto imported from components/include/Header.vue"
+  },
+  "IncludeSidebar": {
+    "description": "Auto imported from components/include/Sidebar.vue"
+  },
+  "ResetPassword": {
+    "description": "Auto imported from components/ResetPassword/resetPassword.vue"
+  },
+  "RoleCreateRole": {
+    "description": "Auto imported from components/Role/create_role.vue"
+  },
+  "RoleEditRole": {
+    "description": "Auto imported from components/Role/edit_role.vue"
+  },
+  "Role": {
+    "description": "Auto imported from components/Role/Role.vue"
+  },
+  "ServiceAuthService": {
+    "description": "Auto imported from components/Service/AuthService.js"
+  },
+  "ServiceCategoryService": {
+    "description": "Auto imported from components/Service/CategoryService.js"
+  },
+  "ServiceDropZoneService": {
+    "description": "Auto imported from components/Service/DropZoneService.js"
+  },
+  "ServicePaymentPlanService": {
+    "description": "Auto imported from components/Service/PaymentPlanService.js"
+  },
+  "ServiceRoleDataService": {
+    "description": "Auto imported from components/Service/RoleDataService.js"
+  },
+  "ServiceSubcategoryService": {
+    "description": "Auto imported from components/Service/SubcategoryService.js"
+  },
+  "ServiceUserService": {
+    "description": "Auto imported from components/Service/UserService.js"
+  },
+  "UserCreateUser": {
+    "description": "Auto imported from components/User/create_user.vue"
+  },
+  "UserEditUser": {
+    "description": "Auto imported from components/User/edit_user.vue"
+  },
+  "UserList": {
+    "description": "Auto imported from components/User/user_list.vue"
+  }
+}
