@@ -98,14 +98,14 @@ export default {
             editModelData: {
                 newCategoryName: '',
                 newCategoryDescription: '',
-                newDropzoneImage: '',
+                dropzoneImage: '',
             },
         }
     },
     methods: {
         fileUploadSuccessEvent(file, response) {
-            this.categoryData.dropzoneImage = response;
-            this.categoryData.newDropzoneImage = response;
+            // this.editModelData.dropzoneImage = response;
+            this.editModelData.dropzoneImage = response;
         },
         editData(id) {
             CategoryService.getEditDetails(id).then((result) => {

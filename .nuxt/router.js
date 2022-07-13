@@ -5,6 +5,7 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _c0906b02 = () => interopDefault(import('..\\pages\\category-managment\\index.vue' /* webpackChunkName: "pages/category-managment/index" */))
+const _f1daa99a = () => interopDefault(import('..\\pages\\course\\index.vue' /* webpackChunkName: "pages/course/index" */))
 const _0b936e12 = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index" */))
 const _c93fadfe = () => interopDefault(import('..\\pages\\forgot-password\\index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
 const _50386f68 = () => interopDefault(import('..\\pages\\link-successfully\\index.vue' /* webpackChunkName: "pages/link-successfully/index" */))
@@ -13,6 +14,7 @@ const _1ff24881 = () => interopDefault(import('..\\pages\\reset-success\\index.v
 const _060c77b0 = () => interopDefault(import('..\\pages\\SubCategory\\index.vue' /* webpackChunkName: "pages/SubCategory/index" */))
 const _1229e0c8 = () => interopDefault(import('..\\pages\\category-managment\\create-category.vue' /* webpackChunkName: "pages/category-managment/create-category" */))
 const _1474e754 = () => interopDefault(import('..\\pages\\Login\\login.vue' /* webpackChunkName: "pages/Login/login" */))
+const _fb822812 = () => interopDefault(import('..\\pages\\SubCategory\\add.vue' /* webpackChunkName: "pages/SubCategory/add" */))
 const _5171608b = () => interopDefault(import('..\\pages\\user-management\\role\\index.vue' /* webpackChunkName: "pages/user-management/role/index" */))
 const _762a03d4 = () => interopDefault(import('..\\pages\\user-management\\user\\index.vue' /* webpackChunkName: "pages/user-management/user/index" */))
 const _7bf7a720 = () => interopDefault(import('..\\pages\\user-management\\role\\create-role.vue' /* webpackChunkName: "pages/user-management/role/create-role" */))
@@ -39,6 +41,10 @@ export const routerOptions = {
     path: "/category-managment",
     component: _c0906b02,
     name: "category-managment"
+  }, {
+    path: "/course",
+    component: _f1daa99a,
+    name: "course"
   }, {
     path: "/dashboard",
     component: _0b936e12,
@@ -71,6 +77,10 @@ export const routerOptions = {
     path: "/Login/login",
     component: _1474e754,
     name: "Login-login"
+  }, {
+    path: "/SubCategory/add",
+    component: _fb822812,
+    name: "SubCategory-add"
   }, {
     path: "/user-management/role",
     component: _5171608b,

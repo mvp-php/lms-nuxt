@@ -10,7 +10,7 @@
 import Dropzone from 'nuxt-dropzone'
 import 'nuxt-dropzone/dropzone.css'
 import authHeader from '../config/AuthHeader';
-// import DropZoneService from '../Service/DropZoneService';
+import DropZoneService from '../Service/DropZoneService';
 export default {
     props: ['fileUploadSuccessEvent'],
     components: {

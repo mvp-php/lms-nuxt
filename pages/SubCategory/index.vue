@@ -10,9 +10,11 @@
                                 class="slds-input search-inp" />
                         </div>
                     </div>
+                       <router-link to="/SubCategory/add">
                     <a class="slds-button slds-button_brand btnmain blue-btn ml-10" href="javascript:void(0)"
-                        id="add-category-btn" v-on:click="openSubCategoryModel()">Add Sub
+                        id="add-category-btn" >Add Sub
                         Category</a>
+                        </router-link>
                 </div>
             </div>
             <div class="main-card">
@@ -166,6 +168,7 @@
                                 <tbody>
                                     <tr v-for="(categoryD, index) in categoryAllData" :key="categoryD.id"
                                         aria-selected="false" class="slds-hint-parent">
+                                        
                                         <td class="slds-text-align_right slds-cell_action-mode" role="gridcell">
                                             <div class="slds-checkbox cus-check1">
                                                 <input type="checkbox" name="options" id="checkbox-01" tabindex="0"
@@ -179,9 +182,8 @@
                                                 </label>
                                             </div>
                                         </td>
-                                        {{categoryAllData.error}}
                                         <td class="slds-cell_action-mode" role="gridcell">
-                                            <div class="slds-truncate" title="1">{{ index + 1 }}</div>
+                                            <div class="slds-truncate" title="1">{{ "1" }}</div>
                                         </td>
                                         <td class="slds-cell_action-mode" role="gridcell">
                                             <div class="slds-truncate" title="Network security">
@@ -514,7 +516,6 @@
             <div class="slds-backdrop " role="presentation" id="add-category-backdrop" ref="addcategorybackdrop"></div>
         </div>
         <!-- edit subcategory -->
-
 
     </div>
 </template>

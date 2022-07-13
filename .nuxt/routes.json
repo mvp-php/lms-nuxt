@@ -7,6 +7,13 @@
     "_name": "_c0906b02"
   },
   {
+    "name": "course",
+    "path": "/course",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\course\\\\index.vue",
+    "chunkName": "pages/course/index",
+    "_name": "_f1daa99a"
+  },
+  {
     "name": "dashboard",
     "path": "/dashboard",
     "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\dashboard\\\\index.vue",
@@ -61,6 +68,13 @@
     "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\Login\\\\login.vue",
     "chunkName": "pages/Login/login",
     "_name": "_1474e754"
+  },
+  {
+    "name": "SubCategory-add",
+    "path": "/SubCategory/add",
+    "component": "C:\\\\xampp\\\\htdocs\\\\NuxtJS\\\\lms-nuxt\\\\pages\\\\SubCategory\\\\add.vue",
+    "chunkName": "pages/SubCategory/add",
+    "_name": "_fb822812"
   },
   {
     "name": "user-management-role",

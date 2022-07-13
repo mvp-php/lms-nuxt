@@ -8,10 +8,10 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Login>` | `<login>` (components/Login.vue)
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
-- `<ConfigAuthHeader>` | `<config-auth-header>` (components/config/AuthHeader.js)
-- `<ConfigDataService>` | `<config-data-service>` (components/config/DataService.js)
 - `<Category>` | `<category>` (components/Category/category.vue)
 - `<CategoryCreateCategory>` | `<category-create-category>` (components/Category/create_category.vue)
+- `<ConfigAuthHeader>` | `<config-auth-header>` (components/config/AuthHeader.js)
+- `<ConfigDataService>` | `<config-data-service>` (components/config/DataService.js)
 - `<Dashboard>` | `<dashboard>` (components/Dashboard/dashboard.vue)
 - `<ElementDataTable>` | `<element-data-table>` (components/element/dataTable.vue)
 - `<ElementDropzone>` | `<element-dropzone>` (components/element/Dropzone.vue)
