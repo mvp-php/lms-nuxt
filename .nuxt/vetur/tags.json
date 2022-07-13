@@ -78,13 +78,13 @@
     "description": "Auto imported from components/ForgotPassword/forgotPassword.vue"
   },
   "IncludeFooter": {
-    "description": "Auto imported from components/include/Footer.vue"
+    "description": "Auto imported from components/Include/Footer.vue"
   },
   "IncludeHeader": {
-    "description": "Auto imported from components/include/Header.vue"
+    "description": "Auto imported from components/Include/Header.vue"
   },
   "IncludeSidebar": {
-    "description": "Auto imported from components/include/Sidebar.vue"
+    "description": "Auto imported from components/Include/Sidebar.vue"
   },
   "ResetPassword": {
     "description": "Auto imported from components/ResetPassword/resetPassword.vue"
