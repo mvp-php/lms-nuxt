@@ -8,15 +8,14 @@
         </div>
         
         <div>
-          <a @click="toogles()"><ImageComponent :log="require('~/assets/img/svg/avtar1.svg')" cliickEvent="say()" class="header-profile" alt="avtar-header"></ImageComponent></a>
+          <ImageComponent :log="require('~/assets/img/svg/avtar1.svg')" class="header-profile" alt="avtar-header"></ImageComponent>
           <div class="log-dropdown position-relative">
-                  <ul class="log-drop" id="logout" v-if="!toogleShow">
+                  <ul class="log-drop" id="logout" style="display: none;">
                       <li>
-                          <a href="javscript:void(0)" @click="Logout()">Logout</a>
+                          Logout
                       </li>
-                  </ul> 
+                  </ul>
               </div>
-              <li></li>
         </div>
       </div>
     </div>
@@ -25,35 +24,10 @@
 
 <script>
 import ImageComponent from '../element/image.vue';
-import UserService from '../Service/UserService';
 export default {
   name: 'UserForm',
   components:{
     ImageComponent
-  },
-  data(){
-      return {
-
-          toogleShow:true
-        }
-  },
-  methods :{
-      toogles(){
-        this.toogleShow = false;
-        
-      },
-      Logout(){
-        UserService.callLogout().then((result) => {
-            localStorage.removeItem('userData');
-            this.$router.push({ path: '/login' });
-            
-        }).catch(error => {
-
-            this.errorMessage = error.response.data.error_msg;
-
-
-        })
-      }
   }
 
 }

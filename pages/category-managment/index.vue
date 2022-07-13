@@ -11,9 +11,11 @@
                                 class="slds-input search-inp" v-on:keyup="searchText($event)" />
                         </div>
                     </div>
-                    <a class="slds-button slds-button_brand btnmain blue-btn ml-10" href="javascript:void(0)"
-                        id="add-category-btn" v-on:click="openModel()">Add Major
-                        Category</a>
+                    <router-link to="/category-managment/create-category">
+                        <a class="slds-button slds-button_brand btnmain blue-btn ml-10" href="javascript:void(0)"
+                            id="add-category-btn">Add Major
+                            Category</a>
+                    </router-link>
                     <button class="slds-button slds-button_brand btnmain light-blue-btn ml-10" href="javascript:void(0)"
                         @click="BulkDelete()" v-if="!bulk_delete_button">Delete
                         Category</button>
@@ -34,82 +36,6 @@
         </div>
         <successToastrVue :success-message="successMessage" id="successMsg" class="successMsg" v-if="!hides"
             ref="successNewMsg" />
-        <!-- add category  -->
-        <div class="user-record-modal">
-            <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
-                class="slds-modal " id="add-category" ref="addcategory">
-                <div class="slds-modal__container addcategory-dialog-modal p-0" ref="newaddcategory">
-                    <div class="slds-modal__header modal-main-record-title category-title">
-                        <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">ADD CATEGORY</h1>
-                        <button
-                            class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse close-modal-record">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="11.354" height="11.385"
-                                viewBox="0 0 11.354 11.385" v-on:click="closeModel()">
-                                <g id="icons_utility_close-copy" data-name="icons/utility/close-copy"
-                                    transform="translate(-0.462 -0.462)">
-                                    <path id="Mask"
-                                        d="M7.677,5.954l4-4.031a.446.446,0,0,0,0-.646L11.062.631a.446.446,0,0,0-.646,0L6.385,4.662a.3.3,0,0,1-.431,0L1.923.6a.446.446,0,0,0-.646,0l-.646.646a.446.446,0,0,0,0,.646L4.662,5.923a.3.3,0,0,1,0,.431L.6,10.415a.446.446,0,0,0,0,.646l.646.646a.446.446,0,0,0,.646,0L5.923,7.677a.3.3,0,0,1,.431,0l4.031,4.031a.446.446,0,0,0,.646,0l.646-.646a.446.446,0,0,0,0-.646l-4-4.031a.3.3,0,0,1,0-.431Z"
-                                        fill="#06529c" />
-                                </g>
-                            </svg>
-                            <span class="slds-assistive-text">Cancel and close</span>
-                        </button>
-                    </div>
-                    <div class="slds-modal__content slds-p-around_medium modal-content-category"
-                        id="modal-content-id-1">
-                        <form @submit="addNewCategory" ref="add_category_submit" enctype="multipart/form-data">
-                            <div class="modal-row">
-                                <div class="modal-category-col1">
-                                    <p class="mb-0 user-modal-title">Category Name</p>
-                                </div>
-                                <div class="modal-record-col2">
-                                    <div class="slds-form-element__control  ">
-                                        <FormTextBoxField v-model="categoryData.categoryName" fieldId="category_name"
-                                            placeHolder="Category Name" className="slds-input" ref="category_name" />
-                                        <span class="text-danger" id="catnameeerror" ref="caterror"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-row">
-                                <div class="modal-category-col1">
-                                    <p class="mb-0 user-modal-title">Category description</p>
-                                </div>
-                                <div class="modal-record-col2">
-                                    <div class="mb-0 user-modal-desc">
-                                        <div class="slds-form-element__control ">
-                                            <FormTextareaField rows="3" v-model="categoryData.categoryDescription"
-                                                no-resize placeHolder="Description comes here with a character limit."
-                                                className="slds-textarea custom-grid-textarea cat-desc"
-                                                fieldId="category_desc" ref="category_description" />
-
-                                            <span class="text-danger" id="catedescerror" ref="caterror"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-row">
-                                <div class="modal-category-col1">
-                                    <p class="mb-0 user-modal-title">Upload thumbnail</p>
-                                </div>
-                                <div class="modal-record-col2">
-                                    <Dropzone v-bind:fileUploadSuccessEvent="fileUploadSuccessEvent"
-                                        modelname="Dropzone" v-model="categoryData.dropzoneImage" />
-                                </div>
-                            </div>
-                            <div class="btn-align-end p-0">
-                                <FormButton type="submit" buttonName="Add Major Category"
-                                    className="slds-button slds-button_brand btnmain blue-btn" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <div class="slds-backdrop " role="presentation" id="add-category-backdrop" ref="addcategorybackdrop">
-            </div>
-            <div class="slds-backdrop " role="presentation" id="edit-category-backdrop" ref="editcategorybackdrop">
-            </div>
-        </div>
-        <!-- end add category -->
 
         <!-- view model -->
         <div class="user-record-modal">
@@ -189,85 +115,6 @@
         <!-- end modal -->
 
 
-        <!-- edit modal -->
-        <div class="user-record-modal">
-            <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
-                class="slds-modal " id="add-category" ref="editcategory">
-                <div class="slds-modal__container editcategory-dialog-modal p-0">
-                    <div class="slds-modal__header modal-main-record-title category-title">
-                        <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">EDIT CATEGORY</h1>
-                        <button
-                            class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse close-modal-record">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="11.354" height="11.385"
-                                viewBox="0 0 11.354 11.385" v-on:click="closeEditModel()">
-                                <g id="icons_utility_close-copy" data-name="icons/utility/close-copy"
-                                    transform="translate(-0.462 -0.462)">
-                                    <path id="Mask"
-                                        d="M7.677,5.954l4-4.031a.446.446,0,0,0,0-.646L11.062.631a.446.446,0,0,0-.646,0L6.385,4.662a.3.3,0,0,1-.431,0L1.923.6a.446.446,0,0,0-.646,0l-.646.646a.446.446,0,0,0,0,.646L4.662,5.923a.3.3,0,0,1,0,.431L.6,10.415a.446.446,0,0,0,0,.646l.646.646a.446.446,0,0,0,.646,0L5.923,7.677a.3.3,0,0,1,.431,0l4.031,4.031a.446.446,0,0,0,.646,0l.646-.646a.446.446,0,0,0,0-.646l-4-4.031a.3.3,0,0,1,0-.431Z"
-                                        fill="#06529c" />
-                                </g>
-                            </svg>
-                            <span class="slds-assistive-text">Cancel and close</span>
-                        </button>
-                    </div>
-                    <div class="slds-modal__content slds-p-around_medium modal-content-category"
-                        id="modal-content-id-1">
-                        <form @submit="updateCategory">
-                            <div class="modal-row">
-                                <div class="modal-category-col1">
-                                    <p class="mb-0 user-modal-title">Category Name</p>
-                                </div>
-                                <div class="modal-record-col2">
-                                    <div class="slds-form-element__control  ">
-
-                                        <FormTextBoxField v-model="editModelData.title"
-                                            @blur="e => editModelData.title = e.target.value" fieldId="category_name"
-                                            :value="editModelData.title" placeHolder="Enter category"
-                                            className="slds-input custom-grid-input" />
-                                        <span class="text-danger" id="catnameeerroredit" ref="caterror"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-row">
-                                <div class="modal-category-col1">
-                                    <p class="mb-0 user-modal-title">Category description</p>
-                                </div>
-                                <div class="modal-record-col2">
-                                    <div class="mb-0 user-modal-desc">
-                                        <div class="slds-form-element__control ">
-                                            <FormTextareaField v-model="editModelData.description"
-                                                :value="editModelData.description"
-                                                @blur="e => editModelData.description = e.target.value"
-                                                placeHolder="Description comes here with a character limit."
-                                                className="slds-textarea custom-grid-textarea cat-desc"
-                                                id="description_id" />
-                                            <span class="text-danger" id="catedescerroredit" ref="caterror"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-row">
-                                <div class="modal-category-col1">
-                                    <p class="mb-0 user-modal-title">Upload thumbnail</p>
-                                </div>
-                                <div class="modal-record-col2">
-                                    <!-- <Dropzone /> -->
-                                    <Dropzone v-bind:fileUploadSuccessEvent="fileUploadSuccessEvent"
-                                        modelname="image" />
-                                </div>
-                            </div>
-                            <div class="btn-align-end p-0">
-                                <FormButton type="submit" buttonName="Update Major Category"
-                                    className="slds-button slds-button_brand btnmain blue-btn" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <div class="slds-backdrop " role="presentation" id="add-category-backdrop" ref="addcategorybackdrop"></div>
-        </div>
-        <!-- edit modal -->
-
         <!-- delete mdoel -->
         <div class="user-record-modal">
             <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal"
@@ -313,105 +160,6 @@
             </div>
         </div>
         <!-- delete model -->
-        <!-- sub category -->
-        <div class="user-record-modal">
-            <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
-                class="slds-modal " id="add-category" ref="addsubcategory">
-                <div class="slds-modal__container addcategory-dialog-modal p-0">
-                    <div class="slds-modal__header modal-main-record-title category-title">
-                        <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">ADD SUB CATEGORY</h1>
-                        <button
-                            class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse close-modal-record">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="11.354" height="11.385"
-                                viewBox="0 0 11.354 11.385" v-on:click="closeSubCategoryModel()">
-                                <g id="icons_utility_close-copy" data-name="icons/utility/close-copy"
-                                    transform="translate(-0.462 -0.462)">
-                                    <path id="Mask"
-                                        d="M7.677,5.954l4-4.031a.446.446,0,0,0,0-.646L11.062.631a.446.446,0,0,0-.646,0L6.385,4.662a.3.3,0,0,1-.431,0L1.923.6a.446.446,0,0,0-.646,0l-.646.646a.446.446,0,0,0,0,.646L4.662,5.923a.3.3,0,0,1,0,.431L.6,10.415a.446.446,0,0,0,0,.646l.646.646a.446.446,0,0,0,.646,0L5.923,7.677a.3.3,0,0,1,.431,0l4.031,4.031a.446.446,0,0,0,.646,0l.646-.646a.446.446,0,0,0,0-.646l-4-4.031a.3.3,0,0,1,0-.431Z"
-                                        fill="#06529c" />
-                                </g>
-                            </svg>
-                            <span class="slds-assistive-text">Cancel and close</span>
-                        </button>
-                    </div>
-
-                    <div class="slds-modal__content slds-p-around_medium modal-content-category"
-                        id="modal-content-id-1">
-                        <form @submit="addSubCategory">
-                            <div class="modal-row">
-                                <div class="modal-category-col1">
-                                    <p class="mb-0 user-modal-title">Select Major Category</p>
-                                </div>
-                                <div class="modal-record-col2">
-                                    <div class="slds-form-element__control  ">
-
-                                        <select @blur="e => subCategoryData.majorCategory = e.target.value"
-                                            v-model="selectedCategory" class="slds-select custom-grid-input"
-                                            id="select-01">
-
-                                            <option value="">Select Main Category</option>
-                                            <option v-for="plan in categoryAllData" :key="plan.id" :value="plan.id">
-                                                {{ plan.title }}
-                                            </option>
-                                        </select>
-                                        <span class="text-danger" id="majorCategoryerror"
-                                            ref="majorCategoryerror"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-row">
-                                <div class="modal-category-col1">
-                                    <p class="mb-0 user-modal-title">Sub Category Name</p>
-                                </div>
-                                <div class="modal-record-col2">
-                                    <div class="slds-form-element__control  ">
-                                        <FormTextBoxField @blur="e => subCategoryData.subCategoryName = e.target.value"
-                                            v-model="subCategoryData.subCategoryName" fieldId="subCategory_name"
-                                            placeHolder="Enter category" className="slds-input custom-grid-input" />
-                                        <span class="text-danger" id="subcatnameeerror" ref="subcatnameeerror"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-row">
-                                <div class="modal-category-col1">
-                                    <p class="mb-0 user-modal-title">Category description</p>
-                                </div>
-                                <div class="modal-record-col2">
-                                    <div class="mb-0 user-modal-desc">
-                                        <div class="slds-form-element__control ">
-                                            <FormTextareaField rows="3" v-model="subCategoryData.subCategoryDescription"
-                                                @blur="e => subCategoryData.subCategoryDescription = e.target.value"
-                                                no-resize placeHolder="Description comes here with a character limit."
-                                                className="slds-input custom-grid-input" fieldId="subCategory_desc" />
-                                            <span class="text-danger" id="subcatedescerror"
-                                                ref="subcatedescerror"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-row">
-                                <div class="modal-category-col1">
-                                    <p class="mb-0 user-modal-title">Upload thumbnail</p>
-                                </div>
-                                <div class="modal-record-col2">
-                                    <Dropzone v-bind:fileUploadSuccessEvent="fileUploadSuccessEvent"
-                                        modelname="Dropzone" v-model="subCategoryData.dropzoneImage" />
-                                </div>
-                            </div>
-                            <div class="btn-align-end p-0">
-                                <FormButton type="submit" buttonName="Add Sub Category"
-                                    className="slds-button slds-button_brand btnmain blue-btn" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <div class="slds-backdrop " role="presentation" id="add-category-backdrop" ref="addsubcategorybackdrop">
-            </div>
-            <div class="slds-backdrop " role="presentation" id="edit-category-backdrop" ref="editsubcategorybackdrop">
-            </div>
-        </div>
-        <!-- sub category -->
         <errorToastr :errorMessage="errorMessage" v-if="!error_hide" />
     </span>
 </template>
@@ -512,13 +260,14 @@ export default {
         closeModel() {
             this.$refs.addcategory.classList.remove("slds-fade-in-open");
             this.$refs.addcategorybackdrop.classList.remove("slds-backdrop_open");
+            document.getElementById("add_category_form").reset();
         },
         successToasterShow() {
             this.hides = false;
             setTimeout(() => this.hides = true, 5000);
         },
         addNewCategory(e) {
-           
+
             document.getElementById("catnameeerror").textContent = "";
             document.getElementById("catedescerror").textContent = "";
             console.log(this.categoryData.categoryName);
@@ -533,16 +282,13 @@ export default {
             if (this.categoryData.categoryName && this.categoryData.categoryDescription) {
 
                 CategoryService.addCategory(this.categoryData).then((result) => {
-                    
-                    this.$refs["category_name"].$attrs.value = "";
-                    this.$refs["category_description"].$attrs.value = "";
                     this.categoryData.categoryName;
                     this.getAllCatData();
                     this.successToasterShow();
                     this.closeModel();
                     this.successMessage = result.data.error_msg;
 
-                
+
 
 
                 }).catch(error => {
@@ -550,7 +296,7 @@ export default {
                     this.errorMessage = error.response.data.error_msg;
                     this.errorToastrShow();
                 });
-               
+
 
                 e.preventDefault();
             }
@@ -596,6 +342,9 @@ export default {
         closeViewModel() {
             this.$refs.openViewModelNew.classList.remove("slds-fade-in-open");
             this.$refs.openViewModelNewbackdrop.classList.remove("slds-backdrop_open");
+        },
+        viewEditPage: function (id) {
+            this.$router.push({ path: "/category-managment/edit-category/" + id });
         },
         userEdit(id) {
             CategoryService.getEditDetails(id).then((result) => {
@@ -650,7 +399,7 @@ export default {
         deleteCategory() {
             CategoryService.deleteCategory(this.DeleteId).then((result) => {
                 if (result) {
-                    this.$router.push({ name: 'category' })
+                    this.$router.push({ name: 'category-managment' })
                     this.closeDeleteModel();
                     this.getAllCatData();
                     this.successMessage = "Successfully Deleted";
@@ -682,7 +431,7 @@ export default {
             this.$refs.addsubcategorybackdrop.classList.remove("slds-backdrop_open");
         },
         addSubCategory(e) {
-            
+
             document.getElementById("majorCategoryerror").textContent = "";
             document.getElementById("subcatnameeerror").textContent = "";
             document.getElementById("subcatedescerror").textContent = "";
@@ -718,6 +467,10 @@ export default {
                 this.bulk_delete_button = true;
             }
             this.deletedId = id;
+        },
+        mainOpenMainSubCategory:function(id){
+             this.$router.push({ path: 'SubCategory/' + id });
+             
         },
         BulkDelete() {
             CategoryService.bulkCategoryDelete(this.deletedId).then((result) => {

@@ -34,6 +34,9 @@ export default {
         getsOpenSubcategoryModel :function(id){
             console.log(id);
             this.$parent.mainOpenMainSubCategory(id);
+        },
+        editMethod:function(id){
+            this.$parent.viewEditPage(id);
         }
     }
     
