@@ -60,11 +60,7 @@ export default {
         return {
             user: {
                 permission:[],
-<<<<<<< HEAD
                 title:'',
-=======
-                role_title:'',
->>>>>>> origin/main
                 description:''
                 
             },
@@ -106,11 +102,7 @@ export default {
                 event.preventDefault();
                 cnt =1;
             }
-<<<<<<< HEAD
        
-=======
-           console.log(this.user);
->>>>>>> origin/main
             if (this.user.permission.length ==0) {
                 document.getElementById("permission_error").textContent = "Please select any one permission";
                 event.preventDefault();
@@ -125,11 +117,7 @@ export default {
                         console.log(result)
                        
                  
-<<<<<<< HEAD
                         this.$router.push({ path: '/user-management/role' });
-=======
-                        this.$router.push({ path: '/user-management/role',params: { success: 1 } });
->>>>>>> origin/main
                        
                     }).catch(error => {
 

@@ -35,6 +35,10 @@ class RoleDataService {
   
     return http.post(`/bulk-role-delete/`,{id: id},{ headers: authHeader() });
   }
+
+  setDefaultRoles(data){
+    return http.post(`/set-default-role/`,data,{ headers: authHeader() });
+  }
   
 }
 export default new RoleDataService();

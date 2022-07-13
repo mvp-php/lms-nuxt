@@ -106,8 +106,8 @@
 
                 <div class="slds-form-element__control custom-grid-control mb-20">
                     <Inputs fieldId="amount" placeHolder="Amount" class="slds-input custom-grid-input "
-                        className="slds-input" v-model.trim="theUser.amount" @keypress="checkInput()"
-                        @keyup="handleInput()" />
+                        className="slds-input" v-model.trim="theUser.amount" @keypress="handleInput()"
+                        />
 
                     <span class="text-danger" id="amount_error" ref="caterror"></span>
                 </div>
@@ -141,9 +141,7 @@ export default {
         }
     },
     props: ['theUser', 'roleTitles', 'rolelist', 'paymentPlan', 'userForm', 'systemFlag'],
-    created() {
-        this.divHideShow();
-    },
+    
     methods: {
         ChangeRole(e) {
             if (e.target.options.selectedIndex > -1) {

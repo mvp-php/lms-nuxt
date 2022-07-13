@@ -16,9 +16,10 @@
                         </div>
                         <nuxt-link to="role/create-role" class="slds-button slds-button_brand btnmain blue-btn ml-10">
                             Create Role</nuxt-link>
-
-                        <button class="slds-button slds-button_brand btnmain light-blue-btn ml-10" href="#">Set Default
-                            Roles</button>
+                         <nuxt-link to="role/set-default-role" class="slds-button slds-button_brand btnmain light-blue-btn ml-10">
+                           Set Default
+                            Roles</nuxt-link>
+                       
                         <button class="slds-button slds-button_brand btnmain light-blue-btn ml-10"
                             href="javascript:void(0)" @click="BulkDelete()" v-if="!bulk_delete_button">Delete
                             Role</button>
@@ -180,13 +181,6 @@ export default {
 
     },
     mounted(){
-<<<<<<< HEAD
-=======
-            if (this.$route.params.success) {
-            alert("asdadsadasd")
- }
-     
->>>>>>> origin/main
         console.log("rere");
     },
     data() {
@@ -206,10 +200,7 @@ export default {
             paginate:'',
             searchkeyword:'',
             pageCount:'',
-<<<<<<< HEAD
            
-=======
->>>>>>> origin/main
         }
     },
     created() {
@@ -239,15 +230,9 @@ export default {
                 .then(async response => {
                  
                     this.tableData = await response.data.data;
-<<<<<<< HEAD
                     this.no_record_avalible = response.data.response_msg
                     this.paginate = response.data.paginate;
                     this.pageCount = response.data.data.length;
-=======
-                    this.no_record_avalible = response.data.error_msg
-                    this.paginate = response.data.paginate;
-                    this.pageCount = page;
->>>>>>> origin/main
                     this.searchkeyword = value;
             }).catch(e => {
                 console.log(e)
@@ -295,22 +280,16 @@ export default {
             } else {
                 this.bulk_delete_button = true;
             }
-<<<<<<< HEAD
-            this.DeleteId = id;
+            this.deletedId = id;
 
            
         },
         BulkDelete() {
 
-=======
-            this.deletedId = id;
-        },
-        BulkDelete() {
->>>>>>> origin/main
             roleService.bulkRoleDelete(this.deletedId).then((result) => {
                 console.log(result);
                 this.getRoleList(1,"");
-                this.successMessage = result.data.error_msg;
+                this.successMessage = result.data.response_msg;
                 this.successToastrShow();
             }).catch((err) => {
                 console.error(err);
@@ -328,6 +307,9 @@ export default {
                 }, 3000);
                
         },
+        successClose:function(){
+            this.successToastrHide = true
+        }
 
     }
 

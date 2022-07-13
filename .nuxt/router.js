@@ -4,25 +4,29 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _c0906b02 = () => interopDefault(import('..\\pages\\category-managment\\index.vue' /* webpackChunkName: "pages/category-managment/index" */))
-const _0b936e12 = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index" */))
-const _c93fadfe = () => interopDefault(import('..\\pages\\forgot-password\\index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
-const _50386f68 = () => interopDefault(import('..\\pages\\link-successfully\\index.vue' /* webpackChunkName: "pages/link-successfully/index" */))
-const _4acd443d = () => interopDefault(import('..\\pages\\Login\\index.vue' /* webpackChunkName: "pages/Login/index" */))
-const _1ff24881 = () => interopDefault(import('..\\pages\\reset-success\\index.vue' /* webpackChunkName: "pages/reset-success/index" */))
-const _060c77b0 = () => interopDefault(import('..\\pages\\SubCategory\\index.vue' /* webpackChunkName: "pages/SubCategory/index" */))
-const _1229e0c8 = () => interopDefault(import('..\\pages\\category-managment\\create-category.vue' /* webpackChunkName: "pages/category-managment/create-category" */))
-const _1474e754 = () => interopDefault(import('..\\pages\\Login\\login.vue' /* webpackChunkName: "pages/Login/login" */))
-const _5171608b = () => interopDefault(import('..\\pages\\user-management\\role\\index.vue' /* webpackChunkName: "pages/user-management/role/index" */))
-const _762a03d4 = () => interopDefault(import('..\\pages\\user-management\\user\\index.vue' /* webpackChunkName: "pages/user-management/user/index" */))
-const _7bf7a720 = () => interopDefault(import('..\\pages\\user-management\\role\\create-role.vue' /* webpackChunkName: "pages/user-management/role/create-role" */))
-const _c7e92d80 = () => interopDefault(import('..\\pages\\user-management\\user\\create-user.vue' /* webpackChunkName: "pages/user-management/user/create-user" */))
-const _136bfc98 = () => interopDefault(import('..\\pages\\user-management\\role\\edit-role\\_id.vue' /* webpackChunkName: "pages/user-management/role/edit-role/_id" */))
-const _661cefb8 = () => interopDefault(import('..\\pages\\user-management\\user\\edit-user\\_id.vue' /* webpackChunkName: "pages/user-management/user/edit-user/_id" */))
-const _357c1d9c = () => interopDefault(import('..\\pages\\category-managment\\edit-category\\_id.vue' /* webpackChunkName: "pages/category-managment/edit-category/_id" */))
-const _7d6bd246 = () => interopDefault(import('..\\pages\\reset-password\\_id.vue' /* webpackChunkName: "pages/reset-password/_id" */))
-const _20fab090 = () => interopDefault(import('..\\pages\\SubCategory\\_id.vue' /* webpackChunkName: "pages/SubCategory/_id" */))
-const _fa2c8ca4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _11325bf4 = () => interopDefault(import('../pages/category-managment/index.vue' /* webpackChunkName: "pages/category-managment/index" */))
+const _1726c1d3 = () => interopDefault(import('../pages/dashboard/index.vue' /* webpackChunkName: "pages/dashboard/index" */))
+const _2ab6c504 = () => interopDefault(import('../pages/forgot-password/index.vue' /* webpackChunkName: "pages/forgot-password/index" */))
+const _8f3f4f4e = () => interopDefault(import('../pages/link-successfully/index.vue' /* webpackChunkName: "pages/link-successfully/index" */))
+const _2c6b2b70 = () => interopDefault(import('../pages/Login/index.vue' /* webpackChunkName: "pages/Login/index" */))
+const _643f7290 = () => interopDefault(import('../pages/reset-password/index.vue' /* webpackChunkName: "pages/reset-password/index" */))
+const _344624f8 = () => interopDefault(import('../pages/reset-success/index.vue' /* webpackChunkName: "pages/reset-success/index" */))
+const _7211eba2 = () => interopDefault(import('../pages/sub-category/index.vue' /* webpackChunkName: "pages/sub-category/index" */))
+const _1f1c18fd = () => interopDefault(import('../pages/SubCategory/index.vue' /* webpackChunkName: "pages/SubCategory/index" */))
+const _5c35519e = () => interopDefault(import('../pages/update-password/index.vue' /* webpackChunkName: "pages/update-password/index" */))
+const _4025e6dc = () => interopDefault(import('../pages/update-profile/index.vue' /* webpackChunkName: "pages/update-profile/index" */))
+const _f550cb3a = () => interopDefault(import('../pages/category-managment/create-category.vue' /* webpackChunkName: "pages/category-managment/create-category" */))
+const _991be542 = () => interopDefault(import('../pages/Login/login.vue' /* webpackChunkName: "pages/Login/login" */))
+const _7a858037 = () => interopDefault(import('../pages/user-management/role/index.vue' /* webpackChunkName: "pages/user-management/role/index" */))
+const _33ec854c = () => interopDefault(import('../pages/user-management/user/index.vue' /* webpackChunkName: "pages/user-management/user/index" */))
+const _1c2f5468 = () => interopDefault(import('../pages/user-management/role/create-role.vue' /* webpackChunkName: "pages/user-management/role/create-role" */))
+const _cfc7a014 = () => interopDefault(import('../pages/user-management/user/create-user.vue' /* webpackChunkName: "pages/user-management/user/create-user" */))
+const _112a3669 = () => interopDefault(import('../pages/user-management/role/edit-role/_id.vue' /* webpackChunkName: "pages/user-management/role/edit-role/_id" */))
+const _37789cd3 = () => interopDefault(import('../pages/user-management/user/edit-user/_id.vue' /* webpackChunkName: "pages/user-management/user/edit-user/_id" */))
+const _2cc52640 = () => interopDefault(import('../pages/category-managment/edit-category/_id.vue' /* webpackChunkName: "pages/category-managment/edit-category/_id" */))
+const _5b28d8f8 = () => interopDefault(import('../pages/reset-password/_id.vue' /* webpackChunkName: "pages/reset-password/_id" */))
+const _4fe636a5 = () => interopDefault(import('../pages/SubCategory/_id.vue' /* webpackChunkName: "pages/SubCategory/_id" */))
+const _52f7988e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -37,23 +41,23 @@ export const routerOptions = {
 
   routes: [{
     path: "/category-managment",
-    component: _c0906b02,
+    component: _11325bf4,
     name: "category-managment"
   }, {
     path: "/dashboard",
-    component: _0b936e12,
+    component: _1726c1d3,
     name: "dashboard"
   }, {
     path: "/forgot-password",
-    component: _c93fadfe,
+    component: _2ab6c504,
     name: "forgot-password"
   }, {
     path: "/link-successfully",
-    component: _50386f68,
+    component: _8f3f4f4e,
     name: "link-successfully"
   }, {
     path: "/Login",
-    component: _4acd443d,
+    component: _2c6b2b70,
     name: "Login"
   }, {
     path: "/reset-password",
@@ -61,13 +65,16 @@ export const routerOptions = {
     name: "reset-password"
   }, {
     path: "/reset-success",
-    component: _1ff24881,
+    component: _344624f8,
     name: "reset-success"
   }, {
-<<<<<<< HEAD
     path: "/sub-category",
     component: _7211eba2,
     name: "sub-category"
+  }, {
+    path: "/SubCategory",
+    component: _1f1c18fd,
+    name: "SubCategory"
   }, {
     path: "/update-password",
     component: _5c35519e,
@@ -76,58 +83,53 @@ export const routerOptions = {
     path: "/update-profile",
     component: _4025e6dc,
     name: "update-profile"
-=======
-    path: "/SubCategory",
-    component: _060c77b0,
-    name: "SubCategory"
   }, {
     path: "/category-managment/create-category",
-    component: _1229e0c8,
+    component: _f550cb3a,
     name: "category-managment-create-category"
   }, {
     path: "/Login/login",
-    component: _1474e754,
+    component: _991be542,
     name: "Login-login"
->>>>>>> origin/main
   }, {
     path: "/user-management/role",
-    component: _5171608b,
+    component: _7a858037,
     name: "user-management-role"
   }, {
     path: "/user-management/user",
-    component: _762a03d4,
+    component: _33ec854c,
     name: "user-management-user"
   }, {
     path: "/user-management/role/create-role",
-    component: _7bf7a720,
+    component: _1c2f5468,
     name: "user-management-role-create-role"
   }, {
     path: "/user-management/user/create-user",
-    component: _c7e92d80,
+    component: _cfc7a014,
     name: "user-management-user-create-user"
   }, {
     path: "/user-management/role/edit-role/:id",
-    component: _136bfc98,
+    component: _112a3669,
     name: "user-management-role-edit-role-id"
   }, {
     path: "/user-management/user/edit-user/:id",
-    component: _661cefb8,
+    component: _37789cd3,
     name: "user-management-user-edit-user-id"
   }, {
     path: "/category-managment/edit-category/:id",
-    component: _357c1d9c,
+    component: _2cc52640,
     name: "category-managment-edit-category-id"
   }, {
     path: "/reset-password/:id?",
-    component: _7d6bd246,
+    component: _5b28d8f8,
     name: "reset-password-id"
   }, {
     path: "/SubCategory/:id",
-    component: _20fab090,
+    component: _4fe636a5,
     name: "SubCategory-id"
   }, {
     path: "/",
-    component: _fa2c8ca4,
+    component: _52f7988e,
     name: "index"
   }],
 

@@ -25,15 +25,9 @@ export default {
         }
     },
     methods: {
-<<<<<<< HEAD
         successToasterHide() {
             this.$parent.successClose()
         }
-=======
-        // successToasterHide() {
-        //     this.$parent.successToastrShow()
-        // }
->>>>>>> origin/main
     }
 }
 </script>

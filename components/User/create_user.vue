@@ -1,51 +1,8 @@
 <template>
-<<<<<<< HEAD
     <div class="create-role-main">
         <div class="slds-form-element custom-grid">
             <Labels labelName="First Name" className="slds-form-element__label custom-label" for="text-input-id-46"
                 required="true" />
-=======
-<div class="create-role-main">
-    <div class="slds-form-element custom-grid">
-        <Labels labelName="First Name" className="slds-form-element__label custom-label" for="text-input-id-46" required="true"/>
-        
-        <div class="slds-form-element__control custom-grid-control mb-20">
-            <Inputs fieldId="first_name" placeHolder="First name"  class="slds-input custom-grid-input "  className="slds-input" v-model.trim="theUser.first_name" />
-            
-            <span class="text-danger" id="first_name_error" ref="caterror"></span>
-        </div>
-    </div>
-    <div class="slds-form-element custom-grid">
-        <Labels labelName="Last Name" className="slds-form-element__label custom-label" for="text-input-id-46" required="true"/>
-        
-        <div class="slds-form-element__control custom-grid-control mb-20">
-            <Inputs fieldId="last_name" placeHolder="Last Name"  class="slds-input custom-grid-input "  className="slds-input" v-model.trim="theUser.last_name" />
-            
-            <span class="text-danger" id="last_name_error" ref="caterror"></span>
-        </div>
-    </div>
-    <div class="slds-form-element custom-grid">
-        <Labels labelName="Email" className="slds-form-element__label custom-label" for="text-input-id-46" required="true"/>
-        
-        <div class="slds-form-element__control custom-grid-control mb-20">
-            <Inputs fieldId="email" placeHolder="Email"  class="slds-input custom-grid-input "  className="slds-input" v-model.trim="theUser.email" />
-            
-            <span class="text-danger" id="email_error" ref="caterror"></span>
-        </div>
-    </div>
-    <div class="slds-form-element custom-grid">
-        <Labels labelName="Role" className="slds-form-element__label custom-label" for="text-input-id-46" required="true"/>
-   
-        <div class="slds-form-element__control custom-grid-control mb-20">
-            <select 
-                v-model="theUser.role_id"
-                class="slds-select custom-grid-input" @change="ChangeRole($event)">
-                <option value="">Select Role</option>
-                <option v-for="roles in rolelist" :key="roles"
-                    :value="roles.id" :dataId="`${roles.is_system_role}`">
-                    {{ roles.role_title }}
-                </option>
->>>>>>> origin/main
 
             <div class="slds-form-element__control custom-grid-control mb-20">
                 <Inputs fieldId="first_name" placeHolder="First name" class="slds-input custom-grid-input "
@@ -146,7 +103,7 @@
 
                 <div class="slds-form-element__control custom-grid-control mb-20">
                     <Inputs type="number" fieldId="amount" placeHolder="Amount" class="slds-input custom-grid-input "
-                        className="slds-input" v-model.trim="theUser.amount" @keypress="checkInput()" @keyup="handleInput()"/>
+                        className="slds-input" v-model.trim="theUser.amount" @keypress="handleInput()" />
 
                     <span class="text-danger" id="amount_error" ref="caterror"></span>
                 </div>
@@ -185,7 +142,6 @@ export default {
                 var systemRole = e.target.options[e.target.options.selectedIndex].dataset.option;
                 var systemText = e.target.options[e.target.options.selectedIndex].text;
 
-<<<<<<< HEAD
                 if (systemText == 'Student' && systemRole == 1) {
                     this.hides = false;
                     this.hidesins = false;
@@ -201,28 +157,6 @@ export default {
                 if(this.theUser.role_id){
                     document.getElementById("role_error").textContent = "";
                 }
-=======
-  },
-  data() {
-    return {
-        hides: true,
-        hidesins:true
-    }
-  },
-  props: ['theUser','rolelist','paymentPlan'],
-  methods: {
-    ChangeRole(e) {
-     
-            if (e.target.value.trim() == "772769390512275457") {
-                this.hides = false;
-                this.hidesins = false;
-            } else if(e.target.value.trim() =='772769426869092353'){
-               this.hides = true;
-                this.hidesins = false;
-            }else{
-                this.hides = true;
-                this.hidesins = true;
->>>>>>> origin/main
             }
 
         },

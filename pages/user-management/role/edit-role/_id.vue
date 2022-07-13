@@ -12,11 +12,7 @@
                         Edit A Role
                     </div>
                     <form v-on:submit.prevent="submitData">
-<<<<<<< HEAD
                         <EditRole :the-user="user" :selectedPermission="selectedPermission" />
-=======
-                        <EditRole :the-user="user" :selectedPermission="selectedPermission"/>
->>>>>>> origin/main
                         <div class="btn-align-end">
                             <ButtonComponent type="submit" class="slds-button slds-button_brand btnmain blue-btn ml-10"
                                 :buttonName="ButtonName" />
@@ -55,15 +51,9 @@ export default {
         return {
             user: {
 
-<<<<<<< HEAD
                 permission: [],
                 title: '',
                 description: ''
-=======
-                permission:[],
-                role_title:'',
-                description:''
->>>>>>> origin/main
             },
             ButtonName: "Update Role",
             errorMessage: "",
@@ -73,11 +63,7 @@ export default {
 
 
             dangerHide: true,
-<<<<<<< HEAD
             userForm: [],
-=======
-            userForm:[],
->>>>>>> origin/main
         };
     },
 
@@ -91,19 +77,11 @@ export default {
 
         getRoleDetails() {
             RoleDataService.getDetailsById(this.$route.params.id).then(response => {
-<<<<<<< HEAD
                 this.user = response.data.data;
 
 
             }).catch(e => {
 
-=======
-                    this.user = response.data.data;
-                   
-                    
-                }).catch(e => {
-                console.log(e)
->>>>>>> origin/main
             });
         },
         submitData(event) {
@@ -120,14 +98,6 @@ export default {
                 event.preventDefault();
                 cnt = 1;
             }
-<<<<<<< HEAD
-=======
-            if (this.user.permission.length ==0) {
-                document.getElementById("permission_error").textContent = "Please select any one permission";
-                event.preventDefault();
-                cnt =1;
-            }
->>>>>>> origin/main
 
             if (cnt == 0) {
                 RoleDataService.updateRole(this.user, this.$route.params.id)

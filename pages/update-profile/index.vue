@@ -95,7 +95,6 @@ export default {
 
             if(cnt == 0){
 
-                console.log(this.user)
                 userService.profileUpdate(this.user).then(async response => {
                     if(response.data.email_status ==0){
                         userService.callLogout().then((result) => {

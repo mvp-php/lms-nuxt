@@ -1,6 +1,6 @@
 <template>
 
-    <span class="slds-category-table">
+    <span  class="slds-category-table">
       
       <dataTable :header="header" :tableData="tableData" :no_record_avalible="no_record_avalible" :paginateObjs="paginateObj" url="/user-management/role" :searchKeyword="searchkeyword" />
     </span>
@@ -34,9 +34,6 @@ export default {
         getsOpenSubcategoryModel :function(id){
             console.log(id);
             this.$parent.mainOpenMainSubCategory(id);
-        },
-        editMethod:function(id){
-            this.$parent.viewEditPage(id);
         }
     }
     
